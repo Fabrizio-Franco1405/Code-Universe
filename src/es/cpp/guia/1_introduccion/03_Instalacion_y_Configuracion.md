@@ -56,7 +56,7 @@ En Windows estaremos utilizando la cadena de herramientas **MinGW** que es un pa
    pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 
 5. Una vez aparezca la lista de paquetes para instalar puedes presionar `Enter` para instalarlos todos (Recomendable si estás aprendiendo) o seleccionar los paquetes que desees instalar individualmente si eres experimentado.
-![Instalador de MinGW](../../../../src/assets/introduccion/cpp-install-MSYS2-toolchain.png)
+![Instalador de MinGW](../../../../assets/cpp/introduccion/cpp-install-MSYS2-toolchain.png)
 
 6. Introduzca `Y` cuando se le pregunte para continuar con la instalación.
 
@@ -106,7 +106,7 @@ Visual Studio Code es un editor moderno, muy usado por principiantes y profesion
 
 Lo primero es instalar las extensiones necesarias para trabajar con C++. Desde la pestaña de **Extensiones** (icono de cuatro cuadritos en la barra lateral o con `Ctrl+Shift+X`), busca e instala:
 
-![Instalador de MinGW](../../../../src/assets/introduccion/cpp-extension.png)
+![Instalador de MinGW](../../../../assets/cpp/introduccion/cpp-extension.png)
 
 - **C/C++ (Microsoft):** Soporte para IntelliSense, depuración y resaltado de sintaxis.  
 - *(Opcional)* **C/C++ Extension Pack:** Incluye depuración avanzada y herramientas adicionales.  
@@ -116,11 +116,11 @@ Lo primero es instalar las extensiones necesarias para trabajar con C++. Desde l
 
 1. Para configurar el compilador dentro del Editor es necesario ejecutar la combinación de teclas `Ctrl+Shift+P` y escribir `C/C++: Edit Configurations (UI)`
 
-![Configuración de VS Code](../../../../src/assets/introduccion/cpp-edit-configuration-ui.png)
+![Configuración de VS Code](../../../../assets/cpp/introduccion/cpp-edit-configuration-ui.png)
 
 2. Acá se desplegarán la lista de compiladores que tienes instalados, en este caso debes buscar el `g++` que viene por defecto con MinGW.
 
-![Configuración de VS Code](../../../../src/assets/introduccion/cpp-ruta-compilador.png)
+![Configuración de VS Code](../../../../assets/cpp/introduccion/cpp-ruta-compilador.png)
 
 ### Usando Visual Studio
 Visual Studio es un **IDE (Entorno de Desarrollo Integrado)** creado por Microsoft.  
@@ -133,7 +133,7 @@ A diferencia de un editor ligero como VS Code, aquí tienes todo listo desde el 
 2. Descarga la edición **Community** (es gratuita y más que suficiente para aprender).  
 
 3. Durante la instalación, selecciona la carga de trabajo **"Desarrollo de escritorio con C++"**. Esto instalará el compilador MSVC, el depurador y las librerías necesarias.
-![Instalador de Visual Studio](../../../../src/assets/introduccion/cpp-install-visual-studio.png)
+![Instalador de Visual Studio](../../../../assets/cpp/introduccion/cpp-install-visual-studio.png)
 
 ::: tip
 💡 Si marcas solo lo necesario (C++), evitas instalar herramientas extra que ocupan mucho espacio.
@@ -150,13 +150,13 @@ En ese caso, quizás prefieras empezar con **VS Code** y luego dar el salto a Vi
 1. Abre Visual Studio. 
 
 2. Selecciona **Crear un nuevo proyecto**.
-![Nuevo_Proyecto](../../../../src/assets/introduccion/cpp-new-project.png)
+![Nuevo_Proyecto](../../../../assets/cpp/introduccion/cpp-new-project.png)
 
 3. Elige **Aplicación de consola en C++** y haz clic en **Siguiente**.
-![Nuevo_Proyecto](../../../../src/assets/introduccion/cpp-console-app.png)
+![Nuevo_Proyecto](../../../../assets/cpp/introduccion/cpp-console-app.png)
 
 4. Ponle un nombre y una ubicación a tu proyecto.
-![Crear-Proyecto](../../../../src/assets/introduccion/cpp-save-project.png)
+![Crear-Proyecto](../../../../assets/cpp/introduccion/cpp-save-project.png)
 5. Haz clic en **Crear**.  
 
 Automáticamente tendrás un proyecto con un archivo `main.cpp` listo para modificar.
@@ -183,12 +183,12 @@ Está diseñado para ofrecer un entorno listo para programar con compilador, dep
    - Versión de prueba gratuita de 30 días.
    - Licencia educativa gratuita para estudiantes con correo académico.
    - Licencencia de uso no comercial (suficiente si de momento quieres aprender)
-   ![Licencia](../../../../src/assets/introduccion/cpp-jetbrains-license.png)
+   ![Licencia](../../../../assets/cpp/introduccion/cpp-jetbrains-license.png)
 
 #### Crear un proyecto de C++
 
 1. Abre CLion y selecciona **New Project**, esto te abrirá una ventana donde puedes seleccionar el tipo de proyecto que deseas crear, en este caso un ejecutable de consola y también podrás seleccionar la versión con la que quieres trabajar.  
-![Nuevo_Proyecto](../../../../src/assets/introduccion/cpp-new-project-clion.png)
+![Nuevo_Proyecto](../../../../assets/cpp/introduccion/cpp-new-project-clion.png)
 
 ::: tip
 💡 En el ejemplo estamos usando C++ 20 aunque tu puedes elegir la que quieras, más adelante explicaremos más acerca de las versiones de C++
