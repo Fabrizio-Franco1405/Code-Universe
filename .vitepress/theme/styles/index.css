@@ -1,0 +1,5 @@
+@import './general/main.css';
+@import './lenguajes/c.css';
+@import './lenguajes/cpp.css';
+@import './lenguajes/rust.css';
+@import './general/custom.css';

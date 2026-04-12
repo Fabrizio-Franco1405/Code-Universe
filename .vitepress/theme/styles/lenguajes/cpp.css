@@ -1,0 +1,96 @@
+/**
+ * Code Universe: C++ - Theme Override
+ */
+
+.lang-cpp {
+  /* Escala de Azules C++ (Cobalt & Electric Blue) */
+  --vp-c-blue-1: #007acc; /* Texto y acentos */
+  --vp-c-blue-2: #00599c; /* Hover */
+  --vp-c-blue-3: #004482; /* Fondos sólidos */
+  --vp-c-blue-soft: rgba(0, 122, 204, 0.14);
+
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  /* Cambiamos el 'brand' de Indigo a Blue (C++) */
+  --vp-c-brand-1: var(--vp-c-blue-1);
+  --vp-c-brand-2: var(--vp-c-blue-2);
+  --vp-c-brand-3: var(--vp-c-blue-3);
+  --vp-c-brand-soft: var(--vp-c-blue-soft);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+.lang-cpp {
+    --vp-button-brand-border: transparent;
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-brand-3);
+    --vp-button-brand-hover-border: transparent;
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+    --vp-button-brand-active-border: transparent;
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home Hero
+ * -------------------------------------------------------------------------- */
+.lang-cpp {
+  /* Gradiente: Del Azul Cobalto al Cian Eléctrico */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(
+        120deg,
+        #00599c 30%,
+        #00d4ff
+    );
+
+  /* Resplandor de fondo de la imagen principal (Azul C++) */
+    --vp-home-hero-image-background-image: linear-gradient(
+        -45deg,
+        rgba(0, 89, 156, 0.6) 50%,
+        rgba(97, 218, 251, 0.4) 50%
+    );
+    --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+    .lang-cpp { --vp-home-hero-image-filter: blur(56px); }
+}
+
+@media (min-width: 960px) {
+    .lang-cpp { --vp-home-hero-image-filter: blur(68px); }
+}
+
+/**
+ * Component: Custom Block (Tips, Containers)
+ * -------------------------------------------------------------------------- */
+.lang-cpp {
+    --vp-custom-block-tip-border: transparent;
+    --vp-custom-block-tip-text: var(--vp-c-text-1);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+    --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/* Ajuste adicional para que los enlaces no se vean azules de fábrica, sino nuestro azul */
+.lang-cpp a {
+    text-decoration-color: var(--vp-c-brand-1);
+}
