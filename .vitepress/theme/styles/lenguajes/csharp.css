@@ -1,0 +1,85 @@
+/**
+ * Code Universe: C# - Theme Override
+ */
+
+.lang-csharp {
+  /* Escala de Morados C# (Microsoft .NET Palette) */
+  --vp-c-purple-1: #a179dc; /* Texto y acentos */
+  --vp-c-purple-2: #68217a; /* Hover */
+  --vp-c-purple-3: #512bd4; /* Fondos sólidos / .NET Logo Blue-Purple */
+  --vp-c-purple-soft: rgba(161, 121, 220, 0.14);
+
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  /* Cambiamos el 'brand' de Indigo a Purple (C#) */
+  --vp-c-brand-1: var(--vp-c-purple-1);
+  --vp-c-brand-2: var(--vp-c-purple-2);
+  --vp-c-brand-3: var(--vp-c-purple-3);
+  --vp-c-brand-soft: var(--vp-c-purple-soft);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+.lang-csharp {
+    --vp-button-brand-border: transparent;
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-brand-3);
+    --vp-button-brand-hover-border: transparent;
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+    --vp-button-brand-active-border: transparent;
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home Hero
+ * -------------------------------------------------------------------------- */
+.lang-csharp {
+  /* Gradiente: Del Púrpura Suave al Violeta .NET */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(
+        120deg,
+        #a179dc 30%,
+        #512bd4
+    );
+
+  /* Resplandor de fondo de la imagen principal (Púrpura C#) */
+    --vp-home-hero-image-background-image: linear-gradient(
+        -45deg,
+        rgba(161, 121, 220, 0.6) 50%,
+        rgba(81, 43, 212, 0.4) 50%
+    );
+    --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+    .lang-csharp { --vp-home-hero-image-filter: blur(56px); }
+}
+
+@media (min-width: 960px) {
+    .lang-csharp { --vp-home-hero-image-filter: blur(68px); }
+}
+
+/**
+ * Component: Custom Block (Tips, Containers)
+ * -------------------------------------------------------------------------- */
+.lang-csharp {
+    --vp-custom-block-tip-border: transparent;
+    --vp-custom-block-tip-text: var(--vp-c-text-1);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+    --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+.lang-csharp a {
+    text-decoration-color: var(--vp-c-brand-1);
+}

@@ -1,18 +1,18 @@
 ---
-pageClass: lang-rust
+pageClass: lang-csharp
 layout: home
 
 hero:
-  name: "Code Universe: Rust"
-  text: "Seguridad sin límites"
-  tagline: "Domina Rust de una forma más didáctica y sencilla."
+  name: "Code Universe: C#"
+  text: "Productividad y Robustez"
+  tagline: "El estándar industrial para aplicaciones escalables y el desarrollo de videojuegos de alto nivel."
   image: 
-    src: /assets/icons/rust-icon.svg
-    alt: "Code Universe Rust"
+    src: /assets/icons/csharp-icon.svg
+    alt: "Code Universe C#"
   actions:
     - theme: brand
       text: Iniciar Travesía
-      link: /es/rs/guia/1_introduccion/01_Vision_General
+      link: 
     - theme: alt
       text: Ver Ecosistema
       link: 
@@ -20,39 +20,39 @@ hero:
 
 <section class="cu-main-container">
 
-<h2 class="cu-title">El Arsenal del Programador</h2>
+<h2 class="cu-title">La Columna del Desarrollo Moderno</h2>
 
 <div class="cu-grid">
 
 <article class="cu-feature-card">
-<header class="cu-card-icon">🦀</header>
+<header class="cu-card-icon">⚡</header>
 <div class="cu-card-content">
-<h3>Ownership</h3>
-<p>Entiende el corazón de Rust: la gestión de memoria sin recolector de basura.</p>
+<h3>Rendimiento Managed</h3>
+<p>Domina el JIT y el Garbage Collector para crear software de alto rendimiento sin los riesgos de la memoria manual.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
-<header class="cu-card-icon">🛡️</header>
+<header class="cu-card-icon">🎮</header>
 <div class="cu-card-content">
-<h3>Seguridad</h3>
-<p>Aprende cómo el compilador evita errores de segmentación antes de que ocurran.</p>
+<h3>Desarrollo de Juegos</h3>
+<p>El lenguaje rey en Unity. Crea experiencias interactivas y mundos virtuales con el poder de .NET.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
-<header class="cu-card-icon">⚙️</header>
+<header class="cu-card-icon">🏗️</header>
 <div class="cu-card-content">
-<h3>Concurrencia</h3>
-<p>Domina el paralelismo sin miedo a las condiciones de carrera.</p>
+<h3>Arquitectura de Nivel</h3>
+<p>Inyección de dependencias, LINQ y Programación Asíncrona nativa para sistemas empresariales complejos.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
-<header class="cu-card-icon">📦</header>
+<header class="cu-card-icon">🌍</header>
 <div class="cu-card-content">
-<h3>Cargo & Crates</h3>
-<p>Gestiona dependencias y construye proyectos como un profesional.</p>
+<h3>Multiplataforma</h3>
+<p>Escribe una vez y despliega en Windows, Linux, macOS, iOS y Android gracias a .NET Core y MAUI.</p>
 </div>
 </article>
 
@@ -61,8 +61,8 @@ hero:
 </section>
 
 <footer class="cu-main-footer">
-<p>Forjado con <span class="cu-flame">🔥</span> por <strong>Fabrizio</strong></p>
-<small class="cu-badge">Rust Edition 2026</small>
+<p>Forjado con <span class="cu-energy">✨</span> por <strong>Fabrizio</strong></p>
+<small class="cu-badge">.NET 8.0/9.0 Standard Edition</small>
 </footer>
 
 <style scoped>
@@ -73,19 +73,18 @@ hero:
   font-weight: 800;
   margin-bottom: 3rem;
   border: none !important;
-  background: linear-gradient(to right, #f06431, #ce412b);
+  /* Gradiente Púrpura C# */
+  background: linear-gradient(to right, #a179dc, #68217a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Grid */
 .cu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
-/* Cards */
 .cu-feature-card {
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
@@ -100,8 +99,9 @@ hero:
 
 .cu-feature-card:hover {
   transform: translateY(-8px);
-  border-color: #f06431;
-  box-shadow: 0 12px 30px rgba(240, 100, 49, 0.12);
+  /* Color de acento Morado */
+  border-color: #a179dc;
+  box-shadow: 0 12px 30px rgba(161, 121, 220, 0.15);
 }
 
 .cu-card-icon {
@@ -121,21 +121,20 @@ hero:
   color: var(--vp-c-text-2);
 }
 
-/* Footer */
 .cu-main-footer {
   text-align: center;
   padding: 60px 24px;
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.cu-flame {
+.cu-energy {
   display: inline-block;
-  animation: flicker 1.5s infinite alternate;
+  animation: pulse 1.5s infinite alternate;
 }
 
-@keyframes flicker {
-  0% { filter: drop-shadow(0 0 2px #f06431); transform: scale(1); }
-  100% { filter: drop-shadow(0 0 8px #ff8c00); transform: scale(1.2); }
+@keyframes pulse {
+  0% { filter: drop-shadow(0 0 2px #a179dc); transform: scale(1); }
+  100% { filter: drop-shadow(0 0 8px #68217a); transform: scale(1.2); }
 }
 
 </style>

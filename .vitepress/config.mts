@@ -7,14 +7,15 @@ export default defineConfig({
   description: "Documentación Multi-lenguaje",
   srcDir: 'src',
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '../assets/favicons/rust-favicon-32.png' }]],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '../assets/favicons/code-universe-favicon.webp' }]],
 
   transformPageData(pageData) {
     const path = pageData.relativePath;
-    let iconName = 'c-favicon-32.png'; 
-    if (path.includes('rs/')) iconName = 'rust-favicon-32.png';
-    else if (path.includes('cpp/')) iconName = 'cpp-favicon-32.png';
-    else if (path.includes('c/')) iconName = 'c-favicon-32.png';
+    let iconName = 'code-universe-favicon.webp';
+    if (path.includes('rs/')) iconName = 'rust-favicon.svg';
+    else if (path.includes('cpp/')) iconName = 'cpp-favicon.svg';
+    else if (path.includes('c/')) iconName = 'c-favicon.svg';
+    else if (path.includes('cs/')) iconName = 'cs-favicon.svg';
 
     const fullIconPath = `/assets/favicons/${iconName}`;
     pageData.frontmatter.head = [['link', { rel: 'icon', type: 'image/png', href: fullIconPath }]];
@@ -31,6 +32,7 @@ export default defineConfig({
           { text: 'Lenguajes', items: [
             { text: 'C++', link: '/es/cpp/' },
             { text: 'C', link: '/es/c/' },
+            { text: 'C#', link: '/es/cs/' },
             { text: 'Rust', link: '/es/rs/' },
           ]}
         ]
@@ -44,9 +46,10 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Languages', items: [
-            { text: 'Rust', link: '/en/rs/' },
             { text: 'C++', link: '/en/cpp/' },
-            { text: 'C', link: '/en/c/' }
+            { text: 'C', link: '/en/c/' },
+            { text: 'C#', link: '/en/cs/' },
+            { text: 'Rust', link: '/en/rs/' },
           ]}
         ]
       }
@@ -54,15 +57,11 @@ export default defineConfig({
   },
 
   themeConfig: {
-    // VitePress permite definir Sidebars Y Navs específicos por ruta aquí
-    // Esto evita duplicar los idiomas en el selector
-    
-    // CONFIGURACIÓN DE SIDEBARS
     sidebar: {
       '/es/cpp/': sidebarEsCpp,
       '/es/rs/': sidebarEsRs,
-      '/es/c/': [], // Aquí iría tu sidebar de C
-      '/en/cpp/': [], // Aquí iría el de C++ en inglés
+      '/es/c/': [],
+      '/en/cpp/': [],
       '/en/rs/': [],
     },
 
