@@ -35,3 +35,21 @@
     opacity: 0.5;
     letter-spacing: 1px;
 }
+
+.VPDoc img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: zoom-in;
+
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.VPDoc img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 3px #fff, 0 4px 20px rgba(0, 0, 0, 0.3);
+}
