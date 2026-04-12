@@ -63,10 +63,17 @@ pnpm run docs:build
 ## 🔒 Acceso y Autoría
 Este es un repositorio privado de uso interno. La arquitectura y el contenido son propiedad intelectual del autor.
 
-Diseñado y forjado por:
-Fabrizio Franco
-Ingeniería de Software • Computer Science Student
-📍 Venezuela
+---
+
+> [!IMPORTANT]
+> ### ✒️ Autoría y Desarrollo
+> **Diseñado y forjado por:** [**Fabrizio Franco**](https://github.com/Fabrizio-Franco1405)
+>
+> **Especialidad:** Ingeniería de Software | *Computer Science Student*
+>
+> **Ubicación:** 📍 Venezuela 🇻🇪
+
+---
 
 <p align="center">
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/Code_Universe_Hub-2026-8b5cf6%3Fstyle%3Dflat-square" alt="Footer">
