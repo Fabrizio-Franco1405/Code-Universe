@@ -7,7 +7,7 @@ hero:
   text: "El origen de todo"
   tagline: "Domina el lenguaje que cimentó las bases de la informática moderna."
   image: 
-    src: /assets/icons/c-hero-400.png
+    src: /assets/icons/c-icon.svg
     alt: "Code Universe C"
   actions:
     - theme: brand

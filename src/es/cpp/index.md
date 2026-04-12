@@ -7,7 +7,7 @@ hero:
   text: "Potencia sin límites"
   tagline: "Ingeniería de software de alto rendimiento al alcance de todos."
   image: 
-    src: /assets/icons/cpp-hero-400.png
+    src: /assets/icons/cpp-icon.svg
     alt: "Code Universe C++"
   actions:
     - theme: brand
