@@ -7,7 +7,7 @@ hero:
   text: "Power and Productivity"
   tagline: "Industrial-grade software engineering for scalable applications and high-end game development."
   image: 
-    src: /assets/icons/csharp-icon.svg
+    src: /icons/csharp-icon.svg
     alt: "Code Universe C#"
   actions:
     - theme: brand

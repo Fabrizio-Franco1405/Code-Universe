@@ -7,7 +7,7 @@ hero:
   text: "Safety without limits"
   tagline: "Master Rust in a more didactic and simple way."
   image: 
-    src: /assets/icons/rust-icon.svg
+    src: /icons/rust-icon.svg
     alt: "Code Universe Rust"
   actions:
     - theme: brand

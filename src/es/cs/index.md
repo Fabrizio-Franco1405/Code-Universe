@@ -7,7 +7,7 @@ hero:
   text: "Productividad y Robustez"
   tagline: "El estándar industrial para aplicaciones escalables y el desarrollo de videojuegos de alto nivel."
   image: 
-    src: /assets/icons/csharp-icon.svg
+    src: /icons/csharp-icon.svg
     alt: "Code Universe C#"
   actions:
     - theme: brand

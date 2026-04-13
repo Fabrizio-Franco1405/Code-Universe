@@ -7,7 +7,7 @@ hero:
   text: "The Knowledge Nexus"
   tagline: "A standardized technical documentation ecosystem for the programming elite."
   image:
-    src: /assets/img/astronauta.png
+    src: /img/astronauta.png
     alt: "Code Universe Logo"
   actions:
     - theme: brand
@@ -26,7 +26,7 @@ hero:
 
 <article class="cu-feature-card" onclick="window.location.href='/en/rs/'">
 <header class="cu-card-icon">
-  <img src="/assets/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
 </header>
 <div class="cu-card-content">
 <h3>Rust (Coming Soon)</h3>
@@ -36,7 +36,7 @@ hero:
 
 <article class="cu-feature-card" onclick="window.location.href='/en/cpp/'">
 <header class="cu-card-icon">
-  <img src="/assets/icons/cpp-icon.svg" alt="C++" width="80" height="80">
+  <img src="/icons/cpp-icon.svg" alt="C++" width="80" height="80">
 </header>
 <div class="cu-card-content">
 <h3>C++</h3>
@@ -46,7 +46,7 @@ hero:
 
 <article class="cu-feature-card" onclick="window.location.href='/en/c/'">
 <header class="cu-card-icon">
-  <img src="/assets/icons/c-icon.svg" alt="C" width="80" height="80">
+  <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
 </header>
 <div class="cu-card-content">
 <h3>C (Coming Soon)</h3>
@@ -56,7 +56,7 @@ hero:
 
 <article class="cu-feature-card" onclick="window.location.href='/en/cs/'">
 <header class="cu-card-icon">
-  <img src="/assets/icons/csharp-icon.svg" alt="C#" width="80" height="80">
+  <img src="/icons/csharp-icon.svg" alt="C#" width="80" height="80">
 </header>
 <div class="cu-card-content">
 <h3>C# (Coming Soon)</h3>

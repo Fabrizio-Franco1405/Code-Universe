@@ -7,7 +7,7 @@ hero:
   text: "The origin of everything"
   tagline: "Master the language that laid the foundations of modern computing."
   image: 
-    src: /assets/icons/c-icon.svg
+    src: /icons/c-icon.svg
     alt: "Code Universe C"
   actions:
     - theme: brand

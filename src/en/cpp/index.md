@@ -7,7 +7,7 @@ hero:
   text: "Power without limits"
   tagline: "High-performance software engineering within everyone's reach."
   image: 
-    src: /assets/icons/cpp-icon.svg
+    src: /icons/cpp-icon.svg
     alt: "Code Universe C++"
   actions:
     - theme: brand
