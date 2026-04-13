@@ -7,7 +7,7 @@ export default defineConfig({
   description: "Documentación Multi-lenguaje",
   srcDir: 'src',
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '../assets/favicons/code-universe-favicon.webp' }]],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/assets/img/code-universe-favicon.webp' }]],
 
   transformPageData(pageData) {
     const path = pageData.relativePath;
