@@ -24,16 +24,6 @@ hero:
 
 <div class="cu-grid">
 
-<article class="cu-feature-card" onclick="window.location.href='/en/rs/'">
-<header class="cu-card-icon">
-  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
-</header>
-<div class="cu-card-content">
-<h3>Rust (Coming Soon)</h3>
-<p>Guaranteed memory safety and cutting-edge performance for modern systems.</p>
-</div>
-</article>
-
 <article class="cu-feature-card" onclick="window.location.href='/en/cpp/'">
 <header class="cu-card-icon">
   <img src="/icons/cpp-icon.svg" alt="C++" width="80" height="80">
@@ -61,6 +51,16 @@ hero:
 <div class="cu-card-content">
 <h3>C# (Coming Soon)</h3>
 <p>Productivity and robustness with .NET for enterprise applications and game development.</p>
+</div>
+</article>
+
+<article class="cu-feature-card" onclick="window.location.href='/en/rs/'">
+<header class="cu-card-icon">
+  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Rust (Coming Soon)</h3>
+<p>Guaranteed memory safety and cutting-edge performance for modern systems.</p>
 </div>
 </article>
 

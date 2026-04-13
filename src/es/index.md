@@ -24,16 +24,6 @@ hero:
 
 <div class="cu-grid">
 
-<article class="cu-feature-card" onclick="window.location.href='/es/rs/'">
-<header class="cu-card-icon">
-  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
-</header>
-<div class="cu-card-content">
-<h3>Rust (Próximamente)</h3>
-<p>Seguridad de memoria garantizada y rendimiento de vanguardia para sistemas modernos.</p>
-</div>
-</article>
-
 <article class="cu-feature-card" onclick="window.location.href='/es/cpp/'">
 <header class="cu-card-icon">
   <img src="/icons/cpp-icon.svg" alt="C++" width="80" height="80">
@@ -61,6 +51,16 @@ hero:
 <div class="cu-card-content">
 <h3>C# (Próximamente)</h3>
 <p>El estándar fundamental. Control absoluto y eficiencia bruta desde el origen.</p>
+</div>
+</article>
+
+<article class="cu-feature-card" onclick="window.location.href='/es/rs/'">
+<header class="cu-card-icon">
+  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Rust (Próximamente)</h3>
+<p>Seguridad de memoria garantizada y rendimiento de vanguardia para sistemas modernos.</p>
 </div>
 </article>
 
