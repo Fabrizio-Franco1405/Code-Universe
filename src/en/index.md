@@ -7,7 +7,7 @@ hero:
   text: "The Knowledge Nexus"
   tagline: "A standardized technical documentation ecosystem for the programming elite."
   image:
-    src: /img/astronauta.png
+    src: /img/astronauta.webp
     alt: "Code Universe Logo"
   actions:
     - theme: brand
