@@ -54,7 +54,7 @@ hero:
 </div>
 </article>
 
-<article class="cu-feature-card" onclick="window.location.href='/es/c/'">
+<article class="cu-feature-card" onclick="window.location.href='/es/cs/'">
 <header class="cu-card-icon">
   <img src="/icons/csharp-icon.svg" alt="C#" width="80" height="80">
 </header>
