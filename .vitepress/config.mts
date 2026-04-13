@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { sidebarEsCpp } from './sidebars/es/es-cpp'
+import { sidebarEsC } from './sidebars/es/es-c'
 import { sidebarEsRs } from './sidebars/es/es-rs'
 
 export default defineConfig({
@@ -64,7 +65,7 @@ export default defineConfig({
     sidebar: {
       '/es/cpp/': sidebarEsCpp,
       '/es/rs/': sidebarEsRs,
-      '/es/c/': [],
+      '/es/c/': sidebarEsC,
       '/en/cpp/': [],
       '/en/rs/': [],
     },
