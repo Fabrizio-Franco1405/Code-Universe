@@ -11,7 +11,7 @@ export default defineConfig({
     publicDir: '../public'
   },
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/assets/img/code-universe-favicon.webp' }]],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/img/code-universe-favicon.webp' }]],
 
   transformPageData(pageData) {
     const path = pageData.relativePath;
@@ -21,7 +21,7 @@ export default defineConfig({
     else if (path.includes('c/')) iconName = 'c-favicon.svg';
     else if (path.includes('cs/')) iconName = 'cs-favicon.svg';
 
-    const fullIconPath = `/assets/favicons/${iconName}`;
+    const fullIconPath = `/favicons/${iconName}`;
     pageData.frontmatter.head = [['link', { rel: 'icon', type: 'image/png', href: fullIconPath }]];
   },
 

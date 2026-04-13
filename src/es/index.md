@@ -7,7 +7,7 @@ hero:
   text: "El Nexo del Conocimiento"
   tagline: "Un ecosistema de documentación técnica estandarizado para la élite de la programación."
   image:
-    src: /img/astronauta.png
+    src: /img/astronauta.webp
     alt: "Code Universe Logo"
   actions:
     - theme: brand
