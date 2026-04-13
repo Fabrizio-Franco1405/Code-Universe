@@ -33,3 +33,55 @@ html:not(.dark) .lang-main {
     50% { filter: drop-shadow(0 0 15px #00f0ff); }
     100% { transform: rotate(360deg); filter: drop-shadow(0 0 5px #ff007a); }
 }
+
+/* --- CORRECCIÓN RESPONSIVE PARA CELULARES --- */
+
+@media (max-width: 375px) {
+    /* 1. Forzamos al contenedor de VitePress a no tener márgenes laterales ocultos */
+    .lang-main .VPHome {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 2. El contenedor de tus tarjetas debe resetear márgenes y centrarse */
+    .cu-main-container {
+        padding: 0 12px !important; /* Espacio mínimo de seguridad */
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box;
+    }
+
+    /* 3. La Grid debe ocupar todo el ancho sin dejar espacios muertos */
+    .cu-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    /* 4. La Tarjeta: Eliminamos cualquier ancho mínimo que la empuje */
+    .cu-feature-card {
+        width: 100% !important; /* Que ocupe el ancho del contenedor centrado */
+        min-width: 0 !important; /* Rompemos el min-width de 300px previo */
+        max-width: 290px !important; /* Ancho fijo ideal para pantallas de 320px */
+        padding: 24px 12px !important;
+        margin: 0 auto !important; /* Centrado automático */
+    }
+
+    /* 5. Ajuste de textos para evitar saltos de línea feos */
+    .cu-card-content h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .cu-card-content p {
+        font-size: 0.85rem !important;
+        padding: 0 5px;
+    }
+
+    .cu-title {
+        font-size: 1.8rem !important;
+        padding: 0 10px;
+    }
+}
