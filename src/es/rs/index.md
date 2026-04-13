@@ -7,7 +7,7 @@ hero:
   text: "Seguridad sin límites"
   tagline: "Domina Rust de una forma más didáctica y sencilla."
   image: 
-    src: /assets/icons/rust-icon.svg
+    src: /icons/rust-icon.svg
     alt: "Code Universe Rust"
   actions:
     - theme: brand

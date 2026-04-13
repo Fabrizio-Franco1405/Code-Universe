@@ -6,6 +6,10 @@ export default defineConfig({
   title: "Code Universe",
   description: "Documentación Multi-lenguaje",
   srcDir: 'src',
+  
+  vite: {
+    publicDir: '../public'
+  },
 
   head: [['link', { rel: 'icon', type: 'image/png', href: '/assets/img/code-universe-favicon.webp' }]],
 
