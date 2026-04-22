@@ -64,10 +64,10 @@ Los archivos de C tiene la extensión `.c`, por lo que cada ves que compilamos d
 
 - `-o programa`: El flag `-o` (output) indica el nombre que tendrá el ejecutable una ves que se compile.
 
-::: danger 🛑 Peligro
-No confundas el compilador **gcc** con **g++**. Aunque GCC puede compilar ambos, usar el comando correcto asegura que las librerías estándar de C se enlacen correctamente sin añadir sobrecarga innecesaria de C++.
-:::
-
 ::: warning Advertencia
 ⚠️ Si olvidas usar el flag -o, el compilador nombrará a tu programa como a.out (en Linux/macOS) o a.exe (en Windows). Es una buena práctica profesional nombrar siempre tus binarios.
+:::
+
+::: danger 🛑 Peligro
+No confundas el compilador **gcc** con **g++**. Aunque GCC puede compilar ambos, usar el comando correcto asegura que las librerías estándar de C se enlacen correctamente sin añadir sobrecarga innecesaria de C++.
 :::
