@@ -17,10 +17,10 @@ export default defineConfig({
   transformPageData(pageData) {
     const path = pageData.relativePath;
     let iconName = 'code-universe-favicon.webp';
-    if (path.includes('rs/')) iconName = 'rust-favicon.svg';
-    else if (path.includes('cpp/')) iconName = 'cpp-favicon.svg';
+    if (path.includes('cpp/')) iconName = 'cpp-favicon.svg';
     else if (path.includes('c/')) iconName = 'c-favicon.svg';
-    else if (path.includes('cs/')) iconName = 'cs-favicon.svg';
+    else if (path.includes('csharp/')) iconName = 'csharp-favicon.svg';
+    else if (path.includes('rs/')) iconName = 'rust-favicon.svg';
 
     const fullIconPath = `/favicons/${iconName}`;
     pageData.frontmatter.head = [['link', { rel: 'icon', type: 'image/png', href: fullIconPath }]];
@@ -37,7 +37,7 @@ export default defineConfig({
           { text: 'Lenguajes', items: [
             { text: 'C++', link: '/es/cpp/' },
             { text: 'C', link: '/es/c/' },
-            { text: 'C#', link: '/es/cs/' },
+            { text: 'C#', link: '/es/csharp/' },
             { text: 'Rust', link: '/es/rs/' },
           ]}
         ]
@@ -53,7 +53,7 @@ export default defineConfig({
           { text: 'Languages', items: [
             { text: 'C++', link: '/en/cpp/' },
             { text: 'C', link: '/en/c/' },
-            { text: 'C#', link: '/en/cs/' },
+            { text: 'C#', link: '/en/csharp/' },
             { text: 'Rust', link: '/en/rs/' },
           ]}
         ]
@@ -64,9 +64,12 @@ export default defineConfig({
   themeConfig: {
     sidebar: {
       '/es/cpp/': sidebarEsCpp,
-      '/es/rs/': sidebarEsRs,
       '/es/c/': sidebarEsC,
+      '/es/csharp/': [],
+      '/es/rs/': sidebarEsRs,
       '/en/cpp/': [],
+      '/en/c/': [],
+      '/en/csharp/': [],
       '/en/rs/': [],
     },
 
