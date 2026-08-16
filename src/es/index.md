@@ -59,7 +59,7 @@ hero:
   <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>Rust (Próximamente)</h3>
+<h3>Rust</h3>
 <p>Seguridad de memoria garantizada y rendimiento de vanguardia para sistemas modernos.</p>
 </div>
 </article>
