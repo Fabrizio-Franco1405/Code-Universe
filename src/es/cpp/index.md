@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Iniciar Travesía
-      link: /es/cpp/guia/1_introduccion/01_Vision_General
+      link: /es/cpp/guia/0_introduccion/01_Vision_General
     - theme: alt
       text: Ver Ecosistema
       link: 
