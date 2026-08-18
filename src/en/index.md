@@ -7,7 +7,7 @@ hero:
   text: "The Knowledge Nexus"
   tagline: "A standardized technical documentation ecosystem for the programming elite."
   image:
-    src: /img/astronauta.webp
+    src: /img/asm-favicon.webp
     alt: "Code Universe Logo"
   actions:
     - theme: brand
@@ -34,6 +34,16 @@ hero:
 </div>
 </article>
 
+<article class="cu-feature-card" onclick="window.location.href='/en/rs/'">
+<header class="cu-card-icon">
+  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Rust</h3>
+<p>Guaranteed memory safety and cutting-edge performance for modern systems.</p>
+</div>
+</article>
+
 <article class="cu-feature-card" onclick="window.location.href='/en/c/'">
 <header class="cu-card-icon">
   <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
@@ -54,13 +64,13 @@ hero:
 </div>
 </article>
 
-<article class="cu-feature-card" onclick="window.location.href='/en/rs/'">
+<article class="cu-feature-card" onclick="window.location.href='/es/asm/'">
 <header class="cu-card-icon">
-  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>Rust</h3>
-<p>Guaranteed memory safety and cutting-edge performance for modern systems.</p>
+<h3>Assembly (Coming Soon)</h3>
+<p></p>
 </div>
 </article>
 

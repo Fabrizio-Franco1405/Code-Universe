@@ -34,6 +34,16 @@ hero:
 </div>
 </article>
 
+<article class="cu-feature-card" onclick="window.location.href='/es/rs/'">
+<header class="cu-card-icon">
+  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Rust</h3>
+<p>Seguridad de memoria garantizada y rendimiento de vanguardia para sistemas modernos.</p>
+</div>
+</article>
+
 <article class="cu-feature-card" onclick="window.location.href='/es/c/'">
 <header class="cu-card-icon">
   <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
@@ -54,13 +64,13 @@ hero:
 </div>
 </article>
 
-<article class="cu-feature-card" onclick="window.location.href='/es/rs/'">
+<article class="cu-feature-card" onclick="window.location.href='/es/asm/'">
 <header class="cu-card-icon">
-  <img src="/icons/rust-icon.svg" alt="Rust" width="80" height="80">
+  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>Rust</h3>
-<p>Seguridad de memoria garantizada y rendimiento de vanguardia para sistemas modernos.</p>
+<h3>Ensamblador (Próximamente)</h3>
+<p>El lenguaje más cercano al metal. Control total sobre la CPU, instrucción por instrucción.</p>
 </div>
 </article>
 

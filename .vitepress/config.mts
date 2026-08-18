@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { sidebarEsCpp } from './sidebars/es/es-cpp'
 import { sidebarEsC } from './sidebars/es/es-c'
 import { sidebarEsRs } from './sidebars/es/es-rs'
+import { sidebarEsAsm } from './sidebars/es/es-asm'
 
 export default defineConfig({
   title: "Code Universe",
@@ -39,6 +40,7 @@ export default defineConfig({
             { text: 'C', link: '/es/c/' },
             { text: 'C#', link: '/es/csharp/' },
             { text: 'Rust', link: '/es/rs/' },
+            { text: 'ASM', link: '/es/asm/' },
           ]}
         ]
       }
@@ -55,6 +57,7 @@ export default defineConfig({
             { text: 'C', link: '/en/c/' },
             { text: 'C#', link: '/en/csharp/' },
             { text: 'Rust', link: '/en/rs/' },
+            { text: 'ASM', link: '/en/asm/' },
           ]}
         ]
       }
@@ -67,10 +70,12 @@ export default defineConfig({
       '/es/c/': sidebarEsC,
       '/es/csharp/': [],
       '/es/rs/': sidebarEsRs,
+      '/es/asm/': sidebarEsAsm,
       '/en/cpp/': [],
       '/en/c/': [],
       '/en/csharp/': [],
       '/en/rs/': [],
+      '/en/asm/': [],
     },
 
     // SOCIAL LINKS
