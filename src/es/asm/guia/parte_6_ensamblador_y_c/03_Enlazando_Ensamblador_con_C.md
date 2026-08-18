@@ -28,7 +28,7 @@ La clave está en el **contrato**: el archivo `.h` declara las funciones, y el `
 
 Escribamos una función en NASM conforme al ABI SysV. Los nombres de las funciones deben coincidir con los que declare C (sin prefijo `_` en Linux):
 
-```nasm
+```text
 ; rapido.asm
 global suma_parcial
 
@@ -159,7 +159,7 @@ Dos reglas de compatibilidad para evitar sorpresas:
 - **Nombres:** en Linux con ELF, los símbolos no llevan prefijo. `global suma_parcial` en NASM corresponde a `suma_parcial` en C, sin `_` extra.
 - **Argumentos mixtos:** si una función recibe varios tipos (enteros y flotantes), los enteros van en `rdi`/`rsi`... y los flotantes en `xmm0`/`xmm1`, respetando el orden de la firma.
 
-```nasm
+```text
 ; double promedio(double *datos, long cantidad)
 global promedio
 promedio:

@@ -61,7 +61,7 @@ pesadillas a los programadores de antaño. Un binario compilado con MSVC puede n
 funcionar con tu código compilado con MinGW, y viceversa. Al compilarlo todo con tu
 mismo compilador, ese dolor desaparece por completo.
 
-## 3. vcpkg: el gestor de Microsoft
+## 3. `vcpkg`: El gestor de Microsoft
 
 **vcpkg** es el gestor de Microsoft, de código abierto. Su fortaleza es la
 **simplicidad** y la integración directa con CMake y Visual Studio. Si quieres el
@@ -110,7 +110,7 @@ Fíjate en cómo se escribe el *toolchain file*: es una ruta **relativa** desde 
 carpeta de trabajo. Por eso la ruta cambia según dónde estés parado, y por eso
 también conviene conocer la alternativa moderna que veremos a continuación.
 
-### Modo manifiesto (recomendado)
+### Modo manifiesto (Recomendado)
 
 El modo clásico instala paquetes de forma **global**, en tu máquina. El modo
 manifiesto, en cambio, declara las dependencias del proyecto en `vcpkg.json`, que
@@ -173,7 +173,7 @@ cmake --preset default
 cmake --build build
 ```
 
-## 4. Conan: el gestor de la comunidad
+## 4. Conan: El gestor de la Comunidad
 
 **Conan** es el gestor de la comunidad C++, descentralizado y agnóstico de build
 system (funciona con CMake, Meson, Premake, etc.). Su modelo es más flexible y su

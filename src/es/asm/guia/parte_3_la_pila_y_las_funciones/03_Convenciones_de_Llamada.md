@@ -34,7 +34,7 @@ La convención SysV define los primeros seis argumentos de enteros en estos regi
 | 5º | `R8` |
 | 6º | `R9` |
 
-```nasm
+```text
 ; llamamos: calcular(a, b, c, d, e, f)
 mov rdi, 10      ; a
 mov rsi, 20      ; b
@@ -64,7 +64,7 @@ Esta es la regla más importante de la convivencia entre funciones. Los registro
 | **Callee-saved** | `RBX`, `RBP`, `R12`–`R15` | La función llamada **debe preservarlos** (guardar y restaurar antes de `ret`) |
 | **Caller-saved** | `RAX`, `RCX`, `RDX`, `RSI`, `RDI`, `R8`–`R11` | La función llamada **puede pisarlos**; el que llama debe respaldar lo que le importe |
 
-```nasm
+```text
 mi_funcion:
     push rbx          ; rbx es callee-saved: hay que preservarlo
     ; ... usar rbx libremente ...
@@ -101,7 +101,7 @@ Cuando llames a funciones de la biblioteca de C (Parte VI), respetar esta alinea
 
 Reunamos todo en una función que suma tres números y devuelve el resultado:
 
-```nasm
+```text
 suma_tres:
     push rbp            ; prólogo
     mov  rbp, rsp
@@ -114,7 +114,7 @@ suma_tres:
     ret                 ; resultado en rax
 ```
 
-```nasm
+```text
 inicio:
     mov rdi, 5
     mov rsi, 10

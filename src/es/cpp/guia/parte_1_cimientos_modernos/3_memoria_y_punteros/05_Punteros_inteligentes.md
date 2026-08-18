@@ -46,7 +46,7 @@ La biblioteca estándar nos ofrece tres tipos, cada uno con una "personalidad" d
 
 Para usarlos necesitamos la cabecera `<memory>`.
 
-## 3. `std::unique_ptr`: el dueño único
+## 3. `std::unique_ptr`: El dueño único
 
 Un `unique_ptr` es un puntero que tiene **propiedad exclusiva** del objeto. No puede haber dos
 `unique_ptr` apuntando al mismo recurso. Se crea con `std::make_unique`:
@@ -92,7 +92,7 @@ unique_ptr<int[]> datos = make_unique<int[]>(100); // Arreglo de 100 enteros
 unique_ptr<Persona> persona = make_unique<Persona>("Juan", 25);
 ```
 
-## 4. `std::shared_ptr`: propiedad compartida
+## 4. `std::shared_ptr`: Propiedad compartida
 
 Un `shared_ptr` permite que **varios punteros compartan** el mismo recurso. Lleva un contador
 interno: el objeto se libera solo cuando el **último** `shared_ptr` que lo referenciaba muere.
@@ -128,7 +128,7 @@ haya varios dueños.
 `shared_ptr`, su contador nunca llega a cero y la memoria **nunca se libera**. Para resolverlo se
 usa `std::weak_ptr`.
 
-## 5. `std::weak_ptr`: el observador
+## 5. `std::weak_ptr`: El observador
 
 Un `weak_ptr` es un puntero que **observa** el objeto de un `shared_ptr` sin contar como
 referencia. No puede usarse directamente: primero debe convertirse a `shared_ptr` con `lock()`.

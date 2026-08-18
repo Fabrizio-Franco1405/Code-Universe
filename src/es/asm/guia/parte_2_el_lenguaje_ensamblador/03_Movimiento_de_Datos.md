@@ -10,11 +10,11 @@ La instrucción que verás más veces en tu vida como programador de ensamblador
 
 `mov` recibe dos operandos: un destino (donde se guarda) y un origen (de dónde se copia):
 
-```nasm
+```text
 mov destino, origen
 ```
 
-```nasm
+```text
 section .data
     numero dq 42
 
@@ -47,7 +47,7 @@ No todas las combinaciones están permitidas. Estas son las reglas de oro de `mo
 - **No a un inmediato:** el destino nunca puede ser un número literal.
 - **Tamaños deben coincidir:** mover un `dword` a un registro de 64 bits no siempre es directo (verás `movzx`/`movsx` en la siguiente sección).
 
-```nasm
+```text
 mov rax, [a]       ; correcto: memoria → registro
 mov rbx, [b]
 mov [c], rbx       ; correcto: registro → memoria
@@ -65,7 +65,7 @@ mov [a], [b]       ; ERROR: memoria → memoria no existe
 
 A veces tienes un valor pequeño y quieres llevarlo a un registro más grande. Ahí aparecen dos instrucciones:
 
-```nasm
+```text
 movzx rax, byte  [dato]    ; extiende con ceros (sin signo)
 movsx rax, byte  [dato]    ; extiende con el signo (con signo)
 ```
@@ -73,7 +73,7 @@ movsx rax, byte  [dato]    ; extiende con el signo (con signo)
 - **`movzx`** (*move with zero extension*): rellena los bits altos con ceros. Sirve para valores sin signo.
 - **`movsx`** (*move with sign extension*): rellena los bits altos con el bit de signo. Preserva el valor si es negativo.
 
-```nasm
+```text
 dato: db 200       ; 200 = 11001000 en binario
 
 movzx rax, byte [dato]   ; RAX = 200  (se rellena con ceros)
@@ -89,7 +89,7 @@ La regla es simple: si tu dato es sin signo, `movzx`; si es con signo, `movsx`. 
 
 La instrucción **`lea`** (*load effective address*) no lee memoria: calcula una **dirección** y la guarda en un registro. Es tan útil que hasta se usa para aritmética.
 
-```nasm
+```text
 lea rax, [numero]        ; RAX = dirección de "numero"
 lea rbx, [rax + 8]       ; RBX = dirección de "numero" + 8
 lea rcx, [rax + rbx*4]   ; RCX = rax + rbx*4 (¡multiplicación gratis!)
@@ -109,7 +109,7 @@ lea rcx, [rax + rbx*4]   ; RCX = rax + rbx*4 (¡multiplicación gratis!)
 
 Para terminar, una instrucción que ahorra un registro: **`xchg`** intercambia el contenido de dos operandos:
 
-```nasm
+```text
 mov rax, 5
 mov rbx, 10
 xchg rax, rbx       ; ahora RAX = 10 y RBX = 5

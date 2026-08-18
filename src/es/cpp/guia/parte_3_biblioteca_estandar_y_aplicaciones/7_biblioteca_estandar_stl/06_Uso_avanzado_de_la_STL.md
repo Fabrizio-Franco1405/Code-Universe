@@ -15,7 +15,7 @@ No necesitas memorizarlas todas hoy, pero **saber que existen** te ahorrará rei
 después. Es como conocer los atajos de tu ciudad: no los usas todos todos los días, pero
 cuando los necesitas, te ahorran un montón de tiempo.
 
-## 1. `std::optional`: un valor que puede no existir
+## 1. `std::optional`: Un valor que puede no existir
 
 ¿Cuántas veces has usado `-1` o `nullptr` para indicar "no hay resultado"? Esos son los
 llamados **valores mágicos**: números o punteros que usamos con un significado que no es
@@ -66,7 +66,7 @@ punteros nulos, la ausencia de valor se expresa de forma explícita y segura. Tu
 vuelve más honesto y mucho más fácil de leer.
 :::
 
-## 2. `std::variant`: una variable que puede ser de varios tipos
+## 2. `std::variant`: Una variable que puede ser de varios tipos
 
 `std::variant` (C++17) es la alternativa **segura** a las uniones que vimos en tipos
 compuestos. Guarda un valor de uno de varios tipos posibles, y **recuerda** cuál es en
@@ -105,7 +105,7 @@ Usa `get_if` cuando no estés seguro del tipo actual: en ese caso devuelve `null
 lugar de lanzar una excepción, y puedes comprobarlo con un simple `if`.
 :::
 
-## 3. `std::tuple`: agrupación de valores fija
+## 3. `std::tuple`: Agrupación de valores fija
 
 Un `tuple` es como un `struct` anónimo: agrupa **varios valores** de tipos
 potencialmente distintos sin necesidad de definir una estructura. Es ideal cuando quieres
@@ -142,7 +142,7 @@ también con `structs` y `maps`. Son una forma moderna y legible de "desempaquet
 valores. Una vez que los usas, cuesta volver atrás.
 :::
 
-## 4. `std::string_view`: ver una cadena sin copiarla
+## 4. `std::string_view`: Ver una cadena sin copiarla
 
 `std::string_view` (C++17) es una **vista** de una cadena: apunta a una parte de memoria
 que contiene texto, sin ser dueño de ella ni copiarla. Es ideal para parámetros de solo
@@ -175,7 +175,7 @@ la original se destruye, la vista queda apuntando a memoria inválida, así que 
 como una invitación a leer, no como la dueña del texto.
 :::
 
-## 5. Funciones variádicas: número variable de argumentos
+## 5. Funciones variádicas: Número variable de argumentos
 
 La STL y el C++ moderno permiten funciones que aceptan **cualquier cantidad** de
 argumentos con plantillas variádicas (los `...`). Así funciona `std::make_unique`, por
@@ -211,7 +211,7 @@ para `std::tuple`). Con saber que existen y verlas de vez en cuando en código a
 más que suficiente por ahora.
 :::
 
-## 6. `std::pair`: el dúo inseparable
+## 6. `std::pair`: El dúo inseparable
 
 `std::pair` es el caso particular de tuple con **dos** valores. Es el tipo que devuelven
 contenedores como `map` al iterar, por eso lo verás por todas partes:

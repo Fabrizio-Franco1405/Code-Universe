@@ -10,7 +10,7 @@ En el capítulo anterior aprendiste a tomar decisiones con `cmp` y saltos. Ahora
 
 NASM ofrece la instrucción **`loop`**, que usa el registro `RCX` como contador automático:
 
-```nasm
+```text
 mov rcx, 5          ; repetimos 5 veces
 inicio_bucle:
     ; ... cuerpo del bucle ...
@@ -23,7 +23,7 @@ inicio_bucle:
 
 Cada `loop` hace tres cosas: decrementa, compara con cero y salta. Es el "for de un solo registro" del ensamblador.
 
-```nasm
+```text
 section .data
     mensaje db "vuelta", 0ah
 
@@ -57,7 +57,7 @@ volver:
 
 A veces necesitas más control que el que da `loop` (por ejemplo, salir a mitad del bucle). Entonces construyes el bucle a mano con `cmp` y `jmp`:
 
-```nasm
+```text
 mov rcx, 10
 inicio:
     ; ... cuerpo ...
@@ -71,7 +71,7 @@ inicio:
 
 Y la versión ascendente (contando hacia arriba):
 
-```nasm
+```text
 mov rcx, 0
 inicio:
     inc rcx
@@ -93,7 +93,7 @@ La ventaja de `cmp`/`jmp` es la flexibilidad: puedes usar cualquier registro com
 
 El ejemplo clásico: sumar los primeros N números. Veamos el patrón completo con datos en memoria:
 
-```nasm
+```text
 section .data
     n         dq 10
 section .bss
@@ -126,7 +126,7 @@ Observa cómo el acumulador vive en `RAX` y el contador en `RCX`, cada uno con s
 
 Un bucle dentro de otro (anidamiento) requiere **dos contadores**. Como `loop` solo usa `RCX`, hay que guardar y restaurar su valor alrededor del bucle interno:
 
-```nasm
+```text
 mov rcx, 3          ; bucle externo: 3 vueltas
 externo:
     mov r9, rcx      ; respaldamos el contador externo
@@ -152,7 +152,7 @@ El patrón de **respaldar y restaurar** el contador es obligatorio con `loop`. S
 
 En la práctica, los bucles recorren datos: arreglos, cadenas, listas. El patrón básico usa un **puntero** que avanza:
 
-```nasm
+```text
 section .data
     numeros dq 2, 4, 6, 8, 10
 section .bss

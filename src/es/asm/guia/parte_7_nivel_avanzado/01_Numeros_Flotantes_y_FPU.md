@@ -19,7 +19,7 @@ float de 32 bits:   | signo | exponente (8)  | mantisa (23) |
 - **`double` (64 bits):** precisión doble, 8 bytes (`dq` en NASM).
 - La representación es binaria, por eso `0.1` no es exacto: se aproxima.
 
-```nasm
+```text
 section .data
     pi_float   dd 3.14159     ; float (32 bits)
     pi_double  dq 3.14159265358979  ; double (64 bits)
@@ -36,7 +36,7 @@ section .data
 
 Históricamente, los decimales se manejaban con la **FPU x87**, que usa una **pila de registros** (`st0` a `st7`) en lugar de registros con nombre. Sus instrucciones básicas:
 
-```nasm
+```text
 fld  qword [numero]    ; carga el valor en el tope (st0)
 fadd qword [otro]      ; st0 = st0 + otro
 fstp qword [resultado] ; guarda st0 en memoria y lo saca de la pila
@@ -46,7 +46,7 @@ fstp qword [resultado] ; guarda st0 en memoria y lo saca de la pila
 - `fadd`: suma con el tope.
 - `fstp`: *store and pop* — guarda y saca de la pila.
 
-```nasm
+```text
 section .data
     a        dq 2.5
     b        dq 1.5
@@ -73,7 +73,7 @@ La pila x87 es válida pero incómoda. Hoy en día, la mayoría del trabajo con 
 
 La generación moderna procesa decimales con **SSE**, que usa 16 registros de 128 bits llamados `xmm0` a `xmm15`. Dentro de cada uno caben dos `double` o cuatro `float`. Las instrucciones escalares (una operación por registro) son:
 
-```nasm
+```text
 movsd xmm0, [a]       ; copia un double a xmm0
 addsd xmm0, [b]       ; xmm0 = xmm0 + b (double)
 mulsd xmm0, [c]       ; xmm0 = xmm0 * c
@@ -83,7 +83,7 @@ mulsd xmm0, [c]       ; xmm0 = xmm0 * c
 - `addsd`/`subsd`/`mulsd`/`divsd`: las operaciones escalares sobre doubles.
 - Para `float` (4 bytes) la variante es `movss`/`addss`/`mulss`.
 
-```nasm
+```text
 section .data
     a       dq 2.5
     b       dq 1.5
@@ -106,7 +106,7 @@ Los `xmm` son los registros que viste en el capítulo del ABI: ahí es donde C p
 
 Muy a menudo necesitas mezclar ambos mundos. Las instrucciones de conversión convierten enteros a flotantes y viceversa:
 
-```nasm
+```text
 cvtsi2sd xmm0, rax    ; rax (entero) → xmm0 (double)
 cvttsd2si rax, xmm0   ; xmm0 (double) → rax (entero, truncado)
 ```
@@ -114,7 +114,7 @@ cvttsd2si rax, xmm0   ; xmm0 (double) → rax (entero, truncado)
 - `cvtsi2sd`: *convert signed integer to scalar double*.
 - `cvttsd2si`: *convert double to signed integer* (la `t` extra indica truncado, no redondeado).
 
-```nasm
+```text
 mov rax, 7
 cvtsi2sd xmm0, rax    ; xmm0 = 7.0
 addsd xmm0, [mitad]   ; xmm0 = 7.0 + 0.5 = 7.5
@@ -134,7 +134,7 @@ Existe la versión sin truncar (`cvtsd2si`) que **redondea** según el modo de r
 
 Comparar decimales también tiene sus reglas. La instrucción `ucomisd` compara dos doubles y modifica las banderas:
 
-```nasm
+```text
 ucomisd xmm0, [limite]
 ja  mayor            ; xmm0 > limite (sin signo)
 jb  menor            ; xmm0 < limite
@@ -145,7 +145,7 @@ je  igual            ; xmm0 == limite
 - Los saltos `ja`/`jb`/`je` consultan las banderas como con enteros.
 - La versión ordenada (`comisd`) además genera excepciones con valores inválidos (NaN).
 
-```nasm
+```text
 section .data
     promedio dq 10.5
     aprobado dq 6.0

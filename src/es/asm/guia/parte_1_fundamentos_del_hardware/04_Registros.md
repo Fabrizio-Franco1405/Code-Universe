@@ -84,7 +84,7 @@ El registro **`RFLAGS`** (o `EFLAGS` en 32 bits) no guarda datos: guarda **bande
 
 Estas banderas son las que permiten tomar decisiones: instrucciones como `cmp` o `sub` las modifican, y los **saltos condicionales** (que verás en la Parte II) las consultan para decidir si saltar o no.
 
-```nasm
+```text
 mov rax, 5
 sub rax, 5      ; rax = 0 → se activa ZF
 ; más adelante, jz (salta si Zero) puede usar esa bandera
@@ -105,7 +105,7 @@ Como hay tan pocos registros, usarlos bien es un arte. Dos reglas te ahorrarán 
 1. **Un registro, un propósito a la vez.** Decide qué guardará y no lo cambies a la ligera; si necesitas su valor después, no lo pises.
 2. **Guarda lo que necesites.** Si una operación te obliga a sobrescribir un registro cuyo valor aún necesitas, copia el valor a otro registro o a la pila antes.
 
-```nasm
+```text
 mov rax, 10
 mov rbx, rax    ; respaldamos 10 en RBX antes de perder RAX
 mov rax, 20     ; RAX ahora vale 20

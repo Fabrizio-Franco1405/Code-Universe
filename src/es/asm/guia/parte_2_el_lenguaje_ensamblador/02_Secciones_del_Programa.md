@@ -16,7 +16,7 @@ Todo programa bien organizado declara tres secciones. Cada una es un "barrio" di
 | `.bss`  | Datos **sin inicializar** (solo se reserva espacio) | Sí |
 | `.text` | Código e instrucciones | No (solo lectura) |
 
-```nasm
+```text
 section .data
     mensaje db "Hola, mundo!", 0ah
 
@@ -40,7 +40,7 @@ La separación no es decorativa: el sistema operativo protege cada sección, y c
 
 En `.data` defines bytes con valores concretos. Recordemos las directivas de tamaño, ahora con ejemplos:
 
-```nasm
+```text
 section .data
     edad      db 30              ; 1 byte
     puntos    dw 1000            ; 2 bytes
@@ -65,7 +65,7 @@ Puedes definir varias etiquetas en la misma sección; cada una apunta a su direc
 
 En `.bss` no defines valores: **reservas espacio** que se llenará durante la ejecución. Las directivas son las mismas pero con el prefijo `res`:
 
-```nasm
+```text
 section .bss
     buffer    resb 64        ; 64 bytes para un texto
     numeros   resq 10        ; 10 números de 8 bytes
@@ -90,7 +90,7 @@ La sección `.text` contiene las instrucciones. Sus características:
 - **Ejecutable:** el procesador puede ejecutar lo que contiene.
 - Contiene la etiqueta de entrada `_start` (o funciones que verás en la Parte III).
 
-```nasm
+```text
 section .text
     global _start
 

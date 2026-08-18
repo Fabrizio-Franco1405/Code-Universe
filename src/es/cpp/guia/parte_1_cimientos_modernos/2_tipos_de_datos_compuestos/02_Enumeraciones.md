@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Enumeraciones (enum, enum class)
+# Enumeraciones (`enum`, `enum class`)
 
 Imagina que estás programando un semáforo. Podrías representar sus colores con números: `0` para
 rojo, `1` para amarillo y `2` para verde. Funciona, pero tiene un problema: en tres semanas ya
@@ -114,7 +114,7 @@ un nombre repetido para que se pisen entre sí.
 del `enum class`.
 :::
 
-## 5. `enum class`: la versión moderna (C++11)
+## 5. `enum class`: La versión moderna (C++11)
 
 Desde C++11 contamos con **enumeraciones con ámbito**, que se declaran con `enum class`.
 Solucionan los problemas del `enum` tradicional:

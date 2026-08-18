@@ -14,7 +14,7 @@ La syscall `write` (número `1`) envía datos a un archivo. La **pantalla** es e
 - `rsi`: la dirección de los datos.
 - `rdx`: cuántos bytes escribir.
 
-```nasm
+```text
 section .data
     mensaje db "Hola, mundo!", 0ah
 
@@ -47,7 +47,7 @@ La syscall `read` (número `0`) recibe datos. La **entrada estándar** es el des
 - `rsi`: la dirección del buffer donde guardar.
 - `rdx`: cuántos bytes máximo leer.
 
-```nasm
+```text
 section .bss
     buffer resb 64          ; espacio para lo que se escriba
 
@@ -83,7 +83,7 @@ El programa lee del teclado y devuelve lo mismo en pantalla. Es un "eco" básico
 
 La syscall `exit` (número `60`) termina el proceso y le comunica al sistema (y al padre que lo lanzó) el código de salida:
 
-```nasm
+```text
 mov rax, 60         ; exit
 mov rdi, 0          ; código de salida (0 = éxito)
 syscall
@@ -107,7 +107,7 @@ Terminar siempre con `exit` explícito es una regla de oro: el sistema no adivin
 
 Unamos todo en un mini-programa que saluda usando el nombre que escribe el usuario:
 
-```nasm
+```text
 section .data
     prompt db "Tu nombre: ", 0
     saludo db "Hola, ", 0
@@ -166,7 +166,7 @@ Este es el patrón de cualquier diálogo con el usuario: escribir, leer, guardar
 
 Un programa robusto comprueba los resultados. Veamos el patrón completo para detectar y manejar un error de `write`:
 
-```nasm
+```text
     mov rax, 1
     mov rdi, 1
     mov rsi, mensaje

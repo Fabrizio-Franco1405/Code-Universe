@@ -16,7 +16,7 @@ pero con objetos.
 
 Es uno de los patrones más usados en la industria, y encaja perfectamente con el C++ moderno.
 
-## 1. El problema: crear objetos con `new` a mano
+## 1. El problema: Crear objetos con `new` a mano
 
 Para entender por qué existe el Factory, primero tenemos que ver el dolor que resuelve. Sin él,
 cada vez que quieres crear un objeto debes conocer la clase concreta. Es decir, tu código sabe
@@ -156,7 +156,7 @@ son *tipos*, no texto libre. Y si en el futuro querés que el compilador te avis
 cubrir un caso nuevo de la enum, podés combinar esto con el warning `-Wswitch` que vimos en el
 capítulo de los flags.
 
-## 4. Fábrica abstracta: familias de productos
+## 4. Fábrica abstracta: Familias de productos
 
 Hasta acá el Factory Method crea un producto por vez. Pero a veces el problema es más grande:
 quieres crear **familias** de objetos relacionados entre sí. Eso es la **Abstract Factory**: una
@@ -228,7 +228,7 @@ un checkbox claro. La coherencia está garantizada por diseño, no por buena sue
 ℹ️ Garantiza que los objetos de una **misma familia** sean coherentes (nunca mezclarás un botón oscuro con un checkbox claro). Perfecto para temas de UI, bases de datos, etc.
 :::
 
-## 5. `std::function` + map: el factory moderno
+## 5. `std::function` + map: El factory moderno
 
 Con C++ moderno, hay una forma todavía más elegante de construir un factory: guardar **lambdas**
 dentro de un `map`. En lugar de una cascada de `if` o un `switch`, cada tipo se registra con su
@@ -314,7 +314,7 @@ El **Singleton** garantiza que una clase tenga **una única instancia** y ofrece
 acceso a ella. Es uno de los patrones más conocidos (y más abusados) de la historia. Su nombre
 viene del inglés *single*, que significa **único**: una sola instancia, nada más.
 
-## 1. El problema: ¿cuántas configuraciones?
+## 1. El problema: ¿Cuántas configuraciones?
 
 Pongamos el caso más común para entender de qué hablamos. Imaginá que tu programa guarda una
 configuración global (el tema de la interfaz, por ejemplo). Sin Singleton, cualquier parte del
@@ -419,7 +419,7 @@ Si dos funciones dependen de "la" configuración, no puedes probarlas con valore
 cambiarla globalmente. Es como si el programa entero compartiera un mismo cuaderno de notas: lo
 que escribe una parte lo leen todas, y no hay manera de darle un cuaderno distinto a cada una.
 
-## 5. Alternativa moderna: inyección de dependencias
+## 5. Alternativa moderna: Inyección de dependencias
 
 Para pruebas y flexibilidad, muchos prefieren **pasar la configuración por parámetro** en lugar de
 usar un Singleton. Esto se conoce como **inyección de dependencias**, y es una de las alternativas
@@ -460,7 +460,7 @@ necesita.
 ℹ️ Inyectar dependencias permite **múltiples instancias** (una por entorno, por test...) sin estado global. Muchas veces es mejor solución que el Singleton.
 :::
 
-## 6. Singleton + hilos: cuidado con el estado
+## 6. Singleton + hilos: Cuidado con el estado
 
 Tenemos que advertirte sobre un punto que suele pasar desapercibido. Aunque la creación del
 Meyers Singleton es segura para hilos, **el uso** de la instancia no lo es automáticamente. Que

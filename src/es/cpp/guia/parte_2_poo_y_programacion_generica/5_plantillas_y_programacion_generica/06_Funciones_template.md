@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Funciones plantilla (Templates)
+# Funciones plantilla (`templates`)
 
 En C++, las **funciones plantilla** (`function templates`) permiten escribir
 funciones **genéricas** que pueden trabajar con distintos tipos de datos sin

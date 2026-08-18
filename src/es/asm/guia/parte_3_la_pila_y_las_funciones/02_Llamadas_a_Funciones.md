@@ -13,7 +13,7 @@ Una **función** es un bloque de código al que puedes saltar, que hace su traba
 - Se **llama** con `call`.
 - **Regresa** con `ret`.
 
-```nasm
+```text
 inicio:
     call saludar     ; salta a "saludar" y recuerda volver
     mov rax, 60
@@ -62,7 +62,7 @@ RSP → [ ... ]                   ← dirección recuperada y saltada
 
 Una función bien escrita no se limita a `call`/`ret`: **preserva el estado** de la pila para poder usar variables locales y registros sin romper nada. La estructura clásica es:
 
-```nasm
+```text
 mi_funcion:
     push rbp          ; prólogo: guardamos el marco anterior
     mov  rbp, rsp     ; fijamos el marco base de esta función
@@ -85,7 +85,7 @@ Gracias a `RBP`, aunque `RSP` se mueva dentro de la función, las variables loca
 
 Las variables locales viven en el espacio que reservó el prólogo. Con `RBP` como referencia:
 
-```nasm
+```text
 suma_dos:
     push rbp
     mov  rbp, rsp
@@ -115,7 +115,7 @@ Esta es la versión ensamblador de las variables locales de C: viven en el marco
 
 Para demostrar la potencia de `call`/`ret`, veamos una función recursiva que calcula el factorial:
 
-```nasm
+```text
 factorial:
     cmp rdi, 1
     jle caso_base        ; si n <= 1, devuelve 1

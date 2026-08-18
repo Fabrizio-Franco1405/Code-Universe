@@ -37,7 +37,7 @@ Tu programa vive abajo; cuando necesita algo del mundo real, **pide permiso haci
 
 El punto exacto donde tu programa cruza al modo núcleo es la instrucción **`syscall`** (en sistemas x86-64 de Linux). Es la "puerta" controlada:
 
-```nasm
+```text
 mov rax, 1      ; qué servicio quiero: write
 mov rdi, 1      ; argumento 1
 mov rsi, mensaje
@@ -69,7 +69,7 @@ Cada servicio del núcleo tiene un **número único**, definido en una tabla int
 
 En Linux, el número viaja en `rax` y los argumentos en `rdi`, `rsi`, `rdx`, `r10`, `r8`, `r9` (en ese orden). Observa que para syscalls, el cuarto argumento va en **`r10`**, no en `rcx` como en las llamadas a funciones de C.
 
-```nasm
+```text
 ; write(rdi=archivo, rsi=dirección, rdx=longitud)
 mov rax, 1
 mov rdi, 1
@@ -89,7 +89,7 @@ Cuando la syscall termina, el núcleo **devuelve el control y deja el resultado 
 - **Éxito:** `rax` contiene un valor positivo (bytes escritos, descriptor abierto, etc.).
 - **Error:** `rax` contiene un valor **negativo** cuyo valor absoluto es el código de error (`errno`).
 
-```nasm
+```text
 mov rax, 1
 mov rdi, 1
 mov rsi, mensaje

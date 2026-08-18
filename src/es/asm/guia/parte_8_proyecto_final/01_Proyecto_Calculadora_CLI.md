@@ -37,7 +37,7 @@ main
 
 Empecemos con la estructura general. La entrada tendrá el formato `número operador número`, separados por espacios:
 
-```nasm
+```text
 section .data
     mensaje_pregunta db "Operación: ", 0
     mensaje_resultado db "Resultado: ", 0
@@ -84,7 +84,7 @@ A partir de aquí, conectaremos las funciones de parseo y cálculo.
 
 La primera función convierte una cadena de dígitos (como `"12"`) en el número `12`. Recibe en `rdi` la dirección y en `rsi` la longitud:
 
-```nasm
+```text
 ; rdi = dirección del texto, rsi = longitud
 ; devuelve rax = número
 texto_a_numero:
@@ -118,7 +118,7 @@ Este es el patrón estándar de conversión a número: recorrer, convertir cada 
 
 Ahora la función que separa la línea en dos números y un operador. La entrada tiene la forma `12 + 7`:
 
-```nasm
+```text
 ; rsi = dirección del buffer
 ; rdi = longitud
 ; salidas: r9 = número 1, r10 = número 2, r11 = operador
@@ -145,7 +145,7 @@ Este parseo puede volverse largo. Para mantener el proyecto manejable, simplifiq
 - **Operador:** el carácter después del primer espacio.
 - **Segundo número:** desde después del operador hasta el final.
 
-```nasm
+```text
 parsear:
     ; rdi = longitud, rsi = buffer
     mov r8, 0           ; posición del operador
@@ -180,7 +180,7 @@ El segundo número empieza justo después del operador, y su longitud es `longit
 
 Unamos las piezas con la función de cálculo y la conversión de vuelta a texto:
 
-```nasm
+```text
 calcular:
     ; r9 = número 1, r10 = número 2, r11 = operador
     mov rax, r9
@@ -209,7 +209,7 @@ fin_calcular:
 
 Para mostrar el número, necesitamos la función inversa a `texto_a_numero`:
 
-```nasm
+```text
 ; rax = número, rdi = buffer destino
 ; devuelve rdx = cantidad de dígitos
 numero_a_texto:
@@ -233,7 +233,7 @@ extraer_digito:
 
 La inversión usa el clásico intercambio de extremos, que ya sabes hacer con registros y la pila:
 
-```nasm
+```text
 invertir:
     ; rdi = inicio, rdx = longitud
     mov rsi, rdi
@@ -258,7 +258,7 @@ intercambiar:
 
 Con todas las funciones, el flujo final queda:
 
-```nasm
+```text
 _start:
     ; prompt y lectura (visto arriba)
 

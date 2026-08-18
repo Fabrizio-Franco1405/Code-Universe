@@ -21,7 +21,7 @@ dejaste los ingredientes fijos y solo falta agregar el último.
 Estas herramientas facilitan la programación flexible y orientada a callbacks, y
 aparecen constantemente en bibliotecas y código profesional.
 
-## 1. Concepto básico de std::function
+## 1. Concepto básico de `std::function`
 
 - `std::function` es un **wrapper** que puede almacenar cualquier callable compatible con
   una firma específica.

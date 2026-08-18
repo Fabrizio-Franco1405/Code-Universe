@@ -34,7 +34,7 @@ En este capítulo nos centramos en los secuenciales. No es casualidad que sean l
 primeros en estudiarse: son los más usados y los que necesitarás casi a diario,
 incluso sin proponértelo.
 
-## 2. `std::vector`: el contenedor estrella
+## 2. `std::vector`: El contenedor estrella
 
 Si tuvieras que quedarte con un solo contenedor de toda la STL, te decimos sin dudar que
 sería `std::vector`. Es un **arreglo dinámico**: crece automáticamente cuando añades
@@ -83,7 +83,7 @@ por este. En la mayoría de los casos será la decisión correcta, y cambiarlo d
 más sencillo de lo que imaginas.
 :::
 
-## 3. `std::array`: tamaño fijo en compilación
+## 3. `std::array`: Tamaño fijo en compilación
 
 Ahora, ¿qué pasa si ya conoces el tamaño **de antemano** y sabes que no cambiará jamás?
 Ahí es donde brilla `std::array`. Es un envoltorio moderno del arreglo clásico, pero con
@@ -113,7 +113,7 @@ montón. Esto puede ser más rápido, pero el tamaño debe conocerse en tiempo d
 compilación. Es el precio de esa velocidad extra.
 :::
 
-## 4. `std::deque`: cola de doble extremo
+## 4. `std::deque`: Cola de doble extremo
 
 Su nombre viene del inglés *double-ended queue*, que podemos traducir como **cola de
 doble extremo**. Y eso es exactamente lo que hace: te permite añadir y quitar elementos
@@ -154,7 +154,7 @@ int main() {
 el `deque` resuelve esa situación en tiempo constante.
 :::
 
-## 5. `std::list`: lista doblemente enlazada
+## 5. `std::list`: Lista doblemente enlazada
 
 `std::list` implementa una **lista doblemente enlazada**. ¿Qué significa eso en criollo?
 Que cada elemento guarda un enlace al anterior y al siguiente, como los vagones de un

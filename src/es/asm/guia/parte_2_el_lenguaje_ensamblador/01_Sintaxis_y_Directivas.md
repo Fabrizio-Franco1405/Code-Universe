@@ -14,7 +14,7 @@ En NASM, casi todo el código se escribe con una instrucción por línea, en un 
 etiqueta:   mnemónico   operando, operando   ; comentario
 ```
 
-```nasm
+```text
 inicio:
     mov     rax, 1       ; syscall para escribir
 ```
@@ -38,7 +38,7 @@ Los operandos pueden ser de tres clases fundamentales. Distinguirlas es la mitad
 - **Inmediato:** un número literal como `1`, `60` o `0ah`. Se escribe tal cual; la CPU lo trae en la propia instrucción.
 - **Memoria:** entre corchetes `[dirección]`, accede a lo que hay guardado en esa dirección.
 
-```nasm
+```text
 mov rax, 1        ; inmediato → registro
 mov rax, rbx      ; registro → registro
 mov rax, [suma]   ; memoria → registro (lee el valor en la dirección "suma")
@@ -58,7 +58,7 @@ Las **directivas** son órdenes que recibe el *ensamblador* (no la CPU) durante 
 
 Las más comunes:
 
-```nasm
+```text
 section .data            ; declara una sección del programa
     mensaje db "Hola", 0 ; define bytes en esa sección
 
@@ -81,7 +81,7 @@ Las directivas existen porque el ensamblador necesita más información de la qu
 
 Una **etiqueta** es un nombre que le pones a una dirección de memoria. Cuando el ensamblador la encuentra, anota la posición actual; cuando el resto del programa usa ese nombre, lo reemplaza por esa dirección.
 
-```nasm
+```text
 section .data
 mensaje:  db "Hola", 0    ; "mensaje" apunta al inicio de estos bytes
 
@@ -103,7 +103,7 @@ Las etiquetas son la forma en que el ensamblador te deja trabajar con direccione
 
 Aunque NASM es flexible con los espacios, mantener un estilo consistente hace el código mucho más legible. Esta es la convención que usaremos en toda la guía:
 
-```nasm
+```text
 section .data
     mensaje db "Hola", 0
 

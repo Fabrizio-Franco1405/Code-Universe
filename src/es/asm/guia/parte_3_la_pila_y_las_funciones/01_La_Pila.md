@@ -30,7 +30,7 @@ Esta orientación "hacia abajo" es la razón de que la pila viva en la parte alt
 
 Las instrucciones que mueven datos a la pila son `push` y `pop`:
 
-```nasm
+```text
 push rax        ; copia rax a la pila, y decrementa rsp
 pop  rax        ; recupera el valor y lo pone en rax
 ```
@@ -39,7 +39,7 @@ pop  rax        ; recupera el valor y lo pone en rax
 - `pop rax`: lee el tope, lo copia a `RAX`, y sube `RSP`.
 - La pila es una máquina de "memoria infinita y temporal": cada `push` debe tener su `pop`.
 
-```nasm
+```text
 mov rax, 100
 push rax        ; la pila guarda 100
 mov rax, 200    ; rax cambia de valor...
@@ -58,7 +58,7 @@ pop  rax        ; ...pero recuperamos el 100 original
 
 Veamos el flujo de una secuencia completa con sus efectos en la memoria:
 
-```nasm
+```text
 mov rax, 1
 push rax        ; rsp baja 8, guarda 1
 mov rbx, 2
@@ -87,7 +87,7 @@ pop rdx:        rdx=1 → [ ... ]
 
 A veces quieres reservar espacio en la pila sin llenarlo de inmediato (por ejemplo, para variables locales de una función). Se hace ajustando `RSP`:
 
-```nasm
+```text
 sub rsp, 32     ; reservamos 32 bytes en la pila
 mov [rsp], rax  ; guardamos un valor en ese espacio
 add rsp, 32     ; liberamos el espacio
@@ -103,7 +103,7 @@ Reservar con `sub rsp` en lugar de varios `push` es más eficiente cuando necesi
 
 El uso más importante de la pila en la práctica es **preservar registros** alrededor de llamadas y funciones. La regla es simple:
 
-```nasm
+```text
 push rbx        ; respaldamos lo que no podemos perder
 mov  rbx, [dato]
 ; ... usamos rbx ...

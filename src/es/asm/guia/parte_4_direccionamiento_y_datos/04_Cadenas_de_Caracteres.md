@@ -10,7 +10,7 @@ Los arreglos de bytes nos llevan al tema más cotidiano de la programación: las
 
 Una cadena es una secuencia de bytes en memoria, uno por carácter. La pregunta clave es: **¿cómo saber dónde termina?** La convención clásica es el **cero final** (NUL): el byte `0` marca el fin.
 
-```nasm
+```text
 section .data
     saludo db "Hola", 0        ; los 4 caracteres + el 0 final
     nombre db "Ada", 0ah, 0    ; con salto de línea
@@ -30,7 +30,7 @@ Sin el terminador, cualquier función que recorra la cadena no sabría cuándo p
 
 Ya imprimiste texto en el primer programa: la syscall `write` necesita la dirección y **la longitud exacta** de la cadena.
 
-```nasm
+```text
 section .data
     mensaje db "Hola, mundo!", 0ah, 0
 section .text
@@ -56,7 +56,7 @@ _start:
 
 Para imprimir cualquier cadena sin contar a mano, necesitas una función que recorra hasta el `0` y devuelva su longitud. Es la clásica `strlen`:
 
-```nasm
+```text
 longitud_cadena:
     ; rdi = dirección de la cadena
     ; devuelve: rax = longitud (sin contar el 0)
@@ -78,7 +78,7 @@ terminar:
 
 Probemos con nuestro mensaje:
 
-```nasm
+```text
     mov rdi, mensaje
     call longitud_cadena    ; rax = 13
     mov rdx, rax            ; la longitud es el tamaño a escribir
@@ -95,7 +95,7 @@ Probemos con nuestro mensaje:
 
 La función anterior usaba un salto hacia atrás con `jmp`. Una versión equivalente pero más ordenada, típica en código profesional, separa la comprobación del avance:
 
-```nasm
+```text
 longitud_cadena:
     mov rax, 0
 siguiente:
@@ -118,7 +118,7 @@ Esta versión no usa `loop` a propósito: la cantidad de vueltas no se conoce de
 
 Además de medirlas, las cadenas se recorren para transformarlas. Veamos una función que convierte a mayúsculas cada letra minúscula:
 
-```nasm
+```text
 a_mayusculas:
     ; rdi = dirección de la cadena (se modifica en el lugar)
 siguiente:

@@ -17,7 +17,7 @@ código moderno de C++ y la biblioteca estándar. No te preocupes si al
 principio parecen densos: iremos paso a paso y verás que no son tan
 complicados como suenan.
 
-## 1. El problema: restringir una plantilla
+## 1. El problema: Restringir una plantilla
 
 Imagina que tienes una plantilla que suma dos valores. Funciona con `int`,
 `double`... pero ¿qué pasa con un tipo que no tenga operador `+`? Acá lo

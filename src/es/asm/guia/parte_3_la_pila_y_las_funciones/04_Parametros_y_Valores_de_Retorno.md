@@ -10,7 +10,7 @@ En el capítulo anterior conociste las reglas del ABI: qué registros llevan arg
 
 Cuando pasas un **parámetro por valor**, copias el dato en el registro de argumento. La función recibe una copia y puede modificarla sin afectar al llamador:
 
-```nasm
+```text
 doble:
     lea rax, [rdi + rdi]    ; rax = rdi * 2
     ret
@@ -30,7 +30,7 @@ Por valor es lo más simple y seguro: nadie rompe los datos del otro.
 
 Cuando el dato es grande (un arreglo, una estructura, una cadena), copiarlo sería costoso. En su lugar, pasamos **la dirección** donde vive:
 
-```nasm
+```text
 leer_primero:
     mov rax, [rdi]      ; rdi es la dirección; leemos el primer qword
     ret
@@ -54,7 +54,7 @@ Pasar por dirección es la versión ensamblador de los punteros de C, y la base 
 
 El resultado de una función entera o de puntero se devuelve en **`RAX`**. Si necesitas devolver dos valores, la convención ofrece `RDX` como segundo resultado:
 
-```nasm
+```text
 dividir:
     ; recibe: rdi = dividendo, rsi = divisor
     mov rax, rdi
@@ -67,7 +67,7 @@ dividir:
 - La función "devuelve" dos valores: el cociente y el resto.
 - El llamador lee `RAX` y `RDX` después de la llamada.
 
-```nasm
+```text
 inicio:
     mov rdi, 17
     mov rsi, 5
@@ -80,7 +80,7 @@ Este patrón de "dos resultados" es común en aritmética y en operaciones que d
 
 ¿Y si la función debe devolver algo que no cabe en `RAX` y `RDX` (una estructura grande)? La convención SysV dicta una regla elegante: **el llamador reserva el espacio y le pasa la dirección**, y la función escribe el resultado ahí.
 
-```nasm
+```text
 section .bss
     resultado resq 2        ; espacio para 2 qwords (una "estructura")
 
@@ -112,7 +112,7 @@ Es un acuerdo implícito: la función no reserva memoria propia para el retorno;
 
 Combinemos todo: una función que suma los elementos de un arreglo, pasando por dirección y devolviendo el total:
 
-```nasm
+```text
 sumar_arreglo:
     ; rdi = dirección del arreglo, rsi = cantidad de elementos
     mov  rcx, rsi       ; contador = cantidad
@@ -124,7 +124,7 @@ recorrer:
     ret                 ; rax = suma total
 ```
 
-```nasm
+```text
 section .data
     valores dq 2, 4, 6, 8
 

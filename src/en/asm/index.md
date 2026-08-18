@@ -4,23 +4,23 @@ layout: home
 
 hero:
   name: "Code Universe: ASM"
-  text: "El metal al desnudo"
-  tagline: "Domina el lenguaje más cercano a la máquina, instrucción por instrucción."
+  text: "Bare metal"
+  tagline: "Master the closest language to the machine, instruction by instruction."
   image: 
     src: /icons/asm-icon.webp
     alt: "Code Universe ASM"
   actions:
     - theme: brand
-      text: Iniciar Travesía
-      link: /es/asm/guia/0_introduccion/01_Vision_General
+      text: Start Journey
+      link: 
     - theme: alt
-      text: Ver Ecosistema
+      text: View Ecosystem
       link: 
 ---
 
 <section class="cu-main-container">
 
-<h2 class="cu-title">El Corazón del Hardware</h2>
+<h2 class="cu-title">The Heart of Hardware</h2>
 
 <div class="cu-grid">
 
@@ -28,31 +28,31 @@ hero:
 <header class="cu-card-icon">🧠</header>
 <div class="cu-card-content">
 <h3>Hardware</h3>
-<p>Entiende cómo piensa realmente la CPU: registros, memoria y direcciones.</p>
+<p>Understand how the CPU really thinks: registers, memory and addresses.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
 <header class="cu-card-icon">⚡</header>
 <div class="cu-card-content">
-<h3>Rendimiento</h3>
-<p>Escribe el código más rápido posible, sin nada que se interponga en tu camino.</p>
+<h3>Performance</h3>
+<p>Write the fastest possible code, with nothing standing in your way.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
 <header class="cu-card-icon">🔩</header>
 <div class="cu-card-content">
-<h3>Control Total</h3>
-<p>Toca cada instrucción y cada bit: el ensamblador no oculta nada.</p>
+<h3>Total Control</h3>
+<p>Touch every instruction and every bit: assembly hides nothing.</p>
 </div>
 </article>
 
 <article class="cu-feature-card">
 <header class="cu-card-icon">🔗</header>
 <div class="cu-card-content">
-<h3>Sistemas y ABI</h3>
-<p>Conecta tu código con el sistema operativo y con C como un profesional.</p>
+<h3>Systems & ABI</h3>
+<p>Connect your code with the operating system and with C like a professional.</p>
 </div>
 </article>
 
@@ -61,7 +61,6 @@ hero:
 </section>
 
 <footer class="cu-main-footer">
-<p>Forjado con <span class="cu-chip">💠</span> por <strong>Fabrizio</strong></p>
+<p>Forged with <span class="cu-chip">💠</span> by <strong>Fabrizio</strong></p>
 <small class="cu-badge">Assembly x86-64 · 2026</small>
 </footer>
-

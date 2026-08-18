@@ -60,7 +60,7 @@ for (int i = 0; i < MAX; i++) {
 }
 ```
 
-## 3. `constexpr` y `consteval`: calcula en compilación
+## 3. `constexpr` y `consteval`: Calcula en compilación
 
 Si una función solo depende de constantes, `constexpr` la calcula **sin coste en ejecución**. La
 idea es elegante: ¿para qué hacer un cálculo en tiempo de ejecución si el resultado nunca cambia?
@@ -179,7 +179,7 @@ for (auto &figura : figuras) {
 💡 La regla: **no optimices las abstracciones antes de medir**. Pero conocer sus costes te dice dónde mirar cuando un perfilador señale un punto caliente.
 :::
 
-## 7. Branch prediction: ramas predecibles
+## 7. Branch prediction: Ramas predecibles
 
 Acá tocamos un tema fascinante del hardware moderno. El CPU **predice** los `if` y ejecuta por
 adelantado: se anticipa al resultado y prepara el camino. Cuando acierta, todo vuela. Pero

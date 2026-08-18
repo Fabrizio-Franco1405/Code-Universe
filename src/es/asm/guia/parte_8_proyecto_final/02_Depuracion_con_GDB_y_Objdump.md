@@ -34,7 +34,7 @@ gdb ./calculadora
 
 Los comandos que usarás el 90% del tiempo:
 
-```gdb
+```text
 break _start        ; pone un punto de quiebre en la etiqueta
 run                 ; ejecuta hasta el primer punto de quiebre
 stepi               ; ejecuta UNA instrucción (paso a paso)
@@ -61,7 +61,7 @@ La combinación de `stepi` + `info registers` te permite **ver el programa pensa
 
 Los registros son la mitad de la historia; la otra mitad está en la memoria. GDB te muestra su contenido con el comando `x` (examine):
 
-```gdb
+```text
 x/8bx buffer        ; 8 bytes de "buffer" en hexadecimal
 x/s buffer          ; interpreta como cadena
 x/4gx $rsp          ; 4 qwords desde el tope de la pila

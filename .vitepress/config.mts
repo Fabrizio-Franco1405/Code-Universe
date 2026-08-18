@@ -10,21 +10,28 @@ export default defineConfig({
   srcDir: 'src',
   
   vite: {
-    publicDir: '../public'
+    publicDir: '../public',
+    build: {
+      reportCompressedSize: false,
+      chunkSizeWarningLimit: 1000,
+      cssCodeSplit: true
+    }
   },
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/img/code-universe-favicon.webp' }]],
+  head: [['link', { rel: 'icon', type: 'image/webp', href: '/favicons/code-universe-favicon.webp' }]],
 
   transformPageData(pageData) {
     const path = pageData.relativePath;
     let iconName = 'code-universe-favicon.webp';
     if (path.includes('cpp/')) iconName = 'cpp-favicon.svg';
-    else if (path.includes('c/')) iconName = 'c-favicon.svg';
     else if (path.includes('csharp/')) iconName = 'csharp-favicon.svg';
+    else if (path.includes('c/')) iconName = 'c-favicon.svg';
     else if (path.includes('rs/')) iconName = 'rust-favicon.svg';
+    else if (path.includes('asm/')) iconName = 'asm-favicon.webp';
 
+    const type = iconName.endsWith('.svg') ? 'image/svg+xml' : 'image/webp';
     const fullIconPath = `/favicons/${iconName}`;
-    pageData.frontmatter.head = [['link', { rel: 'icon', type: 'image/png', href: fullIconPath }]];
+    pageData.frontmatter.head = [['link', { rel: 'icon', type, href: fullIconPath }]];
   },
 
   locales: {

@@ -6,7 +6,7 @@ outline: [2, 3]
 
 En el capítulo de introducción vimos el data race: dos hilos modificando la misma variable a la vez, con resultados impredecibles. Ahora aprenderemos la herramienta que lo resuelve: la **sincronización**. Con mutex y otras técnicas, garantizaremos que los hilos accedan a los datos compartidos de forma **ordenada y segura**.
 
-## 1. El problema otra vez: el data race
+## 1. El problema otra vez: El data race
 
 Recordemos el ejemplo peligroso:
 
@@ -106,7 +106,7 @@ int main() {
 💡 `lock_guard` es la forma correcta de usar un mutex en casi todos los casos. Es imposible olvidarse del `unlock()` porque no existe: el destructor lo hace por ti.
 :::
 
-## 4. `std::unique_lock`: más flexible
+## 4. `std::unique_lock`: Más flexible
 
 `unique_lock` es como `lock_guard` pero **más flexible**: permite bloquear y desbloquear manualmente, retrasar el bloqueo, o mover el lock entre ámbitos. Es lo que necesitan las `condition_variable`.
 
@@ -175,7 +175,7 @@ int main() {
 ⚠️ Si cada hilo bloquea los mutex en distinto orden (uno A→B y otro B→A), pueden **esperarse mutuamente para siempre**: eso es un **deadlock**. `scoped_lock` evita este error bloqueándolos todos a la vez.
 :::
 
-## 6. `condition_variable`: avisar cuando algo cambia
+## 6. `condition_variable`: Avisar cuando algo cambia
 
 A veces un hilo debe **esperar a que algo ocurra** (por ejemplo, a que haya datos disponibles). Con `condition_variable`, un hilo puede dormir y ser **despertado** por otro.
 

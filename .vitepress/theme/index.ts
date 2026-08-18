@@ -21,10 +21,12 @@ export default {
         document.body.classList.add('lang-rust')
       } else if (path.includes('/cpp/')) {
         document.body.classList.add('lang-cpp')
+      } else if (path.includes('/csharp/')) {
+        document.body.classList.add('lang-csharp')
       } else if (path.includes('/c/')) {
         document.body.classList.add('lang-c')
-      } else if (path.includes('/cs/')) {
-        document.body.classList.add('lang-csharp')
+      } else if (path.includes('/asm/')) {
+        document.body.classList.add('lang-asm')
       }
     })
   }

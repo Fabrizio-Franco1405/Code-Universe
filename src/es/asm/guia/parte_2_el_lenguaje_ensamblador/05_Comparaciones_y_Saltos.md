@@ -10,7 +10,7 @@ Hasta ahora nuestros programas corren en línea recta: instrucción tras instruc
 
 La instrucción **`cmp`** compara dos valores restándolos, pero **sin guardar el resultado**: solo actualiza las banderas. Es como hacer una pregunta a la CPU.
 
-```nasm
+```text
 mov rax, 10
 mov rbx, 10
 cmp rax, rbx        ; compara: ¿rax == rbx?
@@ -30,7 +30,7 @@ En el ejemplo anterior, como `10 - 10 = 0`, se activa la bandera `ZF` (cero). Es
 
 Antes de los condicionales, conozcamos el salto simple: **`jmp`** transfiere el control a otra etiqueta sin ninguna condición.
 
-```nasm
+```text
 inicio:
     inc rax
     jmp inicio          ; vuelve a "inicio" indefinidamente
@@ -45,7 +45,7 @@ inicio:
 
 Los saltos condicionales consultan las banderas y deciden si saltar o seguir. Su forma general es:
 
-```nasm
+```text
 cmp rax, rbx
 je iguales            ; salta si rax == rbx
 jne distintos         ; salta si rax != rbx
@@ -64,7 +64,7 @@ jne distintos         ; salta si rax != rbx
 
 Un programa típico de decisión se ve así:
 
-```nasm
+```text
 section .data
     resultado db "mayor", 0
     otro      db "menor", 0
@@ -104,7 +104,7 @@ Este es el detalle que separa a los profesionales de los que sufren bugs raros: 
 - **Con signo:** `jg` (greater), `jl` (less), `jge`, `jle`. Usan las banderas `SF` y `OF`.
 - **Sin signo:** `ja` (above), `jb` (below), `jae`, `jbe`. Usan la bandera `CF`.
 
-```nasm
+```text
 mov al, 0FFh        ; 255 sin signo, o -1 con signo
 cmp al, 1
 ja  es_arriba       ; salta: 255 > 1    (sin signo)
@@ -125,7 +125,7 @@ La misma comparación produce resultados opuestos según la familia que elijas. 
 
 Con estas piezas puedes montar cualquier estructura de alto nivel. Un `if/else` se traduce casi literalmente:
 
-```nasm
+```text
 ; if (edad >= 18) ... else ...
 mov rax, [edad]
 cmp rax, 18
@@ -146,7 +146,7 @@ fin_condicion:
 
 Un `switch` (múltiples casos) se monta con varias comparaciones encadenadas o, cuando los valores son consecutivos, con una **tabla de saltos** (que verás en niveles avanzados). Por ahora, encadena comparaciones:
 
-```nasm
+```text
 cmp rax, 1
 je  caso_uno
 cmp rax, 2

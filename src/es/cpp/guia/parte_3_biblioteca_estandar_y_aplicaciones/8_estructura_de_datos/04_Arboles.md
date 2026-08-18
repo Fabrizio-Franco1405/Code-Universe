@@ -203,7 +203,7 @@ int main() {
 }
 ```
 
-## 5. Árboles balanceados: la clave del rendimiento
+## 5. Árboles balanceados: La clave del rendimiento
 
 Acá viene una advertencia muy importante: un BST es O(log n) **solo si está balanceado**,
 es decir, si los niveles están equilibrados. Si insertamos valores ya ordenados (1, 2, 3,

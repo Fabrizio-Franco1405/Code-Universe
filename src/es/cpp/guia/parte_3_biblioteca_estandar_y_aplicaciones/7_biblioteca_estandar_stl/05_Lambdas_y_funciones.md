@@ -11,7 +11,7 @@ función?** En C++ hay varias formas de hacerlo: punteros a función, **objetos 
 (functors) y las modernas **lambdas**. Este capítulo las presenta una por una y te
 mostrará por qué las lambdas se convirtieron en la opción preferida por la comunidad.
 
-## 1. El problema: pasar comportamiento como parámetro
+## 1. El problema: Pasar comportamiento como parámetro
 
 Imaginemos que queremos ordenar un vector con un criterio personalizado. El algoritmo
 `sort` necesita saber **cómo** comparar los elementos, es decir, necesita recibir ese
@@ -130,7 +130,7 @@ como funciones. La desventaja es la cantidad de código que hay que escribir sol
 pequeña lógica.
 :::
 
-## 4. Las lambdas: la solución moderna
+## 4. Las lambdas: La solución moderna
 
 Una **función lambda** es una función anónima definida **en el lugar** donde se necesita,
 sin necesidad de darle un nombre ni declararla aparte. Es la forma concisa de crear un

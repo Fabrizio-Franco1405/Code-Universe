@@ -8,7 +8,7 @@ C++ es famoso por su velocidad, pero esa velocidad **no es automática**: hay qu
 
 Imagina que tu coche va lento. ¿Cambiarías el volante porque "seguro que es eso"? No: primero medirías qué pieza falla. En rendimiento pasa igual: **primero se mide, después se optimiza**.
 
-## 1. La regla de oro: mide antes de optimizar
+## 1. La regla de oro: Mide antes de optimizar
 
 El 90% del tiempo de un programa suele estar en el 10% del código (la **regla 90/10**). Optimizar el otro 90% es trabajo perdido.
 
@@ -24,7 +24,7 @@ Ejemplo real: programa que tarda 100 segundos
 💡 Optimizar A puede reducir el total a 30 s. Optimizar el "resto" a cero solo ahorra 5 s. **Primero mide**, luego ataca el cuello de botella real.
 :::
 
-## 2. Complejidad: el primer indicador
+## 2. Complejidad: El primer indicador
 
 Antes de optimizar, pregunta por la **complejidad algorítmica** (big-O). A menudo el cuello de botella es elegir mal la estructura de datos:
 
@@ -44,6 +44,7 @@ bool existe = nombres.count("Ana") > 0;
 | `set`/`map` | O(log n) | O(log n) | Búsquedas frecuentes |
 | `unordered_map` | O(1) medio | O(1) medio | Búsquedas por clave |
 | `list` | O(n) | O(1) | Inserciones en medio |
+
 ## 3. Medir el tiempo con `std::chrono`
 
 La forma más simple de medir: cronometrar con `std::chrono`:

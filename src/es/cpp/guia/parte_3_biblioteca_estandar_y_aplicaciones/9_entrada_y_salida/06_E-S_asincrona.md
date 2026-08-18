@@ -56,7 +56,7 @@ I/O  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒▒
 ℹ️ El objetivo de la E/S asíncrona: hacer que la CPU trabaje mientras el disco o la red hacen su parte. En servidores con miles de peticiones, es la diferencia entre atender 10 o 10,000 clientes.
 :::
 
-## 3. El bloqueo: el problema central
+## 3. El bloqueo: El problema central
 
 Toda operación de E/S bloquea al hilo que la ejecuta. Si tu programa es de un solo hilo, se
 congela entero, y eso es un problema serio cuando hablamos de interfaces de usuario o

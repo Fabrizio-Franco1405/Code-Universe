@@ -83,3 +83,13 @@
 .lang-csharp a {
     text-decoration-color: var(--vp-c-brand-1);
 }
+
+/**
+ * Component: Tarjetas cu- (accento Púrpura C#)
+ * -------------------------------------------------------------------------- */
+.lang-csharp {
+    --cu-accent: #a179dc;
+    --cu-gradient: linear-gradient(to right, #a179dc, #68217a);
+    --cu-shadow-color: rgba(161, 121, 220, 0.15);
+    --cu-glow: #68217a;
+}

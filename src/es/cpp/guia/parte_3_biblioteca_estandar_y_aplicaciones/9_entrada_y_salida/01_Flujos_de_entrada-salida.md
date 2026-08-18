@@ -65,7 +65,7 @@ int main() {
 ℹ️ `cerr` y `cout` parecen iguales, pero van por canales distintos del sistema operativo. Esto permite, por ejemplo, separar los errores de los resultados al redirigir la salida.
 :::
 
-## 3. El operador `<<`: inserción
+## 3. El operador `<<`: Inserción
 
 El operador `<<` se llama **operador de inserción**. Su trabajo es "insertar" datos en un
 flujo de salida. Lo importante: **puede encadenarse**, porque cada operación devuelve el
@@ -80,7 +80,7 @@ cout << "Edad: " << edad << ", altura: " << altura << endl;
 
 Cada `<<` inserta su valor y devuelve `cout`, permitiendo encadenar sin límite.
 
-## 4. El operador `>>`: extracción
+## 4. El operador `>>`: Extracción
 
 El operador `>>` se llama **operador de extracción**, y hace el camino inverso: extrae
 datos de un flujo de entrada hacia variables. Es la forma más directa de leer lo que el

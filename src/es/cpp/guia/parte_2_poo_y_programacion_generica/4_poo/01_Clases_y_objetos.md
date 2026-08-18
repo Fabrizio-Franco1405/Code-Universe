@@ -109,7 +109,7 @@ Ese punto se lee como "de", es decir, "el nombre **de** firulais". Cada objeto
 tiene su propio espacio de datos, por eso `firulais.edad` vale `3` mientras que
 `max.edad` vale `5`, sin que jamás se mezclen entre sí.
 
-## 3. Analogía: molde y galleta
+## 3. Analogía: Molde y galleta
 
 Para fijar el concepto, usemos la analogía del molde, una de las formas más
 claras que existen de visualizar la relación entre clase y objeto:
@@ -124,7 +124,7 @@ claras que existen de visualizar la relación entre clase y objeto:
 La clase es la "fábrica" y el objeto es el "producto final". Sin clase no hay
 molde, y sin molde no habría galletas consistentes entre sí.
 
-## 4. El constructor: inicializar objetos
+## 4. El constructor: Inicializar objetos
 
 Cuando creamos un objeto, normalmente queremos que sus atributos empiecen con
 valores. Imagina tener que asignar nombre y edad manualmente cada vez que creas

@@ -9,7 +9,7 @@ Para cerrar el módulo de patrones de diseño, veremos dos patrones **estructura
 - **Adapter**: como un adaptador de enchufe, hace compatible lo incompatible.
 - **Decorator**: como añadir toppings a una pizza, amplía funcionalidades sin tocar la base.
 
-## 1. Adapter: el adaptador de enchufes
+## 1. Adapter: El adaptador de enchufes
 
 Viajas a otro país y tu enchufe no encaja. La solución no es rehacer el enchufe: usas un **adaptador**. El Adapter hace exactamente eso con clases: **convierte una interfaz en otra** que el cliente espera.
 
@@ -71,7 +71,7 @@ int main() {
 💡 El Adapter se usa muchísimo en el mundo real: conectar librerías de terceros, APIs antiguas (legacy), o interfaces de sistemas operativos sin reescribir el código que las consume.
 :::
 
-## 2. Decorator: los toppings de la pizza
+## 2. Decorator: Los toppings de la pizza
 
 Quieres añadir funcionalidades a un objeto sin modificar su clase: queso extra, pepperoni, cebolla... Cada topping **envuelve** al anterior. El **Decorator** añade comportamiento **envolviendo** objetos con otras clases.
 
@@ -165,7 +165,7 @@ public:
 💡 La gran ventaja: puedes **combinar decoradores libremente** (queso y pepperoni, o solo queso) sin crear una clase por cada combinación posible. Las combinaciones infinitas salen de pocos componentes.
 :::
 
-## 3. Decorator en C++ moderno: con lambdas
+## 3. Decorator en C++ moderno: Con lambdas
 
 Al igual que en Strategy, los decoradores simples pueden ser lambdas que **envuelven** funciones:
 

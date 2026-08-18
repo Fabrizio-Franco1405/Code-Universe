@@ -34,7 +34,7 @@ La syscall `open` (número `2`) abre o crea un archivo y devuelve su descriptor:
 - `rdx`: los permisos (usados al crear; normalmente `0644`).
 - Resultado: descriptor en `rax`, o un error negativo.
 
-```nasm
+```text
 section .data
     nombre_archivo db "datos.txt", 0
 
@@ -59,7 +59,7 @@ section .text
 
 Con el descriptor en mano, `read` y `write` funcionan igual que con la consola, cambiando el descriptor:
 
-```nasm
+```text
 section .bss
     buffer resb 128
 
@@ -81,7 +81,7 @@ section .text
 
 Para escribir a un archivo, cambiamos el número de syscall y el descriptor:
 
-```nasm
+```text
     mov rax, 1           ; write
     mov rdi, r8          ; el mismo archivo
     mov rsi, buffer
@@ -95,7 +95,7 @@ El patrón es idéntico al de la consola; solo cambia el descriptor. Eso es lo e
 
 Cuando terminas con un archivo, lo cierras con `close` (número `3`):
 
-```nasm
+```text
 mov rax, 3          ; close
 mov rdi, r8         ; el descriptor
 syscall
@@ -115,7 +115,7 @@ Ese ciclo de tres pasos es la vida de todo archivo: abrir, operar, cerrar. Memor
 
 Unamos todo en un copiador mínimo: lee un archivo completo y escribe su contenido en pantalla.
 
-```nasm
+```text
 section .data
     nombre_archivo db "datos.txt", 0
     mensaje_error  db "No se pudo abrir", 0ah

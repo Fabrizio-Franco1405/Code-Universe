@@ -10,7 +10,7 @@ En el capítulo anterior viste todos los modos de direccionamiento. Ahora profun
 
 Un **puntero** es un valor que contiene una **dirección de memoria**. No guarda datos directamente: guarda *dónde* están los datos.
 
-```nasm
+```text
 section .data
     numero dq 42
 
@@ -32,7 +32,7 @@ La diferencia entre `numero` y `[numero]` que viste en los primeros capítulos e
 
 Con un puntero en un registro, puedes leer **y modificar** el dato original:
 
-```nasm
+```text
 mov rax, numero         ; puntero
 mov qword [rax], 100    ; escribimos 100 donde apunta
 mov rbx, [rax]          ; leemos el nuevo valor → 100
@@ -48,7 +48,7 @@ Poder modificar datos a través de un puntero es lo que permite a una función c
 
 La operación más común con punteros es **avanzarlos** para recorrer una secuencia de datos. Cada avance debe sumar el tamaño del elemento:
 
-```nasm
+```text
 section .data
     numeros dq 10, 20, 30, 40
 
@@ -79,7 +79,7 @@ Todo programador de ensamblador se topa tarde o temprano con la dirección `0` o
 - **No puedes tocar memoria que no te pertenece** (memoria de otros procesos o del núcleo).
 - Intentarlo produce un **fallo de segmentación** (segfault), que termina tu proceso.
 
-```nasm
+```text
 mov rax, 0
 mov rbx, [rax]      ; ERROR: leer la dirección 0 → fallo de segmentación
 ```
@@ -90,7 +90,7 @@ mov rbx, [rax]      ; ERROR: leer la dirección 0 → fallo de segmentación
 
 Un puntero nulo suele significar "no hay nada aquí" o "aún no se calculó la dirección". La práctica profesional es **comprobar antes de usarlo**:
 
-```nasm
+```text
 test rax, rax
 jz  hay_error        ; si rax == 0, no tocar
 mov rbx, [rax]       ; seguro: rax no es nulo
@@ -107,7 +107,7 @@ Antes de dereferenciar un puntero, verifica que no sea nulo ni apunte fuera de t
 
 Los punteros brillan con las estructuras encadenadas. Veamos una **lista enlazada**: cada nodo guarda un dato y un puntero al siguiente nodo.
 
-```nasm
+```text
 section .data
     nodo1 dq 10, 0        ; dato = 10, siguiente = 0 (final)
     nodo2 dq 20, nodo1    ; dato = 20, siguiente = nodo1

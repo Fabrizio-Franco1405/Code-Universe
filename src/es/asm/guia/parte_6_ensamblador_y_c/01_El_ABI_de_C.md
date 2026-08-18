@@ -38,7 +38,7 @@ El ejemplo clásico del puente: usar `printf` para imprimir con formato. Necesit
 3. Los argumentos según la convención.
 4. La pila **alineada** antes de llamar.
 
-```nasm
+```text
 extern printf
 
 section .data
@@ -76,7 +76,7 @@ Este es el detalle que más fallos causa al mezclar con C. La convención exige 
 - Dentro de la función C, el compilador hace `push rbp` (otros 8), volviendo a alinear.
 - Las instrucciones SSE (usadas por `printf` para copiar datos) exigen esa alineación.
 
-```nasm
+```text
 main:
     sub rsp, 8       ; si rsp era múltiplo de 16, sigue siéndolo tras el call
     call printf
@@ -101,7 +101,7 @@ Si `printf` (o cualquier función C) crashea o se comporta raro sin motivo apare
 - Van en `xmm0`, `xmm1`, etc. (en orden).
 - `eax` debe indicar **cuántos** hay.
 
-```nasm
+```text
 extern printf
 
 section .data
@@ -132,7 +132,7 @@ Si `eax` no coincide con la cantidad real de flotantes, `printf` leerá registro
 
 El puente funciona en ambos sentidos. Escribe una función en NASM, expórtala con `global`, y llámala desde C:
 
-```nasm
+```text
 ; doble.asm
 global doble
 

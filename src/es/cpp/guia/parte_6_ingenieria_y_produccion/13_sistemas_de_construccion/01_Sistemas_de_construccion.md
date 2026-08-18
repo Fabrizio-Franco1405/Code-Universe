@@ -76,7 +76,7 @@ make
 ⚠️ En un `Makefile`, las líneas de comando **deben** indentarse con tabulador (TAB), no con espacios. Un error clásico que rompe la compilación de forma confusa.
 :::
 
-## 4. Ninja: el moderno y veloz
+## 4. Ninja: El moderno y veloz
 
 **Ninja** es un sistema de construcción pequeño y enfocado en la **velocidad**. Fue creado para proyectos enormes (como Chromium) donde cada segundo de recompilación cuenta. A diferencia de Make, **no está pensado para escribirse a mano**: su configuración la genera otra herramienta, normalmente CMake.
 

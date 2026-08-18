@@ -10,7 +10,7 @@ El poder del ensamblador tiene dos caras: control total para construir, y contro
 
 La vulnerabilidad más famosa de la historia del software: escribir **más bytes de los que caben** en un buffer. En ensamblador no hay límites automáticos, así que la responsabilidad es tuya.
 
-```nasm
+```text
 section .bss
     buffer resb 16       ; solo 16 bytes reservados
 
@@ -79,7 +79,7 @@ Contra este ataque, la industria construyó capas de defensa. Toda defensa es pr
 
 **Canarios (stack canaries):**
 
-```nasm
+```text
 ; el compilador inserta un valor centinela antes del retorno
     mov [rbp-8], canario      ; valor secreto
     ; ... cuerpo que usa el buffer ...
@@ -107,7 +107,7 @@ Si escribes ensamblador, eres tú quien controla la memoria. Las prácticas que 
 - **Cierra los archivos y libera lo que pidas** para no agotar recursos.
 - **Mantén los datos y el código separados** (datos en `.data`, no en `.text`).
 
-```nasm
+```text
 ; copia SEGURA: solo copia si el destino tiene espacio
     cmp rdx, 16          ; cantidad a copiar
     ja  demaciado        ; > 16 → rechazar

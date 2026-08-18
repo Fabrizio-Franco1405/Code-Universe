@@ -16,7 +16,7 @@ Las reglas de los comentarios en NASM:
 - Comenta el **porqué**, no el qué: la instrucción ya dice qué hace.
 - Mantén una columna de comentarios alineada para legibilidad.
 
-```nasm
+```text
 ; texto_a_numero: convierte una cadena de dígitos en un número.
 ; rdi = dirección del texto, rsi = longitud
 ; devuelve rax = número

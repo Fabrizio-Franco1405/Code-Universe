@@ -55,7 +55,8 @@ Un **hilo** es la unidad más pequeña de ejecución que puede gestionar el sist
 | **No bloquear la interfaz** | La interfaz responde mientras se descarga un archivo |
 | **Simular sistemas reales** | Servidores atendiendo a muchos clientes |
 | **Reducir tiempos de espera** | Esperar a varias APIs en paralelo |
-## 4. El primer problema: carreras de datos (data race)
+
+## 4. El primer problema: Carreras de datos (data race)
 
 Aquí aparece el gran villano de la concurrencia. Como los hilos comparten memoria, **dos hilos pueden modificar la misma variable al mismo tiempo**, con resultados impredecibles.
 

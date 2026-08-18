@@ -46,7 +46,7 @@ El flujo conceptual es el mismo (ensamblar y enlazar), pero los archivos resulta
 
 El "Hola, mundo" de Windows clásico usa `MessageBoxA` de `user32.dll`, que muestra un cuadro de diálogo. Siguiendo la convención Microsoft:
 
-```nasm
+```text
 extern MessageBoxA
 extern ExitProcess
 
@@ -85,7 +85,7 @@ Observa que aquí **no usas syscalls**: usas funciones públicas y documentadas 
 
 Si quieres texto en la consola, el equivalente de `write` es `WriteFile` de `kernel32.dll`. Necesitas primero un manejador de la salida estándar:
 
-```nasm
+```text
 extern GetStdHandle
 extern WriteFile
 extern ExitProcess

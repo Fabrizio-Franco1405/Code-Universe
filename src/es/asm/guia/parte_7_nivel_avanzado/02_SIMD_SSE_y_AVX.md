@@ -31,7 +31,7 @@ El rendimiento no escala exactamente 4x (hay costos de carga y de "empaquetar"),
 
 Para usar SIMD, primero cargas varios datos en el registro con `movups`/`movaps` (memoria → registro):
 
-```nasm
+```text
 section .data
     vector_a dd 1.0, 2.0, 3.0, 4.0
     vector_b dd 5.0, 6.0, 7.0, 8.0
@@ -48,7 +48,7 @@ section .text
 
 Después de la operación, guardas el resultado de vuelta a memoria con otro `movups`:
 
-```nasm
+```text
 section .bss
     resultado resq 4     ; espacio para 4 floats (16 bytes)
 
@@ -66,7 +66,7 @@ El patrón completo SIMD es: **cargar → operar → guardar**. El ahorro está 
 
 Las operaciones básicas tienen sus versiones packed (`ps`/`pd`):
 
-```nasm
+```text
 addps xmm0, xmm1     ; suma los 4 floats
 subps xmm0, xmm1     ; resta
 mulps xmm0, xmm1     ; multiplica
@@ -74,7 +74,7 @@ divps xmm0, xmm1     ; divide
 sqrtps xmm0, xmm1    ; raíz cuadrada de cada carril
 ```
 
-```nasm
+```text
 section .data
     valores dd 4.0, 9.0, 16.0, 25.0
 section .bss
@@ -95,7 +95,7 @@ Esto es lo que acelera los videojuegos, los códecs y las simulaciones: operacio
 
 **AVX** (Advanced Vector Extensions) duplica el ancho: los registros **`ymm0`-`ymm15`** de 256 bits. La forma de operar es la misma, pero con la cantidad duplicada:
 
-```nasm
+```text
 vmovups ymm0, [vector_a]   ; carga 8 floats (32 bytes)
 vmovups ymm1, [vector_b]
 vaddps  ymm0, ymm0, ymm1   ; suma los 8 floats en paralelo
@@ -107,7 +107,7 @@ vaddps  ymm0, ymm0, ymm1   ; suma los 8 floats en paralelo
 
 La ventaja de 3 operandos es doble: más claridad y menos copias de datos (los compiladores la aprovechan para evitar movimientos innecesarios).
 
-```nasm
+```text
 section .data
     datos_a dd 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0
     datos_b dd 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
@@ -129,13 +129,13 @@ section .text
 
 SIMD no es solo para flotantes: también acelera enteros. Las versiones `p` de las instrucciones operan sobre bytes/words/dwords:
 
-```nasm
+```text
 paddd xmm0, xmm1     ; suma 4 dwords (enteros de 32 bits)
 paddq xmm0, xmm1     ; suma 2 qwords (enteros de 64 bits)
 pcmpeqd xmm0, xmm1   ; compara por igualdad, carril por carril
 ```
 
-```nasm
+```text
 section .data
     nums_a dd 1, 2, 3, 4
     nums_b dd 10, 20, 30, 40

@@ -10,7 +10,7 @@ Los punteros ya te mostraron cómo recorrer datos. Ahora formalicemos el concept
 
 Un **arreglo** es una secuencia de elementos del mismo tamaño, guardados **uno tras otro** en la memoria. Para definir uno en NASM basta con listar sus valores:
 
-```nasm
+```text
 section .data
     numeros dq 10, 20, 30, 40, 50
     pesos   dw 70, 80, 90
@@ -40,7 +40,7 @@ numeros:  | 10 | 20 | 30 | 40 | 50 |
 
 La fórmula para acceder al elemento `i` es `base + i * tamaño`. Usando el modo base + índice del capítulo de direccionamiento:
 
-```nasm
+```text
 section .data
     numeros dq 10, 20, 30, 40, 50
 
@@ -62,7 +62,7 @@ La combinación clásica: un bucle que recorre todos los elementos. Tenemos dos 
 
 **Con puntero que avanza:**
 
-```nasm
+```text
 section .data
     numeros dq 10, 20, 30, 40, 50
 section .bss
@@ -84,7 +84,7 @@ recorrer:
 
 **Con índice que avanza:**
 
-```nasm
+```text
 _start:
     mov rsi, numeros     ; base
     mov rcx, 0           ; índice
@@ -111,7 +111,7 @@ Los arreglos no son solo de qwords. La regla es siempre la misma: **`base + índ
 
 **Arreglo de bytes (caracteres):**
 
-```nasm
+```text
 section .data
     vocales db "aeiou"
 
@@ -125,7 +125,7 @@ section .text
 
 **Arreglo de words:**
 
-```nasm
+```text
 section .data
     puntos dw 10, 20, 30
 
@@ -147,7 +147,7 @@ El único riesgo es mezclar la escala con el tamaño real. Un `dq` con escala `*
 
 Cuando cada elemento es una estructura de varios campos, el cálculo se complica un poco pero sigue la misma fórmula. Recordando el capítulo de direccionamiento:
 
-```nasm
+```text
 ; Cada persona: [nombre: 32 bytes][edad: 8 bytes]
 section .bss
     personas resb 40*5      ; 5 personas de 40 bytes
@@ -164,7 +164,7 @@ section .text
 
 Espera: la escala máxima es 8. ¿Cómo indexar estructuras de 40 bytes? La solución es la **aritmética en dos pasos**:
 
-```nasm
+```text
     mov rax, rcx
     imul rax, rax, 40       ; rax = índice * 40
     mov rax, [rsi + rax + 32] ; edad de la persona rcx

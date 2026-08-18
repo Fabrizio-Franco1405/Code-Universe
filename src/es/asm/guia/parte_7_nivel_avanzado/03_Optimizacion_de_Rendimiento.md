@@ -41,7 +41,7 @@ En el capítulo de la memoria viste la jerarquía. Ahora veamos sus consecuencia
 - **Vuelve a lo mismo:** reutilizar datos recientes evita recargarlos (localidad temporal).
 - **Evita saltos erráticos:** los accesos "a salto de mata" destrozan la caché.
 
-```nasm
+```text
 ; BUENO: recorre el arreglo en orden
 mov rcx, cantidad
 mov rsi, arreglo
@@ -66,7 +66,7 @@ La diferencia entre ambos no se ve en el ensamblador "conceptual": se ve en los 
 
 Los procesadores modernos **adivinan** qué camino tomará un salto para mantener el pipeline lleno. Si adivinan mal, descartan trabajo y empiezan de nuevo: un **miss** de predicción cuesta decenas de ciclos.
 
-```nasm
+```text
 ; Patrón predecible: el salto casi siempre sigue el mismo camino
     cmp rax, limite
     jb  procesar          ; normalmente se cumple
@@ -88,7 +88,7 @@ Los bucles internos son el lugar donde cada ciclo cuenta. Algunas técnicas que 
 
 **Usar `lea` para aritmética combinada:**
 
-```nasm
+```text
 ; en lugar de: add rsi, 8  +  add rax, [rsi]
 lea rax, [rax + rbx*2]     ; multiplica y suma en un solo paso
 ```
@@ -98,7 +98,7 @@ lea rax, [rax + rbx*2]     ; multiplica y suma en un solo paso
 
 **Desenrollar el bucle (loop unrolling):**
 
-```nasm
+```text
 ; en lugar de procesar 1 elemento por vuelta...
     add rax, [rsi]
     add rsi, 8

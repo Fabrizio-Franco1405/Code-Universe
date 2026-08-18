@@ -150,7 +150,7 @@ deduce el resultado correcto sin que nos preocupemos por los tipos. Es la
 forma más cómoda cuando el resultado depende de los parámetros.
 :::
 
-## 4. Parámetros por referencia: evitar copias
+## 4. Parámetros por referencia: Evitar copias
 
 Como las plantillas pueden recibir tipos grandes (vectores, cadenas,
 objetos), es muy común pasarlos por **referencia constante** para evitar

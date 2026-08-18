@@ -10,7 +10,7 @@ Hasta ahora accedes a la memoria de forma simple: `[etiqueta]` para leer una var
 
 Recuerda que un operando puede ser de tres clases, y que los corchetes cambian el significado:
 
-```nasm
+```text
 mov rax, 10         ; inmediato: el número 10
 mov rax, rbx        ; registro: el valor de rbx
 mov rax, [dirección] ; memoria: lo que hay guardado en esa dirección
@@ -26,7 +26,7 @@ Todo lo que sigue son variaciones de ese tercer caso: distintas maneras de calcu
 
 Los dos modos más simples:
 
-```nasm
+```text
 mov rax, [total]      ; directo: la dirección la da la etiqueta
 mov rbx, [rcx]        ; indirecto: la dirección la da el registro rcx
 ```
@@ -44,7 +44,7 @@ En el modo indirecto, el registro actúa como un puntero: contiene una direcció
 
 Con este modo puedes apuntar a una base y "desplazarte" un número fijo de bytes:
 
-```nasm
+```text
 mov rax, [rbx]        ; base = rbx, sin desplazamiento
 mov rax, [rbx + 8]    ; base = rbx, desplazamiento 8
 mov rax, [rbp - 16]   ; base = rbp, desplazamiento -16
@@ -60,7 +60,7 @@ Este modo es la forma estándar de acceder a campos de una estructura: si `rbx` 
 
 El modo más poderoso combina **dos registros** y una **escala** (1, 2, 4 u 8), ideal para recorrer arreglos:
 
-```nasm
+```text
 mov rax, [rsi + rcx*8]    ; base + índice*8
 mov rax, [rsi + rcx*4 + 16] ; base + índice*4 + desplazamiento
 ```
@@ -71,7 +71,7 @@ mov rax, [rsi + rcx*4 + 16] ; base + índice*4 + desplazamiento
 
 Para un arreglo de qwords, `rcx` sería el índice del elemento y `*8` el tamaño de cada elemento:
 
-```nasm
+```text
 ; suma los elementos 2 y 3 de un arreglo de qwords
 mov rsi, numeros
 mov rcx, 2
@@ -102,7 +102,7 @@ Un resumen práctico para elegir el modo correcto:
 
 Un ejemplo que combina casi todo: recorrer un arreglo de estructuras de 16 bytes, accediendo a su segundo campo:
 
-```nasm
+```text
 ; cada estructura: [campo_a: 8 bytes][campo_b: 8 bytes]
 mov rsi, lista           ; base
 mov rcx, 0               ; índice

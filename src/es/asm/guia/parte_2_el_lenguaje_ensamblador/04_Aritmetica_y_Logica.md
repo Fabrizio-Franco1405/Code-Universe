@@ -10,7 +10,7 @@ Ya mueves datos con soltura. Ahora toca hacer algo con ellos: sumar, restar, mul
 
 Las instrucciones básicas son `add`, `sub`, `inc` y `dec`. Todas ellas modifican las banderas de `RFLAGS`:
 
-```nasm
+```text
 mov rax, 10
 add rax, 5        ; rax = 15
 sub rax, 3        ; rax = 12
@@ -24,7 +24,7 @@ dec rax           ; rax = 12
 
 La forma `add destino, origen` sigue la misma lógica que `mov`: el resultado va al primer operando.
 
-```nasm
+```text
 add rax, rbx       ; rax = rax + rbx
 add [total], rax   ; la memoria "total" recibe su valor + rax
 ```
@@ -40,7 +40,7 @@ add [total], rax   ; la memoria "total" recibe su valor + rax
 
 La multiplicación es menos intuitiva porque depende del tamaño de los operandos. La instrucción es `imul`:
 
-```nasm
+```text
 mov rax, 7
 mov rbx, 6
 imul rbx            ; rax = 7 * 6 = 42
@@ -51,7 +51,7 @@ imul rbx            ; rax = 7 * 6 = 42
 
 También existe la forma de dos operandos, más cómoda:
 
-```nasm
+```text
 mov rax, 7
 imul rax, rax, 6    ; rax = 7 * 6 = 42
 ```
@@ -63,7 +63,7 @@ imul rax, rax, 6    ; rax = 7 * 6 = 42
 
 La división es la más delicada: usa **tres registros** de forma implícita. El dividendo vive en `RDX:RAX` (la parte alta en `RDX`), y el divisor se pasa como operando:
 
-```nasm
+```text
 mov rax, 42         ; dividendo (bajo)
 mov rdx, 0          ; dividendo (alto) = 0
 mov rbx, 6          ; divisor
@@ -74,7 +74,7 @@ idiv rbx            ; rax = cociente (7), rdx = resto (0)
 - Después de `idiv`: `RAX` guarda el **cociente** y `RDX` el **resto**.
 - Olvidarte de limpiar `RDX` produce resultados absurdos: la CPU divide el número de 128 bits `RDX:RAX`.
 
-```nasm
+```text
 mov rax, 17
 mov rdx, 0
 mov rbx, 5
@@ -92,7 +92,7 @@ La división **no perdona** el divisor cero: produce una excepción de hardware 
 
 La ALU también trabaja bit a bit. Estas instrucciones son la base de las **máscaras** y de infinidad de trucos:
 
-```nasm
+```text
 and rax, rbx        ; rax = rax & rbx   (Y lógica)
 or  rax, rbx        ; rax = rax | rbx   (O lógica)
 xor rax, rax        ; rax = 0           (¡la forma rápida de poner a cero!)
@@ -106,7 +106,7 @@ not rax             ; rax = ~rax        (invierte todos los bits)
 
 Los **desplazamientos** mueven los bits a izquierda o derecha:
 
-```nasm
+```text
 shl rax, 1          ; rax = rax * 2  (desplazamiento a la izquierda)
 shr rax, 2          ; rax = rax / 4  (desplazamiento a la derecha)
 ```
@@ -123,7 +123,7 @@ shr rax, 2          ; rax = rax / 4  (desplazamiento a la derecha)
 
 Combinemos todo para calcular el área de un rectángulo, por ejemplo `ancho × alto`:
 
-```nasm
+```text
 section .data
     ancho  dq 15
     alto   dq 8

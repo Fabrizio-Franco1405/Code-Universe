@@ -72,7 +72,7 @@ tipos para clases llegó en C++17 y veremos más adelante cómo simplifica las
 cosas.
 :::
 
-## 2. Instanciación: cómo se genera la clase
+## 2. Instanciación: Cómo se genera la clase
 
 Cada tipo distinto genera una clase distinta. Esto es fundamental para
 entender cómo trabajan las plantillas de clase:
