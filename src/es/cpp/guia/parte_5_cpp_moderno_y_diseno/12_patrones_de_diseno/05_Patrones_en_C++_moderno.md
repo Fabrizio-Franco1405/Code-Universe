@@ -15,7 +15,7 @@ resuelve el patrón Strategy, no necesitas cinco clases. Es como elegir entre us
 calculadora o armar una planilla de cálculo con macros para sumar dos números: no tiene sentido
 sobredimensionar la solución cuando algo simple alcanza.
 
-## 1. `std::function`: la interfaz de una sola función
+## 1. `std::function`: La interfaz de una sola función
 
 Muchos patrones (Strategy, Observer, Command) existen para encapsular "una cosa que se puede
 ejecutar". Pensalo un segundo: la mayoría de esos patrones terminan siendo, en el fondo, *una
@@ -45,7 +45,7 @@ tocar la función `procesar` ni crear una sola clase.
 💡 El coste de `std::function` es una pequeña indirección y, en algunos casos, una asignación. Para la mayoría de casos reales es despreciable.
 :::
 
-## 2. Lambdas genéricas: el patrón Visitor moderno
+## 2. Lambdas genéricas: El patrón Visitor moderno
 
 El **Visitor** clásico (doble despacho con herencia) es uno de los patrones más verbosos que
 existen: exige una jerarquía de clases, un método `accept` en cada elemento y otro `visit` en

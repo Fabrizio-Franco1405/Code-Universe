@@ -6,7 +6,7 @@ outline: [2, 3]
 
 Tras tres estándares de mejora continua, **C++20** (2020) volvió a ser un punto de inflexión: el mayor estándar desde C++11. Conceptos, ranges, corrutinas y módulos convierten C++20 en un lenguaje casi nuevo. Es la versión más ambiciosa del C++ moderno.
 
-## 1. Concepts: restricciones a las plantillas
+## 1. Concepts: Restricciones a las plantillas
 
 Los conceptos permiten **expresar los requisitos** que debe cumplir un tipo usado en plantillas. En lugar de errores crípticos de plantilla, el compilador puede decirte claramente "este tipo no es ordenable":
 
@@ -33,7 +33,7 @@ int main() {
 💡 En el capítulo de plantillas vimos SFINAE para esto. Los conceptos lo hacen **legible y claro**: el código expresa sus intenciones y los errores son entendibles.
 :::
 
-## 2. Ranges: el nuevo estilo de los algoritmos
+## 2. Ranges: El nuevo estilo de los algoritmos
 
 Con **ranges**, los algoritmos de la STL se componen y se leen como tuberías:
 
@@ -63,7 +63,7 @@ int main() {
 ℹ️ Los ranges son **perezosos**: no crean vectores intermedios. El filtrado y transformación se aplican sobre la marcha mientras recorres el resultado.
 :::
 
-## 3. `std::span`: ver arreglos sin copiar
+## 3. `std::span`: Ver arreglos sin copiar
 
 `std::span<T>` es como un `string_view` pero para **cualquier tipo**: una vista sobre un rango de elementos contiguos:
 
@@ -92,7 +92,7 @@ int main() {
 }
 ```
 
-## 4. Corrutinas: pausar y reanudar funciones
+## 4. Corrutinas: Pausar y reanudar funciones
 
 Las **corrutinas** permiten pausar una función, devolver el control y reanudarla más tarde. Son la base de la E/S asíncrona moderna y de los generadores:
 
@@ -130,7 +130,7 @@ int main() {
 ⚠️ Las corrutinas tienen una curva de aprendizaje pronunciada. No las necesitas para empezar, pero son el futuro de la E/S asíncrona eficiente en C++.
 :::
 
-## 5. Módulos: adiós a los `#include`
+## 5. Módulos: Adiós a los `#include`
 
 Los **módulos** son la alternativa moderna a los archivos de cabecera: más rápidos de compilar y sin los problemas de orden de `#include`. Aún en adopción, cambiarán la forma de organizar proyectos:
 

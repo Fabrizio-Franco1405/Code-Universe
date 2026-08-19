@@ -117,7 +117,7 @@ int main() {
 ℹ️ Sin `ios::app`, cada vez que abres un `ofstream` se **borra** el contenido anterior. Esa es la diferencia entre crear un registro acumulativo y sobrescribir.
 :::
 
-## 4. Ejemplo completo: una agenda simple
+## 4. Ejemplo completo: Una agenda simple
 
 Veamos un ejemplo que integra escritura y lectura con estructuras, uniendo todo lo que
 vimos hasta acá. Vamos a guardar contactos y luego leerlos de vuelta:

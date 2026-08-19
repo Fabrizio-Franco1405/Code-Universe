@@ -94,3 +94,13 @@
 .lang-cpp a {
     text-decoration-color: var(--vp-c-brand-1);
 }
+
+/**
+ * Component: Tarjetas cu- (accento Azul C++)
+ * -------------------------------------------------------------------------- */
+.lang-cpp {
+    --cu-accent: #00599c;
+    --cu-gradient: linear-gradient(to right, #00599c, #004482);
+    --cu-shadow-color: rgba(0, 89, 156, 0.15);
+    --cu-glow: #61dafb;
+}

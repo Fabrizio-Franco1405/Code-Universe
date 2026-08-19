@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Gestión manual de memoria (new/delete)
+# Gestión manual de memoria (`new`/`delete`)
 
 Hasta ahora, todas las variables que hemos creado han sido **automáticas**: nacen cuando se
 ejecuta su bloque y mueren cuando el bloque termina, y el compilador se encarga de todo ese
@@ -98,7 +98,7 @@ rendimiento hasta hacer el programa inservible.
 
 ## 4. Puntero colgante (dangling pointer)
 
-El error opuesto a la fuga es el **puntero colgante**: un puntero que apunta a memoria que ya fue
+El error opuesto a la fuga es el **puntero colgante**: Un puntero que apunta a memoria que ya fue
 liberada.
 
 ```cpp

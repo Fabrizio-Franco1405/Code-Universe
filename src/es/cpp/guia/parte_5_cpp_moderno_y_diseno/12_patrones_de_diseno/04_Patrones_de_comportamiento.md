@@ -7,7 +7,7 @@ outline: [2, 3]
 
 Es el patrón de las notificaciones, los eventos y las interfaces reactivas.
 
-## 1. El problema: comprobar cambios a cada rato
+## 1. El problema: Comprobar cambios a cada rato
 
 Sin Observer, si varios componentes necesitan saber cuándo cambia un dato, tendrías dos malas opciones:
 
@@ -118,7 +118,7 @@ int main() {
 💡 Añadir un nuevo "interesado" = crear una clase `Observador` y suscribirla. **Nada más cambia**: ni el Termómetro ni los demás observadores.
 :::
 
-## 4. Observer moderno: con `std::function`
+## 4. Observer moderno: Con `std::function`
 
 En C++ moderno no necesitas interfaces para observadores: puedes suscribir **lambdas** directamente con `std::function`. Es el estilo más habitual en código real.
 
@@ -218,7 +218,7 @@ Imagina una aplicación de mapas. Según el contexto, el camino óptimo cambia: 
 
 El **Strategy** encapsula algoritmos intercambiables en clases (o lambdas) separadas y permite **cambiarlos en tiempo de ejecución** sin tocar el código que los usa.
 
-## 1. El problema: los `if` que crecen sin parar
+## 1. El problema: Los `if` que crecen sin parar
 
 ```cpp
 // Sin Strategy: la clase conoce todos los algoritmos
@@ -327,7 +327,7 @@ int main() {
 💡 La `CalculadoraDeRuta` no sabe nada de velocidades. Solo dice "calcula el tiempo con la estrategia actual". Añadir el metro = crear `RutaMetro` y pasar la instancia.
 :::
 
-## 4. Strategy moderno: con lambdas y `std::function`
+## 4. Strategy moderno: Con lambdas y `std::function`
 
 Para algoritmos simples, las **lambdas** evitan crear clases. `std::function` guarda el algoritmo intercambiable:
 

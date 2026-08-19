@@ -17,7 +17,7 @@ solo le dices qué platillo quieres y él lo prepara con las mejores técnicas.
 
 Estos algoritmos viven en el encabezado `<algorithm>` (y algunos en `<numeric>`).
 
-## 1. La idea: algoritmos genéricos
+## 1. La idea: Algoritmos genéricos
 
 La gran virtud de los algoritmos de la STL es que **no están atados a un contenedor
 concreto**. Funcionan con **iteradores** (que veremos en el próximo capítulo), así que

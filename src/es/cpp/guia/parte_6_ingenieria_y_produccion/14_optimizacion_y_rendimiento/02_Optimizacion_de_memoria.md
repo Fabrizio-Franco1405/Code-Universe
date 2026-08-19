@@ -136,7 +136,7 @@ struct UsuarioCompacto {
 💡 Ordenar los campos de mayor a menor tamaño reduce el **relleno** (padding). Menos bytes por objeto = más objetos en caché = acceso más rápido.
 :::
 
-## 6. SoA vs AoS: el truco del rendimiento
+## 6. SoA vs AoS: El truco del rendimiento
 
 Cuando trabajas con muchos objetos con varios campos, la disposición **SoA** (Structure of Arrays) suele vencer a la **AoS** (Array of Structures):
 

@@ -62,7 +62,7 @@ millones. En otras palabras, los "unordered" suelen ser los más veloces, pero p
 orden.
 :::
 
-## 3. `std::map`: diccionario ordenado
+## 3. `std::map`: Diccionario ordenado
 
 `std::map` guarda pares clave→valor **ordenados por la clave**. Es exactamente como un
 diccionario o una agenda: todo queda organizado alfabéticamente y puedes buscar cualquier
@@ -113,7 +113,7 @@ completo durante el recorrido, lo cual es especialmente importante cuando los va
 objetos grandes.
 :::
 
-## 4. `std::set`: conjunto de claves únicas
+## 4. `std::set`: Conjunto de claves únicas
 
 `std::set` es como un `map` **sin valor**: solo guarda claves únicas y ordenadas. Es
 perfecto para eliminar duplicados o para comprobar si un elemento pertenece a un grupo.
@@ -186,7 +186,7 @@ necesitas recorrer en orden, usa `map`. No es que uno sea mejor que el otro, es 
 uno brilla en su terreno.
 :::
 
-## 6. Comparación: ordenado vs sin orden
+## 6. Comparación: Ordenado vs sin orden
 
 Para que decidas con fundamentos, acá tienes la comparación lado a lado entre los dos
 grupos. Mírala con calma y fíjate en la última fila, que resume cuándo conviene cada uno:

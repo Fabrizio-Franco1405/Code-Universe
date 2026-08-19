@@ -8,7 +8,7 @@ Un proyecto sin documentación es como un mapa sin leyenda: solo lo entiende qui
 
 En este capítulo documentaremos el sistema de inventario: README, comentarios en el código y la documentación de la API.
 
-## 1. El README: la puerta de entrada
+## 1. El README: La puerta de entrada
 
 Todo proyecto profesional empieza con un **README** claro. Lo mínimo indispensable:
 
@@ -107,7 +107,7 @@ Doxygen soporta las sintaxis modernas de C++ (concepts, lambdas, `auto`). Un eje
 std::optional<Producto *> buscarPorId(uint32_t id);
 ```
 
-## 4. Comentarios: cantidad correcta
+## 4. Comentarios: Cantidad correcta
 
 Los comentarios no son un premio: son un **recurso**. La regla profesional:
 | Situación | Comentario |

@@ -94,3 +94,13 @@
 .lang-rust a {
     text-decoration-color: var(--vp-c-brand-1);
 }
+
+/**
+ * Component: Tarjetas cu- (accento Naranja Rust)
+ * -------------------------------------------------------------------------- */
+.lang-rust {
+    --cu-accent: #f06431;
+    --cu-gradient: linear-gradient(to right, #f06431, #ce412b);
+    --cu-shadow-color: rgba(240, 100, 49, 0.12);
+    --cu-glow: #ff8c00;
+}

@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Uniones (union)
+# Uniones (`union`)
 
 Hasta ahora, cada variable que declaramos ocupa su propio espacio en memoria. Pero, ¿qué pasaría
 si quisiéramos ahorrar memoria permitiendo que varias variables **compartan el mismo espacio**?
@@ -178,7 +178,7 @@ especificado en ciertos casos). Si la ves en código real, es normalmente para o
 protocolos de bajo nivel.
 :::
 
-## 7. `std::variant`: la alternativa moderna
+## 7. `std::variant`: La alternativa moderna
 
 Desde **C++17**, la biblioteca estándar nos ofrece `std::variant`, que es básicamente una unión
 **segura**: recuerda automáticamente qué valor contiene y lanza un error si intentas leer el que

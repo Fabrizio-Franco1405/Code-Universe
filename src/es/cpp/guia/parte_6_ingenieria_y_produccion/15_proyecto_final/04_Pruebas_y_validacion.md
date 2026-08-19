@@ -61,7 +61,7 @@ header-only: un `#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN` y tienes tu propio
 `main` de tests.
 :::
 
-## 3. El primer test: añadir productos
+## 3. El primer test: Añadir productos
 
 Empecemos por lo más básico: que agregar productos funcione. Un test típico tiene
 tres fases: **preparar** el escenario, **ejecutar** la acción y **verificar** el

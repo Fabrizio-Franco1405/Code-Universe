@@ -26,7 +26,7 @@ promise<int> p;                  future<int> f = p.get_future();
 p.set_value(42);  ─────────────►  int valor = f.get(); // 42
 ```
 
-## 2. `std::async`: la forma más sencilla
+## 2. `std::async`: La forma más sencilla
 
 Para el caso más común (lanzar una tarea y esperar su resultado), `std::async` es lo más cómodo: lanza la tarea en segundo plano y devuelve un `future` directamente.
 
@@ -75,7 +75,7 @@ cout << f.get() << endl; // 42
 
 Si necesitas ver el valor sin consumirlo, existe `wait()` (espera sin devolver) o `get()` una única vez y guardar el resultado.
 
-## 4. `std::promise`: control manual
+## 4. `std::promise`: Control manual
 
 Cuando quieres controlar **tú mismo** cuándo entregar el valor (en lugar de delegar en `async`), usa `promise` directamente:
 
@@ -144,7 +144,7 @@ int main() {
 💡 `wait_for` es perfecto para la E/S asíncrona que vimos: compruebas si los datos llegaron sin bloquear el programa para siempre.
 :::
 
-## 6. `std::packaged_task`: tarea lista para ejecutar
+## 6. `std::packaged_task`: Tarea lista para ejecutar
 
 `packaged_task` envuelve una función y expone un `future` para su resultado. Es útil cuando quieres **programar** cuándo ejecutar la tarea.
 

@@ -30,7 +30,7 @@ Objeto en memoria                 Archivo / red
 └────────────────┘
 ```
 
-## 2. Serialización manual: el formato simple
+## 2. Serialización manual: El formato simple
 
 La forma más básica es definir nosotros mismos cómo se guarda cada objeto. Se controla
 todo, pero hay que escribir el código de guardar y cargar a mano. Acá la clave está en
@@ -173,7 +173,7 @@ struct Persona {
 };
 ```
 
-## 5. Serialización en C++ moderno: bibliotecas
+## 5. Serialización en C++ moderno: Bibliotecas
 
 En proyectos reales, casi nadie serializa a mano. Existen bibliotecas que lo hacen por ti,
 y son tan buenas que reinventar la rueda sería un desperdicio de tiempo:

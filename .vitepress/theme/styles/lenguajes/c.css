@@ -94,3 +94,13 @@
 .lang-c a {
     text-decoration-color: var(--vp-c-brand-1);
 }
+
+/**
+ * Component: Tarjetas cu- (accento Gris Acero)
+ * -------------------------------------------------------------------------- */
+.lang-c {
+    --cu-accent: #5c7e91;
+    --cu-gradient: linear-gradient(to right, #394a59, #a8b9cc);
+    --cu-shadow-color: rgba(92, 126, 145, 0.15);
+    --cu-glow: #a8b9cc;
+}

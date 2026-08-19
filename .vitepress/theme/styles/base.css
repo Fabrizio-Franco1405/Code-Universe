@@ -1,0 +1,85 @@
+/**
+ * Code Universe — Componentes base «cu-»
+ * Estilos compartidos por la home y las landings de lenguajes.
+ * Los colores por lenguaje llegan a traves de variables CSS (--cu-*)
+ * definidas en .lang-* de cada lenguaje.
+ */
+
+.cu-main-container {
+    padding: 80px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cu-badge {
+    display: block;
+    margin-top: 12px;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
+.cu-title {
+    text-align: center;
+    border: none !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.cu-grid {
+    display: grid;
+}
+
+.cu-feature-card {
+    background: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-divider);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cu-feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cu-accent, var(--vp-c-brand-1));
+    box-shadow: 0 12px 30px var(--cu-shadow-color, rgba(0, 0, 0, 0.1));
+}
+
+.cu-card-content h3 {
+    margin: 0 0 8px 0 !important;
+    color: var(--vp-c-text-1);
+}
+
+.cu-card-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--vp-c-text-2);
+}
+
+.cu-main-footer {
+    text-align: center;
+    padding: 60px 24px;
+    border-top: 1px solid var(--vp-c-divider);
+}
+
+/* Chispa del footer: una sola animacion economica (text-shadow, sin filter) */
+.cu-energy,
+.cu-anvil,
+.cu-flame,
+.cu-chip {
+    display: inline-block;
+    animation: cu-sparkle 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes cu-sparkle {
+    from {
+        transform: scale(1);
+        text-shadow: 0 0 4px var(--cu-glow, var(--cu-accent, currentColor));
+    }
+    to {
+        transform: scale(1.15);
+        text-shadow: 0 0 10px var(--cu-glow, var(--cu-accent, currentColor));
+    }
+}

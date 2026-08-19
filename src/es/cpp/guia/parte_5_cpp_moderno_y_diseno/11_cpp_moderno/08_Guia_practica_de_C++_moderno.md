@@ -43,7 +43,7 @@ for (int i : views::iota(0, 10)) {       // Ranges (C++20)
 }
 ```
 
-## 3. Regla de oro: smart pointers y RAII
+## 3. Regla de oro: Smart pointers y RAII
 
 Nunca uses `new` y `delete` a mano en código nuevo:
 
@@ -153,7 +153,7 @@ int main() {
 }
 ```
 
-## 8. Tabla: cuándo usar cada herramienta
+## 8. Tabla: Cuándo usar cada herramienta
 | Situación | Herramienta moderna |
 |---|---|
 | Quiero un valor que puede faltar | `std::optional` |

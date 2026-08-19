@@ -1,0 +1,65 @@
+/* ============================================
+   Code Universe — Landings de lenguajes
+   Layout compartido por todas las .lang-*
+   Colores via variables --cu-* de cada lenguaje.
+   Nota: se ancla al elemento de pagina (pageClass),
+   presente desde el SSR, para evitar un FOUC del
+   titulo con gradiente. La home (lang-main) queda fuera.
+   ============================================ */
+
+.lang-cpp .cu-grid,
+.lang-c .cu-grid,
+.lang-csharp .cu-grid,
+.lang-rust .cu-grid,
+.lang-asm .cu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.lang-cpp .cu-title,
+.lang-c .cu-title,
+.lang-csharp .cu-title,
+.lang-rust .cu-title,
+.lang-asm .cu-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    background: var(--cu-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.lang-cpp .cu-feature-card,
+.lang-c .cu-feature-card,
+.lang-csharp .cu-feature-card,
+.lang-rust .cu-feature-card,
+.lang-asm .cu-feature-card {
+    border-radius: 16px;
+    padding: 32px;
+    gap: 16px;
+}
+
+.lang-cpp .cu-feature-card:hover,
+.lang-c .cu-feature-card:hover,
+.lang-csharp .cu-feature-card:hover,
+.lang-rust .cu-feature-card:hover,
+.lang-asm .cu-feature-card:hover {
+    border-color: var(--cu-accent);
+    box-shadow: 0 12px 30px var(--cu-shadow-color);
+}
+
+.lang-cpp .cu-card-icon,
+.lang-c .cu-card-icon,
+.lang-csharp .cu-card-icon,
+.lang-rust .cu-card-icon,
+.lang-asm .cu-card-icon {
+    font-size: 3rem;
+}
+
+.lang-cpp .cu-card-content h3,
+.lang-c .cu-card-content h3,
+.lang-csharp .cu-card-content h3,
+.lang-rust .cu-card-content h3,
+.lang-asm .cu-card-content h3 {
+    font-size: 1.25rem;
+}

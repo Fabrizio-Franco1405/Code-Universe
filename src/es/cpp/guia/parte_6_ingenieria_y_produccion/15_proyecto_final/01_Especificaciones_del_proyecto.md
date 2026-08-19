@@ -8,7 +8,7 @@ Has llegado al final de la guía. Todos los módulos anteriores (variables, POO,
 
 Este es el examen final, pero el bueno: el que se aprueba **construyendo**.
 
-## 1. El proyecto: un sistema de gestión de inventario
+## 1. El proyecto: Un sistema de gestión de inventario
 
 Construiremos una aplicación de consola que gestiona un **inventario de productos** con las siguientes características:
 
@@ -31,6 +31,7 @@ Construiremos una aplicación de consola que gestiona un **inventario de product
 | R8 | Cargar el inventario desde el archivo al iniciar |
 | R9 | Generar reportes (valor total, agotados, más caros) |
 | R10 | Menú interactivo por consola |
+
 ## 3. Requisitos técnicos (lo que debes aplicar)
 
 Aquí es donde entran **todos** los módulos de la guía:
@@ -45,6 +46,7 @@ Aquí es donde entran **todos** los módulos de la guía:
 | **Excepciones** | Manejo de errores de archivos |
 | **Patrones** | Quizás un Factory para las categorías |
 | **CMake** | Build con CMake y estructura profesional |
+
 ## 4. La estructura del proyecto
 
 ```
@@ -100,6 +102,7 @@ El inventario se guarda como un arreglo de productos:
 | Código limpio (nombres, estructura, sin código muerto) | 20% |
 | Manejo de errores y casos límite | 10% |
 | Build reproducible con CMake | 10% |
+
 ## 7. Entregables
 
 1. El código completo del proyecto.

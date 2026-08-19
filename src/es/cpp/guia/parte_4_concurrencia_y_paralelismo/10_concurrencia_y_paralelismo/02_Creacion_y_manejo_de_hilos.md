@@ -50,7 +50,7 @@ int main() {
 ⚠️ Un `std::thread` **destruido sin `join()` ni `detach()`** provoca que el programa termine abruptamente (`std::terminate`). Todo hilo debe unirse o separarse antes de morir.
 :::
 
-## 2. `join()` y `detach()`: el ciclo de vida
+## 2. `join()` y `detach()`: El ciclo de vida
 
 Todo hilo tiene dos destinos posibles:
 | Método | Efecto |
@@ -131,7 +131,7 @@ int main() {
 }
 ```
 
-## 4. Múltiples hilos: el poder del paralelismo
+## 4. Múltiples hilos: El poder del paralelismo
 
 Con varios hilos, el orden de ejecución es **impredecible** (lo decide el sistema operativo):
 
@@ -183,7 +183,7 @@ int main() {
 💡 Crear **más hilos que núcleos** no acelera el cómputo: los hilos extra solo se turnan los mismos núcleos, con el coste de cambiar de contexto.
 :::
 
-## 6. `std::jthread`: el hilo seguro (C++20)
+## 6. `std::jthread`: El hilo seguro (C++20)
 
 Desde **C++20** existe `std::jthread` ("joining thread"): se **une automáticamente** en su destructor, evitando el `std::terminate` si olvidamos `join()`. Además soporta cancelación cooperativa.
 

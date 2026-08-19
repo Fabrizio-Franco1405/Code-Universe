@@ -48,7 +48,7 @@ Fíjate en la división de responsabilidades: `dividir()` solo se preocupa por
 detectar el problema y lanzarlo; `main()` es quien decide qué hacer con él. Esa
 separación es una de las grandes ventajas de las excepciones.
 
-## 2. Capturar por referencia const
+## 2. Capturar por referencia `const`
 
 Siempre deberías capturar por **referencia const**: `catch (const runtime_error
 &e)`. ¿Por qué?

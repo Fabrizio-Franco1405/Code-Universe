@@ -68,7 +68,7 @@ std::string nombre;
 ⚠️ Un header que no compila solo es un header con bugs invisibles: el problema solo aparece cuando alguien lo usa en otro orden. Incluye siempre lo que necesites, aunque parezca redundante.
 :::
 
-## 3. Los namespaces: el apellido de tus símbolos
+## 3. Los namespaces: El apellido de tus símbolos
 
 Los **namespaces** evitan que tus funciones choquen con las de otros (o las de la biblioteca estándar). Son el apellido de tus símbolos:
 

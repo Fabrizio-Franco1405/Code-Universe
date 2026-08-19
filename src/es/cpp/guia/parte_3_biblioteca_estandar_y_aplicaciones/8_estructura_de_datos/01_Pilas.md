@@ -67,7 +67,7 @@ llamadas.
 ℹ️ Ese es el famoso "stack overflow" que da nombre a la web de programadores: se llena la memoria de llamadas cuando las funciones no terminan nunca.
 :::
 
-## 3. `std::stack`: la pila de la STL
+## 3. `std::stack`: La pila de la STL
 
 La STL nos ofrece `std::stack` en el encabezado `<stack>`. Sus operaciones principales son
 las siguientes:
@@ -137,7 +137,7 @@ int main() {
 💡 Fíjate en que el recorrido es **en orden inverso** a la inserción: eso es precisamente la regla LIFO en acción.
 :::
 
-## 5. Ejemplo práctico: invertir una palabra
+## 5. Ejemplo práctico: Invertir una palabra
 
 Un uso clásico de la pila es **invertir el orden** de algo. Si apilamos las letras de una
 palabra y luego las desapilamos, obtenemos la palabra al revés. Es una idea sencilla pero
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-## 6. Ejemplo práctico: paréntesis balanceados
+## 6. Ejemplo práctico: Paréntesis balanceados
 
 Otro uso muy real: verificar que una expresión tiene los paréntesis correctamente
 balanceados, algo que los compiladores hacen todo el tiempo. La idea es sencilla: cada vez
