@@ -55,7 +55,7 @@ el objeto real (un perro), no como el tipo de la variable. Es como tener un
 animal en una jaula etiquetada "Animal": aunque dentro haya un perro, si la
 etiqueta no se actualiza, todos creerán que solo sabe hacer un sonido genérico.
 
-## 2. La solución: métodos `virtual`
+## 2. La solución: Métodos `virtual`
 
 La palabra clave `virtual` le dice al compilador: "este método puede ser
 sobrescrito y debe decidirse en tiempo de ejecución según el objeto real".
@@ -143,7 +143,7 @@ public:
 `final` es como poner un candado a una puerta: nadie más podrá volver a
 sobrescribir ese método. Sirve para marcar el límite de la cadena de herencia.
 
-## 4. Polimorfismo en la práctica: un veterinario
+## 4. Polimorfismo en la práctica: Un veterinario
 
 El verdadero poder del polimorfismo se ve cuando escribimos **una función que
 sirve para todos**:

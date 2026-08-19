@@ -8,7 +8,7 @@ Piensa en una línea de montaje en una fábrica: cada pieza pasa por varias esta
 
 Son la revolución de estilo más importante de C++20: el código que antes era un mar de bucles e iteradores ahora se lee como una frase.
 
-## 1. El problema: los bucles que se apilan
+## 1. El problema: Los bucles que se apilan
 
 Con el estilo clásico, transformar datos significaba encadenar bucles y vectores temporales:
 
@@ -39,7 +39,7 @@ int main() {
 
 Funciona, pero es verboso, crea vectores intermedios y mezcla el *qué* con el *cómo*.
 
-## 2. Ranges: los algoritmos se encadenan
+## 2. Ranges: Los algoritmos se encadenan
 
 Con **ranges**, los mismos pasos se escriben como una composición única. El algoritmo recibe **el rango completo** y los adaptadores se encadenan con `|`:
 
@@ -69,7 +69,7 @@ Cada `|` es un **adaptador de rango**: recibe un rango y devuelve otro rango **v
 💡 El `namespace views` se escribe a veces como `std::views`. Con C++23 puedes omitir el prefijo `views::` gracias al argument-dependent lookup.
 :::
 
-## 3. Vistas: procesamiento bajo demanda
+## 3. Vistas: Procesamiento bajo demanda
 
 La clave de las vistas es el **perezado** (*lazy*): no calculan nada hasta que se itera. La tubería anterior no procesa ningún elemento hasta el `for`.
 
@@ -126,7 +126,7 @@ int main() {
 
 `take` y `drop` limitan por cantidad, `reverse` invierte el orden, y `enumerate` añade el índice.
 
-## 5. Rangos propios: contenedores y rangos generados
+## 5. Rangos propios: Contenedores y rangos generados
 
 Los ranges no solo trabajan con vectores. Cualquier secuencia iterable funciona, y puedes **generar** rangos infinitos:
 

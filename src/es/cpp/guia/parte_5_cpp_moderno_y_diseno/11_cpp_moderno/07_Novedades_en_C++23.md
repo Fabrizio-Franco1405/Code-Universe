@@ -6,7 +6,7 @@ outline: [2, 3]
 
 La historia del C++ moderno continúa. Después de C++20, llegó **C++23** (2023): un estándar de "consolidación", que afina lo anterior y añade mejoras muy prácticas sin romper la compatibilidad. Es la prueba de que C++ sigue evolucionando en ciclos regulares de 3 años.
 
-## 1. `std::expected`: el retorno que puede ser error
+## 1. `std::expected`: El retorno que puede ser error
 
 Uno de los problemas clásicos de C++: las funciones que deben devolver "un valor **o** un error". Antes tenías excepciones (lanzar/capturar) o códigos de error. `std::expected` (C++23) devuelve **ambas posibilidades de forma explícita**:
 
@@ -44,7 +44,7 @@ int main() {
 💡 `std::expected` es perfecto para errores esperables (validación, parseo) donde lanzar excepciones es demasiado costoso o el error es parte del flujo normal.
 :::
 
-## 2. `std::views::zip`: recorrer varios contenedores a la vez
+## 2. `std::views::zip`: Recorrer varios contenedores a la vez
 
 La vieja duda: "¿cómo recorro dos vectores en paralelo?". C++23 añade `views::zip`:
 
@@ -71,7 +71,7 @@ int main() {
 ℹ️ La longitud del recorrido es la del contenedor más corto. Combinado con structured bindings, es extremadamente legible.
 :::
 
-## 3. `std::print`: impresión sin `cout` (¡y con formato!)
+## 3. `std::print`: Impresión sin `cout` (¡y con formato!)
 
 `std::print` llega para modernizar la salida, usando la sintaxis de formato de `std::format`:
 
@@ -99,7 +99,7 @@ int main() {
 💡 `std::print` es más seguro (evita problemas de formato), más rápido y más legible. Es el futuro de la salida por consola en C++.
 :::
 
-## 4. `std::mdspan`: arreglos multidimensionales
+## 4. `std::mdspan`: Arreglos multidimensionales
 
 Para computación científica y matemáticas, `std::mdspan` permite ver un arreglo como **multidimensional** sin copiarlo:
 

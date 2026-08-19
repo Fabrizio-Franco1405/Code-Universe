@@ -1,6 +1,9 @@
+@import './base.css';
 @import './general/main.css';
+@import './general/custom.css';
+@import './lenguajes/landing.css';
 @import './lenguajes/c.css';
 @import './lenguajes/cpp.css';
 @import './lenguajes/csharp.css';
 @import './lenguajes/rust.css';
-@import './general/custom.css';
+@import './lenguajes/asm.css';

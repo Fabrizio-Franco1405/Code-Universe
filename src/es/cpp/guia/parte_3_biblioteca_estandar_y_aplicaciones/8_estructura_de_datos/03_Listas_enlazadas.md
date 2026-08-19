@@ -147,7 +147,7 @@ Lista doblemente enlazada:
 └─────────┘   └─────────┘   └─────────┘
 ```
 
-## 5. Ejemplo: invertir una lista enlazada
+## 5. Ejemplo: Invertir una lista enlazada
 
 Un clásico de entrevistas: invertir la dirección de todos los punteros. Parece simple, pero
 tiene un truco muy importante que conviene interiorizar bien:

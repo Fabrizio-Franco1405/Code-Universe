@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { sidebarEsCpp } from './sidebars/es/es-cpp'
 import { sidebarEsC } from './sidebars/es/es-c'
 import { sidebarEsRs } from './sidebars/es/es-rs'
+import { sidebarEsAsm } from './sidebars/es/es-asm'
 
 export default defineConfig({
   title: "Code Universe",
@@ -9,21 +10,28 @@ export default defineConfig({
   srcDir: 'src',
   
   vite: {
-    publicDir: '../public'
+    publicDir: '../public',
+    build: {
+      reportCompressedSize: false,
+      chunkSizeWarningLimit: 1000,
+      cssCodeSplit: true
+    }
   },
 
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/img/code-universe-favicon.webp' }]],
+  head: [['link', { rel: 'icon', type: 'image/webp', href: '/favicons/code-universe-favicon.webp' }]],
 
   transformPageData(pageData) {
     const path = pageData.relativePath;
     let iconName = 'code-universe-favicon.webp';
     if (path.includes('cpp/')) iconName = 'cpp-favicon.svg';
-    else if (path.includes('c/')) iconName = 'c-favicon.svg';
     else if (path.includes('csharp/')) iconName = 'csharp-favicon.svg';
+    else if (path.includes('c/')) iconName = 'c-favicon.svg';
     else if (path.includes('rs/')) iconName = 'rust-favicon.svg';
+    else if (path.includes('asm/')) iconName = 'asm-favicon.webp';
 
+    const type = iconName.endsWith('.svg') ? 'image/svg+xml' : 'image/webp';
     const fullIconPath = `/favicons/${iconName}`;
-    pageData.frontmatter.head = [['link', { rel: 'icon', type: 'image/png', href: fullIconPath }]];
+    pageData.frontmatter.head = [['link', { rel: 'icon', type, href: fullIconPath }]];
   },
 
   locales: {
@@ -39,6 +47,7 @@ export default defineConfig({
             { text: 'C', link: '/es/c/' },
             { text: 'C#', link: '/es/csharp/' },
             { text: 'Rust', link: '/es/rs/' },
+            { text: 'ASM', link: '/es/asm/' },
           ]}
         ]
       }
@@ -55,6 +64,7 @@ export default defineConfig({
             { text: 'C', link: '/en/c/' },
             { text: 'C#', link: '/en/csharp/' },
             { text: 'Rust', link: '/en/rs/' },
+            { text: 'ASM', link: '/en/asm/' },
           ]}
         ]
       }
@@ -67,10 +77,12 @@ export default defineConfig({
       '/es/c/': sidebarEsC,
       '/es/csharp/': [],
       '/es/rs/': sidebarEsRs,
+      '/es/asm/': sidebarEsAsm,
       '/en/cpp/': [],
       '/en/c/': [],
       '/en/csharp/': [],
       '/en/rs/': [],
+      '/en/asm/': [],
     },
 
     // SOCIAL LINKS

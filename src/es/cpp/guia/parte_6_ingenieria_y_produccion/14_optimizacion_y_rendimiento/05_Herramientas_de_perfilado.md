@@ -65,7 +65,7 @@ El resultado es una lista con las funciones **más calientes** (hotspots), orden
 💡 La regla: el perfilador **nunca miente**. Si dice que `procesar_datos` es el 99% del tiempo, esa es la función a optimizar, aunque tú pensaras que era otra.
 :::
 
-## 3. Sanitizadores: detectar bugs de memoria
+## 3. Sanitizadores: Detectar bugs de memoria
 
 Los **sanitizadores** del compilador son otra pieza clave del diagnóstico: detectan errores de
 memoria *al ejecutar*. La idea es brillante: el compilador inyecta comprobaciones extra en tu
@@ -120,7 +120,7 @@ Para leer esos reportes, hay tres categorías que conviene conocer:
 ℹ️ Valgrind es lento (10-50x), pero da **la verdad absoluta** sobre fugas. Perfecto para una pasada de auditoría antes de publicar.
 :::
 
-## 5. Medir la caché: cache misses
+## 5. Medir la caché: Cache misses
 
 Los profilers avanzados (VTune, perf con eventos) van más allá del tiempo de CPU y muestran los
 **cache misses**: accesos a memoria que no encontraron el dato en caché. Es una información

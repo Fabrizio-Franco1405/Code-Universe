@@ -13,7 +13,7 @@ Como un chef experimentado que tiene sus atajos: no reinventa la técnica cada v
 trucos que sabe que funcionan. Vos, igual que él, vas a empezar a reconocer estos patrones apenas
 los veas aparecer en código ajeno.
 
-## 1. Memoización: no recalcular lo ya calculado
+## 1. Memoización: No recalcular lo ya calculado
 
 Si una función se llama muchas veces con los mismos argumentos, **guarda** los resultados y
 devuélvelos sin recalcular. A eso se le llama **memoización**, y es uno de los trucos más
@@ -47,7 +47,7 @@ int main() {
 ℹ️ Sin memoización, `fibonacci(50)` tarda minutos. Con ella, milisegundos. Cambiar espacio (caché) por tiempo es uno de los patrones más rentables.
 :::
 
-## 2. Early exit: devuelve pronto
+## 2. Early exit: Devuelve pronto
 
 El **early exit** consiste en salir del bucle y de la función **lo antes posible**. Cada
 comprobación temprana ahorra trabajo, porque no tiene sentido seguir recorriendo datos cuando ya

@@ -6,7 +6,7 @@ outline: [2, 3]
 
 Tres años después de C++14, llegó **C++17** (2017): un estándar con muchas novedades prácticas y centrado en simplificar el código cotidiano. Si C++11 fue la revolución y C++14 el pulido, **C++17 fue la comodidad**: resolver problemas comunes con la sintaxis más elegante posible.
 
-## 1. Structured bindings: desempaquetar en una línea
+## 1. Structured bindings: Desempaquetar en una línea
 
 La joya más vistosa de C++17: puedes **descomponer** un contenedor, tupla o struct en variables directamente:
 
@@ -40,7 +40,7 @@ int main() {
 💡 Los structured bindings eliminan el código repetitivo de `first`/`second` y de destrozar tuplas a mano. El estilo del mapa `for (const auto &[clave, valor])` es C++17 puro.
 :::
 
-## 2. `std::optional`: un valor que puede faltar
+## 2. `std::optional`: Un valor que puede faltar
 
 Cuántas veces has usado `-1` o `nullptr` para indicar "no hay resultado". `std::optional<T>` representa explícitamente **"hay valor o no hay valor"**:
 
@@ -78,7 +78,7 @@ int main() {
 ℹ️ `std::optional` hace el código **auto-documentado**: se ve claramente que el resultado puede no existir, sin trucos como `-1` o punteros nulos.
 :::
 
-## 3. `std::variant`: un valor de varios tipos posibles
+## 3. `std::variant`: Un valor de varios tipos posibles
 
 ¿Recuerdas las uniones de C? `std::variant` es la unión **segura y moderna**: guarda un valor de uno de varios tipos, con acceso comprobado:
 
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-## 4. `std::string_view`: ver strings sin copiar
+## 4. `std::string_view`: Ver strings sin copiar
 
 En el mundo moderno del rendimiento, `std::string_view` es una **vista** de una cadena: te deja leerla sin copiarla. Perfecto para parámetros de funciones que solo leen:
 

@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# typedef y using
+# `typedef` y `using`
 
 Imagina que tienes que escribir un tipo de dato muy largo y complicado muchas veces en tu código.
 Cada vez que lo escribes, hay más posibilidades de cometer un error o de que una línea se vuelva
@@ -33,7 +33,7 @@ int saldo = 100;    // Son el mismo tipo
 exactamente el mismo tipo para el compilador.
 :::
 
-## 2. `typedef`: la forma clásica
+## 2. `typedef`: La forma clásica
 
 La palabra clave `typedef` existe desde los inicios de C. Su sintaxis puede parecer un poco
 contraintuitiva al principio, porque el orden es `typedef` + tipo + nuevo nombre. En otras

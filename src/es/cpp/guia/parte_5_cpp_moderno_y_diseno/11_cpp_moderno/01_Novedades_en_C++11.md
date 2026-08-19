@@ -8,7 +8,7 @@ Si hay un momento que marcó un antes y un después en la historia de C++, fue e
 
 De hecho, casi todo lo que has aprendido en esta guía es C++ moderno. Este capítulo es un recorrido por las novedades más importantes de C++11, ese año que reinventó el lenguaje.
 
-## 1. `auto`: el compilador deduce los tipos
+## 1. `auto`: El compilador deduce los tipos
 
 En lugar de escribir el tipo completo, deja que el compilador lo deduzca:
 
@@ -38,7 +38,7 @@ shared_ptr<int> b = make_shared<int>(100);
 
 Nunca más fugas de memoria por olvidar un `delete`. Esta fue una de las mayores victorias de C++11.
 
-## 3. `nullptr`: el puntero nulo correcto
+## 3. `nullptr`: El puntero nulo correcto
 
 En el C++ clásico, el puntero nulo era `NULL` o `0`. Con `nullptr` (C++11) tenemos un tipo propio y seguro:
 
@@ -51,7 +51,7 @@ if (p == nullptr) { /* ... */ }
 ℹ️ `NULL` en realidad es un entero `0`, lo que causaba ambigüedades en sobrecargas. `nullptr` es un valor de puntero puro y resuelve el problema.
 :::
 
-## 4. Lambdas: funciones anónimas
+## 4. Lambdas: Funciones anónimas
 
 Las funciones anónimas que vimos en la STL nacieron en C++11:
 
@@ -76,7 +76,7 @@ for (int n : numeros) {
 }
 ```
 
-## 6. `constexpr`: cálculo en tiempo de compilación
+## 6. `constexpr`: Cálculo en tiempo de compilación
 
 La palabra clave `constexpr` permite que ciertas funciones y variables se calculen en **tiempo de compilación**, no de ejecución:
 
@@ -104,7 +104,7 @@ vector<int> origen = {1, 2, 3};
 vector<int> destino = move(origen); // Sin copias
 ```
 
-## 8. `std::thread`: hilos en la biblioteca estándar
+## 8. `std::thread`: Hilos en la biblioteca estándar
 
 Antes de C++11, la concurrencia dependía de librerías externas. Desde C++11, los hilos son parte del estándar:
 

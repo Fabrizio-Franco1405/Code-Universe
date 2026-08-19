@@ -27,7 +27,7 @@ Como los elementos de un arreglo están **contiguos en memoria**, si `p` apunta 
 entonces `p + 1` apunta al segundo, `p + 2` al tercero, y así sucesivamente. Piénsalo como una fila
 de casilleros uno al lado del otro: conocés el primero y, desde ahí, contás los siguientes.
 
-## 2. Sumar y restar: moverse entre elementos
+## 2. Sumar y restar: Moverse entre elementos
 
 La aritmética de punteros no funciona como la aritmética normal con números: **sumar 1 a un
 puntero no suma 1 byte**, sino que avanza hasta el siguiente elemento del tipo al que apunta.
@@ -57,7 +57,7 @@ exactamente un elemento completo. El compilador hace ese cálculo por nosotros: 
 pensamos en "elementos".
 :::
 
-## 3. Distancia entre punteros: restar punteros
+## 3. Distancia entre punteros: Restar punteros
 
 Restar dos punteros que apuntan al mismo arreglo nos da el **número de elementos** que hay entre
 ellos (no el número de bytes). Es como preguntar "¿cuántos casilleros hay entre el primero y el
@@ -167,7 +167,7 @@ int main() {
 compilador no te avisará, pero el resultado puede ser impredecible.
 :::
 
-## 7. Cuidado: el puntero fuera de los límites
+## 7. Cuidado: El puntero fuera de los límites
 
 La mayor fuente de errores con la aritmética de punteros es **salirse de los límites** del
 arreglo. El compilador no comprueba que tu puntero apunte a memoria válida; esa responsabilidad

@@ -84,7 +84,7 @@ int main() {
 }
 ```
 
-## 4. `std::atomic<bool>`: flags compartidos
+## 4. `std::atomic<bool>`: Flags compartidos
 
 Un uso muy común: un **flag** que varios hilos leen para saber si deben detenerse.
 
@@ -144,7 +144,7 @@ contador++;
 ⚠️ Los atómicos **no son la solución para todo**. Si necesitas proteger varias variables o un bloque de código con varias operaciones, necesitas un mutex. Los atómicos brillan para **una variable a la vez**.
 :::
 
-## 6. Limpiando la sincronización: el problema del `cout`
+## 6. Limpiando la sincronización: El problema del `cout`
 
 Los atómicos son útiles incluso para entender por qué los `cout` se entremezclan: `cout <<` no es atómico. La solución simple es proteger la impresión con un mutex.
 

@@ -262,7 +262,7 @@ Este bucle imprimirá los números del 1 al 5. Cuando `contador` llega a 6, la c
 - Cuando no sabes cuántas veces se repetirá el bloque.
 - Cuando la condición depende de una entrada o evento externo.
 
-### 3.2 Estructura do while
+### 3.2 Estructura `do while`
 
 La estructura `do-while` es similar a `while`, pero con una diferencia clave: El bloque
 se ejecuta al menos una vez, y luego es que se evalúa la condición. Es como preguntar
@@ -295,7 +295,7 @@ condición es falsa desde el inicio.
 - Cuando necesitas ejecutar el bloque al menos una vez antes de verificar la condición.
 - Ideal para validaciones de entrada o menús interactivos.
 
-### 3.3 Estructura for
+### 3.3 Estructura `for`
 
 La estructura `for` se usa cuando conoces de antemano cuántas veces debe ejecutarse el
 bloque. Incluye en su sintaxis la inicialización, la condición y la actualización del
@@ -344,7 +344,7 @@ bucles, `switch` o funciones. En C++ existen cuatro sentencias de salto principa
 
 A continuación, veremos cada una en detalle.
 
-### 4.1 Estructura break
+### 4.1 Estructura `break`
 
 La instrucción `break` se utiliza para **interrumpir** la ejecución de un bucle (`for`,
 `while`, `do while`) o salir de un `switch` antes de que termine de forma natural. Es
@@ -376,7 +376,7 @@ switch (opcion) {
 }
 ```
 
-### 4.2 Estructura continue
+### 4.2 Estructura `continue`
 
 La instrucción `continue` salta directamente a la siguiente iteración del bucle,
 omitiendo el resto del código en la iteración actual. A diferencia de `break`, no
@@ -401,7 +401,7 @@ Valor: 4
 Valor: 5
 ```
 
-### 4.3 Estructura return
+### 4.3 Estructura `return`
 
 La instrucción `return` finaliza la ejecución de una función y, si la función no es
 `void`, devuelve un valor.

@@ -34,7 +34,7 @@ Fíjate en la diferencia clave con la pila: acá el que entra primero se va prim
 que en la pila el que entraba último era el que salía primero. Dos caras de la misma
 moneda: controlar el orden de los elementos.
 
-## 2. `std::queue`: la cola FIFO
+## 2. `std::queue`: La cola FIFO
 
 La STL nos ofrece `std::queue` en el encabezado `<queue>`. Sus operaciones principales son:
 
@@ -72,7 +72,7 @@ int main() {
 ⚠️ Igual que en la pila, `front()`/`pop()` sobre una cola vacía es comportamiento indefinido. Verifica con `empty()` primero.
 :::
 
-## 3. Ejemplo práctico: simular una fila de atención
+## 3. Ejemplo práctico: Simular una fila de atención
 
 Veamos cómo se comporta una cola en una simulación sencilla de atención a clientes. Es el
 mismo mecanismo de los turnos que tomás en el banco o en el médico:
@@ -107,7 +107,7 @@ int main() {
 💡 Observa cómo la cola respeta el **orden de llegada**: el cliente 1 se atiende primero. Si esto fuera una pila, se atendería el cliente 5 primero (lo cual sería injusto para una fila real).
 :::
 
-## 4. `std::priority_queue`: la cola con prioridad
+## 4. `std::priority_queue`: La cola con prioridad
 
 Ahora vamos a agregarle una vuelta de tuerca interesante. En una cola con prioridad, los
 elementos no salen por orden de llegada, sino según una **prioridad**: el elemento con
@@ -186,7 +186,7 @@ int main() {
 💡 Carlos (urgencia 1) se atiende primero aunque llegara en segundo lugar: eso es la prioridad en acción. Las `priority_queue` son la base de los **planificadores de tareas** de los sistemas operativos.
 :::
 
-## 5. Ejemplo práctico: imprimir en orden (FIFO)
+## 5. Ejemplo práctico: Imprimir en orden (FIFO)
 
 Un ejemplo clásico de uso real: la **cola de impresión**. Los documentos se imprimen en el
 orden en que se enviaron, como debe ser. Nadie quiere que su documento salga antes que el de

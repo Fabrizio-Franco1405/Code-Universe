@@ -8,7 +8,7 @@ Has creado tus propias librerías y usado gestores de paquetes. Ahora falta la p
 
 Es como montar una tienda: necesitas saber dónde comprar (find_package) y, a la vez, preparar tu mercancía para que otros la compren (install).
 
-## 1. `find_package`: encontrar librerías de terceros
+## 1. `find_package`: Encontrar librerías de terceros
 
 CMake localiza librerías instaladas con `find_package`:
 

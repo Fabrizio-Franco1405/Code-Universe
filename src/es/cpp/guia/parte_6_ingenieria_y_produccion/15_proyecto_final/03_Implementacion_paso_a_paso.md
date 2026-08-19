@@ -17,7 +17,7 @@ Si un paso se rompe, sabremos exactamente cuál fue, porque el anterior ya qued�
 verificado. Es la diferencia entre un error que se arregla en cinco minutos y uno
 que te roba una tarde entera.
 
-## 1. Paso 0: el esqueleto que compila
+## 1. Paso 0: El esqueleto que compila
 
 Todo proyecto empieza por su estructura. Acá no buscamos funcionalidad todavía,
 solo un **esqueleto mínimo** que compile sin errores. Es la base sobre la que iremos
@@ -66,7 +66,7 @@ compilador que tienes configurado soporte C++20. Es mejor resolver esto ahora,
 con un proyecto vacío, que en medio de la implementación.
 :::
 
-## 2. Paso 1: la clase Producto
+## 2. Paso 1: La clase Producto
 
 Con el esqueleto en pie, empezamos por la pieza más básica: la clase **Producto**.
 La elegimos primero porque es el **dato puro**, sin lógica que lo complique. Es lo
@@ -112,7 +112,7 @@ archivo JSON) sin perder el tipo seguro que nos da `enum class`.
 ejecutable. Recuerda: compila y verifica tras cada paso.
 :::
 
-## 3. Paso 2: la clase Inventario (CRUD)
+## 3. Paso 2: La clase Inventario (CRUD)
 
 Ahora sí, la lógica de negocio. La clase **Inventario** es el corazón del sistema,
 y acá empezamos por su parte esencial: las operaciones **CRUD** —*Create, Read,
@@ -158,7 +158,7 @@ Fíjate en dos detalles que ya conoces de capítulos anteriores y que brillan ac
   justo para lo que diseñamos `std::optional<Producto*>`: distinguir "encontrado"
   de "no existe" sin ambigüedades.
 
-## 4. Paso 3: búsquedas y filtros con lambdas
+## 4. Paso 3: Búsquedas y filtros con lambdas
 
 Una vez que el CRUD funciona, pasamos a las búsquedas y filtros. Acá ya no
 buscamos por un ID exacto, sino que devolvemos **listas** de productos que
@@ -213,7 +213,7 @@ calcular cuántos productos coincidirán, simplemente dejamos que el resultado
 crezca solo.
 :::
 
-## 5. Paso 4: reportes
+## 5. Paso 4: Reportes
 
 Con las búsquedas listas, vamos por los **reportes**: los cálculos y listados que
 dan valor al inventario. Acá el sistema empieza a "pensar", a decirnos cosas que
@@ -258,7 +258,7 @@ Tres reportes con tres enfoques distintos:
   trabajamos sobre una copia: no queremos modificar el orden original del
   inventario solo para generar un reporte.
 
-## 6. Paso 5: el menú principal
+## 6. Paso 5: El menú principal
 
 Ya tenemos toda la lógica. Ahora falta la **cara del sistema**: el menú
 interactivo que permite a una persona usar el inventario sin escribir código. Acá
@@ -337,7 +337,7 @@ tamaño es correcto y simple. Si el inventario fuera enorme, cambiaríamos a
 devolver vistas o IDs.
 :::
 
-## 7. Paso 6: la persistencia JSON
+## 7. Paso 6: La persistencia JSON
 
 El último paso de la implementación es la **persistencia**: que el inventario
 sobreviva al cierre del programa. Sin esto, cada vez que cerramos la aplicación

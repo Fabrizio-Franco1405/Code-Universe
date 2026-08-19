@@ -11,7 +11,7 @@ excepciones en mente, veremos por qué este principio es **absolutamente
 esencial**: sin RAII, una excepción puede dejar tu programa con fugas de memoria
 y recursos sin liberar.
 
-## 1. El problema: excepciones y memoria
+## 1. El problema: Excepciones y memoria
 
 Imagina este código con gestión manual de memoria:
 

@@ -15,7 +15,7 @@ organizar y agrupar identificadores bajo un nombre único. Un **namespace** defi
 ámbito para nombres, evitando conflictos y facilitando la lectura y mantenimiento del
 código.
 
-## 1. Sintaxis básica de un namespace
+## 1. Sintaxis básica de un `namespace`
 
 Para declarar un namespace se usa la palabra clave `namespace` seguida de un
 identificador y un bloque `{ }` que contiene sus miembros. Es como crear una carpeta en
@@ -98,7 +98,7 @@ int main() {
 }
 ```
 
-## 4. Alias de namespaces
+## 4. Alias de `namespaces`
 
 Si un namespace tiene un nombre largo, puedes crear un alias para acortar su uso. Es
 como ponerle un apodo a alguien para no repetir todo el nombre cada vez que lo

@@ -97,7 +97,7 @@ una de las razones por las que devolver objetos grandes "por valor" no es tan
 costoso como parece.
 :::
 
-## 3. Referencias rvalue: el secreto
+## 3. Referencias rvalue: El secreto
 
 Para entender cómo funciona el movimiento por debajo, debemos conocer las
 **referencias rvalue**, escritas con `&&`:
