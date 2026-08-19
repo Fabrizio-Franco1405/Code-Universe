@@ -9,7 +9,7 @@ export const sidebarEsAsm: DefaultTheme.SidebarItem[] = [
         { text: 'Visión general y filosofía', link: '/es/asm/guia/0_introduccion/01_Vision_General' },
         { text: 'Preparando el entorno', link: '/es/asm/guia/0_introduccion/02_Preparando_el_Entorno' },
         { text: 'Tu primer programa en ensamblador', link: '/es/asm/guia/0_introduccion/03_Tu_Primer_Programa' },
-        { text: 'Ensamblar y enlazar: el flujo de trabajo', link: '/es/asm/guia/0_introduccion/04_Ensamblar_y_Enlazar' },
+        { text: 'Ensamblar y enlazar: El flujo de trabajo', link: '/es/asm/guia/0_introduccion/04_Ensamblar_y_Enlazar' },
         ]
     },
 
@@ -18,7 +18,7 @@ export const sidebarEsAsm: DefaultTheme.SidebarItem[] = [
         text: 'Parte I · El hardware que dominas',
         collapsed: true,
         items: [
-        { text: 'Cómo funciona una CPU: la máquina de Von Neumann', link: '/es/asm/guia/parte_1_fundamentos_del_hardware/01_Arquitectura_de_la_CPU' },
+        { text: 'Cómo funciona una CPU: La máquina de Von Neumann', link: '/es/asm/guia/parte_1_fundamentos_del_hardware/01_Arquitectura_de_la_CPU' },
         { text: 'Bits, bytes y hexadecimal', link: '/es/asm/guia/parte_1_fundamentos_del_hardware/02_Bits_Bytes_y_Hexadecimal' },
         { text: 'La memoria: RAM, direcciones y endianness', link: '/es/asm/guia/parte_1_fundamentos_del_hardware/03_La_Memoria' },
         { text: 'Los registros del procesador', link: '/es/asm/guia/parte_1_fundamentos_del_hardware/04_Registros' },

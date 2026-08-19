@@ -3,6 +3,12 @@ outline: [2, 3]
 ---
 # Visión General
 
+Bienvenido a **Code Universe: Rust**
+
+A lo largo de este camino aprenderás acerca de uno de los lenguajes modernos y más influyentes de la actualidad y entenderás a fondo el detrás de la filosofía precursora que impulsó la creación de este mimso. Sin embargo Rust trae con nosotros conceptos un poco nuevos y en algunos casos un tanto extraño es por ello que recomendamos encarecidamente que lees con detenimiento cada uno de los capitulos sin saltarte ninguno para que puedas entender y ahorrarte muchas frustraciones.
+
+Es importante aclarar que Rust como bien decía su documentación oficial en sus inicios está pensado para gente que tiene conocimientos en el área de la programación pero si no es tu caso igual no te preocupes porque nuestro trabajo en Code Universe es poder llevarte a conocer cada tecnología desde los cimientos asumiendo que no tienes ningún tipo de experiencia, así que puedes tomarte con total tranquilidad esta guía y disfrutar de tu aprendizaje.
+
 ## ¿Qué es Rust?
 
 Rust es un lenguaje de programación de propósito general, moderno y de código abierto, nacido de la necesidad de ofrecer una alternativa distinta a los lenguajes tradicionales. Durante décadas, los desarrolladores se enfrentaban a una elección forzada: Optar por lenguajes veloces y cercanos al hardware, pero con una complejidad que castigaba cualquier error humano, o elegir lenguajes que facilitaban el desarrollo sacrificando el rendimiento y el control del sistema.

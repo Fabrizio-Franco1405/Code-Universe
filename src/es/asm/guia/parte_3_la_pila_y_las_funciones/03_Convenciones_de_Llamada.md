@@ -15,7 +15,7 @@ Una **convención de llamada** (o **ABI**, *Application Binary Interface*) es un
 - Qué registros puede pisar la función llamada y cuáles **debe preservar**.
 - Cómo se alinea la pila en las llamadas.
 
-Sin este acuerdo, una función escrita por ti no podría llamar a una escrita por el compilador de C, ni viceversa. Es el "idioma común" de las funciones.
+Sin este acuerdo, una función escrita por ti no podría llamar a una escrita por el compilador de C, ni viceversa. Es el "lenguaje común" de las funciones.
 
 :::info Nota
 ℹ️ En Linux y macOS, el estándar es el **SysV AMD64**. En Windows las reglas son diferentes (los argumentos van en `RCX`, `RDX`, `R8`, `R9`). Ese detalle es clave cuando veas Windows en la Parte V.

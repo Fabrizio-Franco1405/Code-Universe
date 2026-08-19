@@ -6,7 +6,11 @@ outline: [2, 3]
 
 En el capítulo anterior viste por qué el ensamblador es tan poderoso y qué esperar de esta travesía. Ahora es momento de poner manos a la obra: vamos a instalar el **ensamblador NASM** y el **enlazador** en tu máquina, y dejaremos listo tu editor para que escribir ensamblador sea cómodo.
 
-Trabajaremos con herramientas de la familia GNU, así que en los ejemplos usaré Linux. Si usas Windows, te mostraré también el camino —más de uno funcionará con WSL, que es lo que recomiendo.
+Esta guía usa **NASM** y las herramientas de la familia GNU, así que la mayoría de los ejemplos corren en **Linux** (o en **WSL** si estás en Windows). Si trabajas en Windows nativo no te quedas fuera: en la sección 3 verás el camino con **MASM**, el ensamblador de Microsoft.
+
+:::info Nota sobre macOS
+ℹ️ ¿Y macOS? El ensamblador que aprendemos aquí es **x86-64**, y los Mac modernos usan procesadores **Apple Silicon (ARM64)**, un conjunto de instrucciones completamente distinto. Por eso esta guía se centra en Linux y Windows, donde x86-64 es el estándar.
+:::
 
 ## 1. Instalando NASM
 
@@ -59,7 +63,49 @@ ld --version
 make --version
 ```
 
-## 3. Configurando el editor
+## 3. En Windows: MASM y Visual Studio
+
+Si trabajas en Windows y prefieres **no usar WSL**, tienes un camino nativo con el ensamblador oficial de Microsoft: **MASM** (*Microsoft Macro Assembler*). MASM viene incluido en Visual Studio, así que instalar el IDE te da el ensamblador (`ml64.exe`), el enlazador (`link`) y un entorno completo, sin tocar la terminal de Linux.
+
+### Instalar Visual Studio 2026
+
+1. Descarga **Visual Studio Community** (es gratuito y más que suficiente para aprender) desde [Visual Studio 2026](https://visualstudio.microsoft.com/es/).
+
+2. Ejecuta el instalador. En la pantalla inicial del **Instalador de Visual Studio** se eligen las cargas de trabajo:
+
+![Componentes de C++ en el instalador](/asm/introduccion/asm-install-cpp-components-vc2026.png)
+
+3. Selecciona la carga de trabajo **"Desarrollo de escritorio con C++"**. Su componente **"Herramientas de MSVC"** es el que instala el ensamblador MASM (`ml64.exe`):
+
+![Instalador de Visual Studio](/asm/introduccion/asm-install-vc2026.png)
+
+:::tip
+💡 Si marcas solo lo necesario (C++), evitas instalar herramientas extra que ocupan mucho espacio.
+:::
+
+### Verificar que MASM quedó instalado
+
+1. Abre el menú Inicio y busca **"Developer PowerShell for VS 2026"** (o **"x64 Native Tools Command Prompt"**). Esta consola prepara automáticamente las variables de entorno de las herramientas de C++.
+
+2. Escribe:
+
+```text
+ml64 /?
+```
+
+Si aparece la ayuda del ensamblador, todo está listo. MASM quedó instalado como `ml64.exe` (el ensamblador de 64 bits) en una ruta como:
+
+```text
+C:\Program Files\Microsoft Visual Studio\2026\Community\VC\Tools\MSVC\<versión>\bin\Hostx64\x64\ml64.exe
+```
+
+### ¿NASM o MASM?
+
+- **NASM** es el estándar del mundo GNU/Linux, multiplataforma, y el que usan la mayoría de los ejemplos de esta guía.
+- **MASM** es el ensamblador de Microsoft, ideal para Windows nativo: se integra con Visual Studio, el depurador y las herramientas de Windows.
+- La **sintaxis** de ambos difiere (directivas, secciones y detalles), pero la **arquitectura** que estás aprendiendo —registros, pila, direccionamiento— es idéntica. En el próximo capítulo verás el mismo "Hola, mundo" en MASM para que compares.
+
+## 4. Configurando el editor
 
 Escribir ensamblador no exige un IDE especial, pero un buen editor con resaltado de sintaxis hace la diferencia. Usaremos **VS Code** con la extensión de NASM:
 
@@ -77,7 +123,7 @@ proyectos/asm/
 💡 Configura que VS Code use **tabulaciones con ancho 8** para el ensamblador, que es la convención clásica: los mnemónicos, operandos y comentarios se alinean en columnas y el código queda mucho más legible.
 :::
 
-## 4. Una herramienta extra: `objdump`
+## 5. Una herramienta extra: `objdump`
 
 Antes de terminar, presentamos a tu futuro mejor amigo: **`objdump`**, el desensamblador. Convierte un ejecutable o archivo objeto de vuelta a ensamblador. Es perfecto para comprobar qué generó el ensamblador o para leer el código de programas ya compilados:
 
@@ -88,12 +134,13 @@ objdump -d mi_programa
 Aprenderás a usarlo a fondo en los capítulos de depuración, pero desde ya tenlo presente: verás que lo usamos más de una vez.
 
 :::warning Advertencia
-⚠️ En Windows nativo (sin WSL) el proceso es más engorroso: necesitas NASM en modo `win64`, un enlazador como el de MinGW y las llamadas al sistema de Windows, que difieren mucho de las de Linux. Si puedes, usa WSL: todos los ejemplos de esta guía están pensados para el mundo Linux.
+⚠️ Los ejemplos de esta guía están pensados para **NASM en Linux/WSL**. Si usas Windows nativo, la ruta recomendada es **MASM** (sección 3) o NASM en modo `win64` con las funciones de las DLL de Windows: la sección 5 del próximo capítulo y el capítulo de Windows muestran las diferencias.
 :::
 
 ## Resumen rápido
 
 - **NASM** es el ensamblador que usaremos; instálalo con el gestor de paquetes de tu sistema.
+- En **Windows nativo**, **MASM** (incluido en Visual Studio) es la alternativa al flujo GNU/Linux.
 - El **enlazador** (`ld`), **gcc** y **make** completan el flujo de trabajo.
 - **VS Code** con la extensión de NASM te da resaltado de sintaxis cómodo.
 - **`objdump`** desensambla ejecutables y será tu aliado en la depuración.

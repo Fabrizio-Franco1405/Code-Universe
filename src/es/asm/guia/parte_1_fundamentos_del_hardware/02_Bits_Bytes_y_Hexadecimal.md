@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Bits, bytes y hexadecimal
 
-En el capítulo anterior viste cómo la CPU ejecuta instrucciones una tras otra. Pero, ¿en qué idioma habla la máquina cuando mueve datos? La respuesta son los **números binarios**: ceros y unos. En este capítulo vas a dominar el sistema de numeración de la computadora y, sobre todo, la forma cómoda de escribirlo: el **hexadecimal**.
+En el capítulo anterior viste cómo la CPU ejecuta instrucciones una tras otra. Pero, ¿en qué lenguaje habla la máquina cuando mueve datos? La respuesta son los **números binarios**: ceros y unos. En este capítulo vas a dominar el sistema de numeración de la computadora y, sobre todo, la forma cómoda de escribirlo: el **hexadecimal**.
 
 ## 1. Bits y bytes
 
@@ -75,7 +75,7 @@ La magia: **un dígito hexadecimal equivale a un nibble (4 bits)**. Entonces, un
 - Cada dos dígitos hex = un byte. Por eso en ensamblador y en herramientas como `objdump` ves direcciones como `0x401000`.
 
 :::tip
-💡 En ensamblador NASM, los números hexadecimales se escriben con el sufijo `h` (por ejemplo, `0ah` para el salto de línea) y en C con el prefijo `0x`. Acostúmbrate a leerlos: son el idioma común de las direcciones y los opcodes.
+💡 En ensamblador NASM, los números hexadecimales se escriben con el sufijo `h` (por ejemplo, `0ah` para el salto de línea) y en C con el prefijo `0x`. Acostúmbrate a leerlos: son el lenguaje común de las direcciones y los opcodes.
 :::
 
 ## 4. Números negativos: Complemento a dos
@@ -129,4 +129,4 @@ Estos nombres aparecerán en cada programa que escribas de aquí en adelante. El
 - `db`, `dw`, `dd`, `dq` definen datos de 1, 2, 4 y 8 bytes respectivamente.
 - El mismo patrón de bits puede ser positivo o negativo según lo interpretes; la CPU te sigue la palabra.
 
-Con el idioma de los números claro, pasemos al espacio donde viven tus datos: en el próximo capítulo estudiaremos **la memoria** — direcciones, bytes y endianness — y entenderás cómo el procesador encuentra cada dato que pides.
+Con el lenguaje de los números claro, pasemos al espacio donde viven tus datos: en el próximo capítulo estudiaremos **la memoria** — direcciones, bytes y endianness — y entenderás cómo el procesador encuentra cada dato que pides.

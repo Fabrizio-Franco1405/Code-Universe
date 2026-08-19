@@ -69,7 +69,7 @@ hero:
   <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>Assembly (Coming Soon)</h3>
+<h3>Assembly</h3>
 <p>The closest language to the metal. Total control over the CPU, instruction by instruction.</p>
 </div>
 </article>

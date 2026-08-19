@@ -4,7 +4,7 @@ outline: [2, 3]
 
 # Visión general y filosofía
 
-Bienvenido a la galaxia del **Ensamblador**, el idioma más antiguo y más cercano a la máquina que existe. Cada lenguaje que has tocado antes —C, C++, Rust— es una capa de traducción que te protege del hardware. El ensamblador, en cambio, te quita todas las capas y te deja hablando directamente con el procesador, en su propio idioma.
+Bienvenido a la galaxia del **Ensamblador**, el lenguaje de programación más antiguo y más cercano a la máquina que existe. Cada lenguaje que has tocado antes —C, C++, Rust— es una capa de traducción que te protege del hardware. El ensamblador, en cambio, te quita todas las capas y te deja hablando directamente con el procesador, en su propio lenguaje.
 
 Esta guía está pensada para que entiendas el ensamblador x86-64 de una forma didáctica y sin miedo. No necesitas ser un gurú del hardware: necesitas curiosidad y ganas de descubrir qué pasa realmente detrás de cada línea de código que escribes en otros lenguajes.
 
