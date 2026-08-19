@@ -25,6 +25,8 @@
     font-weight: 800;
     margin-bottom: 3rem;
     background: var(--cu-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .lang-cpp .cu-feature-card,

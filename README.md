@@ -19,9 +19,10 @@ Cada lenguaje es una "Galaxia" independiente con su propia identidad visual y t�
 | Galaxia | Nodo | Estado | Especialización Técnica |
 | :--- | :---: | :--- | :--- |
 | **C++** | `cpp` | 🟢 **Active** | C++23, Modern Abstractions & Systems. |
-| **Rust** | `rs` | 🟠 **Activo** | Memory Safety, Ownership & Concurrency. |
-| **C#** | `cs` | 🟠 **Beta** | .NET Ecosystem, Enterprise Scalability. |
+| **Rust** | `rs` | 🟢 **Activo** | Memory Safety, Ownership & Concurrency. |
 | **C** | `c` | 🟠 **Beta** | Low-level Control & Hardware Foundations. |
+| **C#** | `cs` | 🟠 **Beta** | .NET Ecosystem, Enterprise Scalability. |
+| **ASM** | `asm` | 🟠 **Beta** | Performance, Harware & Total Control. |
 
 ---
 

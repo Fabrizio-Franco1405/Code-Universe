@@ -49,7 +49,7 @@ hero:
   <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>C</h3>
+<h3>C (Próximamente)</h3>
 <p>El estándar fundamental. Control absoluto y eficiencia bruta desde el origen.</p>
 </div>
 </article>
