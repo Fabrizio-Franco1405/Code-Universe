@@ -8,7 +8,7 @@ En la Parte III estudiaste la convención SysV. Ahora descubrirás que es **la m
 
 ## 1. ¿Por qué C y Ensamblador se entienden?
 
-C compilado y tu ensamblador comparten el mismo "idioma" de funciones: el **ABI SysV AMD64**. Eso significa que:
+C compilado y tu ensamblador comparten el mismo "lenguaje" de funciones: el **ABI SysV AMD64**. Eso significa que:
 
 - Los argumentos van en los mismos registros (`rdi`, `rsi`, `rdx`, `rcx`, `r8`, `r9`).
 - El resultado vuelve en `rax`.

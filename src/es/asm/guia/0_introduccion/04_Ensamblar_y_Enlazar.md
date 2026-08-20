@@ -110,7 +110,22 @@ make clean
 💡 Esta es la estructura que usarás en el proyecto final. Automatizar desde el principio te ahorra errores y tiempo; `make` solo recompila lo que cambió.
 :::
 
-## 5. Más allá: Inspeccionar el resultado
+## 5. El flujo en Windows: ml64 y link
+
+En Windows con MASM los dos pasos existen igual, pero con sus propias herramientas:
+
+```text
+ml64 /c hola.asm                            ; ensambla  -> hola.obj
+link hola.obj /SUBSYSTEM:CONSOLE /ENTRY:main ; enlaza   -> hola.exe
+```
+
+- `ml64` es el ensamblador de MASM; la opción `/c` genera el archivo objeto (`*.obj`), igual que `nasm -f elf64`.
+- `link` es el enlazador de Visual Studio; resuelve los símbolos y produce el ejecutable PE (`.exe`).
+- `/ENTRY:main` indica el punto de entrada; si el programa usa funciones del sistema, enlaza también sus bibliotecas (`kernel32.lib`, `user32.lib`).
+
+Para automatizar puedes usar **`nmake`**, que lee un `Makefile` con la misma filosofía que `make`: solo recompila lo que cambió.
+
+## 6. Más allá: Inspeccionar el resultado
 
 Para confirmar que todo está en su lugar, puedes preguntarle al ejecutable quién es:
 
@@ -141,6 +156,7 @@ Observa cómo la CPU recorre las direcciones de 16 en 16 en decimal... no, perd�
 - El **enlazador** une los objetos, resuelve símbolos y produce el ejecutable final.
 - `global` expone etiquetas; `extern` importa símbolos de otros objetos.
 - **`make`** automatiza el flujo recompilando solo lo que cambió.
+- En **Windows**, `ml64` y `link` reemplazan a `nasm` y `ld`.
 - **`objdump`** te deja inspeccionar el código de máquina generado.
 
 Ahora que dominas el flujo completo de compilación, vamos a la base de todo: en la **Parte I** entenderás cómo funciona realmente la máquina que ejecuta tus programas, empezando por la arquitectura de la CPU.

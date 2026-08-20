@@ -30,7 +30,7 @@ hero:
 </header>
 <div class="cu-card-content">
 <h3>C++</h3>
-<p>Limitless power and high-level abstractions for the world's most demanding software.</p>
+<p>Native performance without compromise: the language that builds the world.</p>
 </div>
 </article>
 
@@ -44,12 +44,22 @@ hero:
 </div>
 </article>
 
+<article class="cu-feature-card" onclick="window.location.href='/en/asm/'">
+<header class="cu-card-icon">
+  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Assembly</h3>
+<p>The closest language to the metal. Total control over the CPU, instruction by instruction.</p>
+</div>
+</article>
+
 <article class="cu-feature-card" onclick="window.location.href='/en/c/'">
 <header class="cu-card-icon">
   <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>C (Coming Soon)</h3>
+<h3>C (In Development)</h3>
 <p>The foundational standard. Absolute control and raw efficiency from the source.</p>
 </div>
 </article>
@@ -60,17 +70,7 @@ hero:
 </header>
 <div class="cu-card-content">
 <h3>C# (Coming Soon)</h3>
-<p>Productivity and robustness with .NET for enterprise applications and game development.</p>
-</div>
-</article>
-
-<article class="cu-feature-card" onclick="window.location.href='/en/asm/'">
-<header class="cu-card-icon">
-  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
-</header>
-<div class="cu-card-content">
-<h3>Assembly (Coming Soon)</h3>
-<p>The closest language to the metal. Total control over the CPU, instruction by instruction.</p>
+<p>The industrial standard for scalable applications and high-level game development.</p>
 </div>
 </article>
 

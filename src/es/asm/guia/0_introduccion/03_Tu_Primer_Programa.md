@@ -112,10 +112,57 @@ syscall
 - `mov rdi, 0`: el código de salida. Cero significa éxito; cualquier otro valor indica un error.
 
 :::warning Advertencia
-⚠️ En Windows nativo el programa anterior **no funciona**: los números de syscall de Windows son distintos y la estructura del ejecutable también. Por eso toda la guía usa Linux/WSL. Cuando veamos Windows en un capítulo avanzado, las diferencias serán evidentes.
+⚠️ En Windows nativo el programa anterior **no funciona**: los números de syscall de Windows son distintos y la estructura del ejecutable también. Por eso la guía usa NASM en Linux/WSL y dedica la sección 5 (y el capítulo de Windows) al camino con **MASM**.
 :::
 
-## 5. ¿Qué hace la CPU mientras tanto?
+## 5. El mismo programa en Windows: MASM
+
+Si instalaste MASM en el capítulo anterior, aquí tienes el mismo "Hola, mundo" en su sintaxis. En vez de una syscall como en Linux, el programa le pide a Windows que escriba en la consola usando las funciones de `kernel32.dll`:
+
+```text
+; hola.asm - Hola, mundo en MASM (x64)
+; Ensamblar:   ml64 /c hola.asm
+; Enlazar:     link hola.obj /SUBSYSTEM:CONSOLE /ENTRY:main kernel32.lib
+
+extrn GetStdHandle: PROC
+extrn WriteFile:    PROC
+extrn ExitProcess:  PROC
+
+.data
+    mensaje db "Hola, mundo!", 0ah, 0
+    escrito dq 0
+
+.code
+main PROC
+    sub rsp, 40                      ; espacio de sombra + alineación
+
+    mov ecx, -11                     ; STD_OUTPUT_HANDLE
+    call GetStdHandle                ; rax = manejador de la consola
+
+    mov rcx, rax                     ; hFile
+    lea rdx, mensaje                 ; lpBuffer
+    mov r8d, 13                      ; nNumberOfBytesToWrite
+    lea r9, escrito                  ; lpNumberOfBytesWritten
+    mov qword ptr [rsp+32], 0        ; lpOverlapped (nulo)
+    call WriteFile
+
+    xor ecx, ecx                     ; código de salida 0
+    call ExitProcess
+main ENDP
+END
+```
+
+- `extrn ...: PROC`: declara funciones externas de Windows, el equivalente de `extern` en NASM.
+- `.data` y `.code` son las secciones, equivalentes a `.data` y `.text`.
+- `PROC` / `ENDP` delimitan el procedimiento `main`, el punto de entrada que busca el enlazador.
+- `ml64 /c hola.asm` ensambla y genera `hola.obj`; `link` lo convierte en `hola.exe`.
+- La mecánica es la misma que en Linux: obtener el manejador de la consola, pasarle un buffer con el texto y pedir que lo escriba.
+
+:::tip
+💡 Compara ambas versiones: los **registros y la mecánica son idénticos**; lo que cambia es cómo se pide el servicio al sistema. Una vez entiendes el hardware, cambiar de ensamblador es solo aprender una nueva sintaxis.
+:::
+
+## 6. ¿Qué hace la CPU mientras tanto?
 
 Cuando ejecutas `./hola`, ocurre algo maravilloso detrás de escena:
 
@@ -132,6 +179,7 @@ Ese "leer, ejecutar, avanzar" es el **ciclo de ejecución** de toda CPU. Lo estu
 - Un programa ensamblador mínimo tiene **datos** (`.data`), **código** (`.text`) y una etiqueta de entrada (`_start`).
 - `nasm` convierte tu código en un archivo objeto; `ld` lo convierte en ejecutable.
 - `mov` copia valores entre registros y memoria; `syscall` pide servicios al sistema operativo.
+- En **Windows nativo**, el flujo equivalente usa **MASM** (`ml64` + `link`) y las funciones de `kernel32.dll`.
 - El programa termina siempre con la syscall `exit` para no devolver el control de forma abrupta.
 
 Ya viste tu primer programa funcionar de principio a fin. En el próximo capítulo entenderás el flujo completo que conecta tu texto con el hardware: **ensamblar y enlazar**, y las herramientas que intervienen en cada paso.

@@ -87,4 +87,4 @@ En otras palabras: estás aprendiendo a pensar como la máquina, no a traducirle
 - Los **núcleos** y la **caché** añaden complejidad a la CPU moderna, y explican por qué la velocidad no se mide solo en GHz.
 - El ensamblador te hace pensar como la máquina: cada instrucción es un paso real del hardware.
 
-Ya conoces la arquitectura general. Ahora es momento de aprender el idioma de los datos: en el próximo capítulo veremos **bits, bytes y hexadecimal**, los números con los que la máquina habla realmente.
+Ya conoces la arquitectura general. Ahora es momento de aprender el lenguaje de los datos: en el próximo capítulo veremos **bits, bytes y hexadecimal**, los números con los que la máquina habla realmente.
