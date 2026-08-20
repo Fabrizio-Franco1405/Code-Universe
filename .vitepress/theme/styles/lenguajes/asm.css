@@ -80,6 +80,12 @@
     .lang-asm { --vp-home-hero-image-filter: blur(68px); }
 }
 
+/* Suaviza los bordes del icono principal para que no se vea recortado */
+.lang-asm .VPHero .VPImage {
+    -webkit-mask-image: radial-gradient(ellipse 82% 82% at 50% 50%, #000 58%, transparent 99%);
+            mask-image: radial-gradient(ellipse 82% 82% at 50% 50%, #000 58%, transparent 99%);
+}
+
 /**
  * Component: Custom Block (Tips, Containers)
  * -------------------------------------------------------------------------- */

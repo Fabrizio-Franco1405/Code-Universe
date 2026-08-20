@@ -30,7 +30,7 @@ hero:
 </header>
 <div class="cu-card-content">
 <h3>C++</h3>
-<p>Potencia sin límites y abstracciones de alto nivel para el software más exigente del mundo.</p>
+<p>Rendimiento nativo sin compromisos: el lenguaje que construye el mundo.</p>
 </div>
 </article>
 
@@ -44,12 +44,22 @@ hero:
 </div>
 </article>
 
+<article class="cu-feature-card" onclick="window.location.href='/es/asm/'">
+<header class="cu-card-icon">
+  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
+</header>
+<div class="cu-card-content">
+<h3>Ensamblador</h3>
+<p>El lenguaje más cercano al metal. Control total sobre la CPU, instrucción por instrucción.</p>
+</div>
+</article>
+
 <article class="cu-feature-card" onclick="window.location.href='/es/c/'">
 <header class="cu-card-icon">
   <img src="/icons/c-icon.svg" alt="C" width="80" height="80">
 </header>
 <div class="cu-card-content">
-<h3>C (Próximamente)</h3>
+<h3>C (En Desarrollo)</h3>
 <p>El estándar fundamental. Control absoluto y eficiencia bruta desde el origen.</p>
 </div>
 </article>
@@ -64,15 +74,6 @@ hero:
 </div>
 </article>
 
-<article class="cu-feature-card" onclick="window.location.href='/es/asm/'">
-<header class="cu-card-icon">
-  <img src="/icons/asm-icon.webp" alt="ASM" width="80" height="80">
-</header>
-<div class="cu-card-content">
-<h3>Ensamblador</h3>
-<p>El lenguaje más cercano al metal. Control total sobre la CPU, instrucción por instrucción.</p>
-</div>
-</article>
 
 </div>
 

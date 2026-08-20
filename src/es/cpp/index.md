@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Code Universe: C++"
   text: "Potencia sin límites"
-  tagline: "Ingeniería de software de alto rendimiento al alcance de todos."
+  tagline: "Aprende a crear software Robusto y Seguro."
   image: 
     src: /icons/cpp-icon.svg
     alt: "Code Universe C++"

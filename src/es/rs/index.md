@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Code Universe: Rust"
   text: "Seguridad sin límites"
-  tagline: "Domina Rust de una forma más didáctica y sencilla."
+  tagline: "Domina Rust de una forma más sencilla y divertida."
   image: 
     src: /icons/rust-icon.svg
     alt: "Code Universe Rust"
@@ -28,7 +28,7 @@ hero:
 <header class="cu-card-icon">🦀</header>
 <div class="cu-card-content">
 <h3>Ownership</h3>
-<p>Entiende el corazón de Rust: la gestión de memoria sin recolector de basura.</p>
+<p>Entiende el corazón de Rust: La gestión de memoria sin recolector de basura.</p>
 </div>
 </article>
 
